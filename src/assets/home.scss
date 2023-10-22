@@ -1,13 +1,10 @@
 $color_1: black;
 $color_2: #538E6E;
 
+
 .picture {
-	background: linear-gradient( rgba(255,255,255,0.5), rgba(255,255,255,0.5) ), url("/images/officepic3.png");
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	display: grid;
-	align-content: center;
+	
+	
 }
 .welcome-text {
 	color: $color_1;
