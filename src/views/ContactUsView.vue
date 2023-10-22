@@ -1,6 +1,9 @@
+<script setup>
+import Office_photo1 from '@/images/Emoffice4_0.png'; // Replace with the correct path to your image
+import Office_photo2 from '@/images/Emoffice5_0.png';
+import Office_photo3 from '@/images/Emoffice1_0.png';
+</script>
 <template>
-<!-- <link href="./asset/contactUs.css" rel="stylesheet" type="text/css" />
-<link href="./asset/team.css" rel="stylesheet" type="text/css" /> -->
 <div class="bg-image" style="margin-top: 5rem; padding-top : 10rem">
     <div class="container">
         <div class="container center margin-head">
@@ -33,11 +36,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-8 margin-padding-0 ">
-            <img src="./images/Emoffice4_0.png" class="image-office" alt="Office_photo1">
+            <img :src="Office_photo1" alt="Office_photo_1" class="image-office">
         </div>
         <div class="col-lg-4 margin-padding-0 ">
-            <img src="./images/Emoffice5_0.png" class="image-office" alt="Office_photo2">
-            <img src="./images/Emoffice1_0.png" class="image-office" alt="Office_photo3">
+            <img :src="Office_photo2" alt="Office_photo2" class="image-office" >
+            <img :src="Office_photo3" alt="Office_photo3" class="image-office" >
         </div>
     </div>
 </div>
