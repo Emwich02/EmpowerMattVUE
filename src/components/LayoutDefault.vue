@@ -1,9 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import { ref } from 'vue'
-
-
-import logo from '@/images/logo.jpg'; // Replace with the correct path to your image
+import logo from '@/images/logo.jpg';
 
 const CONSTANT_WORD = {
     Home: 'Home',
@@ -15,20 +13,31 @@ const CONSTANT_WORD = {
     ContactUs: 'Contact Us',
     ENG: 'ENG',
     THA: 'THA',
+    Description: 'As a Platform Our approach to developing and creating empower material innovations steps up to Intellectual Properties(IP)'
 }
 const activeButton = ref(null);
 const isActive = ref(false);
-
+const buttons = ref([
+    { id: 1, label: 'Home', key: 'Home', isActive: false },
+    { id: 2, label: 'Products', key: 'Products', isActive: false },
+    { id: 3, label: 'Natural Hemp Fabric', key: 'NaturalHempFabric', isActive: false },
+    { id: 4, label: 'Hemp bioplastics compound materials', key: 'HempBioplasticsCompoundMaterials', isActive: false },
+    { id: 5, label: 'Services', key: 'Services', isActive: false },
+    { id: 6, label: 'Teams', key: 'Teams', isActive: false },
+    { id: 7, label: 'Contact Us', key: 'ContactUs', isActive: false },
+    { id: 8, label: 'ENG', key: 'ENG', isActive: false },
+    { id: 9, label: 'THA', key: 'THA', isActive: false },
+]);
 
 function setActiveButton(button) {
-  if (activeButton.value) {
-    activeButton.value.classList.remove('active');
-  }
-  activeButton.value = button;
-  button.classList.add('active');
+    if (activeButton.value) {
+        activeButton.value.classList.remove('active');
+    }
+    activeButton.value = button;
+    button.classList.add('active');
 }
 function setActivea() {
-  isActive.value = true;
+    isActive.value = true;
 }
 </script>
 <template>
@@ -46,33 +55,37 @@ function setActivea() {
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item ">
-                            <a class=" nav-link nav-nav active ps-3 pe-3 no-transition" @click="setActivea" style="color: black;" href="/">{{
-                                CONSTANT_WORD.Home }}</a>
+                            <a class=" nav-link nav-nav active ps-3 pe-3 no-transition" :class="{ active: isActive }"
+                                @click="setActivea" style="color: black;" href="/">
+                                {{ CONSTANT_WORD.Home }}</a>
                         </li>
                         <li class="nav-item ">
-                            <div class="dropdown nav-link nav-nav text-center no-transition" @click="() => setActiveButton($event.target)"  id="dropdown1">
+                            <div class="dropdown nav-link nav-nav text-center no-transition"
+                                @click="() => setActiveButton($event.target)" id="dropdown1">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3 " type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <a>{{ CONSTANT_WORD.Products }}</a>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">{{ CONSTANT_WORD.NaturalHempFabric }}</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">{{ CONSTANT_WORD.HempBioplasticsCompoundMaterials }}</a></li>
+                                    <li><a class="dropdown-item" href="#">{{ CONSTANT_WORD.HempBioplasticsCompoundMaterials
+                                    }}</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" @click="setActivea" href="#">{{
-                                CONSTANT_WORD.Services }}</a>
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                                :class="{ active: isActive }" @click="setActivea" href="#">{{
+                                    CONSTANT_WORD.Services }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" @click="setActivea"
-                                href="/team">{{ CONSTANT_WORD.Teams }}</a>
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                                :class="{ active: isActive }" @click="setActivea" href="/team">{{ CONSTANT_WORD.Teams }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" @click="setActivea" href="#">{{
-                                CONSTANT_WORD.ContactUs }}</a>
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                                :class="{ active: isActive }" @click="setActivea" href="#">{{
+                                    CONSTANT_WORD.ContactUs }}</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown nav-link nav-nav text-center no-transition" id="dropdown2">
@@ -122,6 +135,6 @@ function setActivea() {
                 </div>
             </div>
         </section>
-</footer>
+    </footer>
 </template>
   
