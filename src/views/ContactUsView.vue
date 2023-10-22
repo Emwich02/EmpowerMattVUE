@@ -45,3 +45,8 @@ import Office_photo3 from '@/images/Emoffice1_0.png';
     </div>
 </div>
 </template>
+<style lang="scss">
+// Import Main styles for this application
+@import '/src/assets/contactUs.scss';
+@import '/src/assets/team.scss';
+</style>

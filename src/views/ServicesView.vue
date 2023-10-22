@@ -34,3 +34,7 @@
     </div>
 </div>
 </template>
+<style lang="scss">
+// Import Main styles for this application
+@import '/src/assets/services.scss';
+</style>
