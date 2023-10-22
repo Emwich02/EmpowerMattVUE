@@ -4,7 +4,7 @@ import CTO_photo from '@/images/IU1.jpg';
 </script>
 <template>
 <div class="container">
-    <div class="container center" >
+    <div class="container center" style="padding-top: 10rem;" >
         <p class="margin-0 team-text">THE TEAM</p>
         <hr class="line-team-head" size="5px"/>
         <p class="margin-0 meet-text">MEET Our Team.</p>
