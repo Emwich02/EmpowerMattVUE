@@ -1,6 +1,35 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import { ref } from 'vue'
+
+
 import logo from '@/images/logo.jpg'; // Replace with the correct path to your image
+
+const CONSTANT_WORD = {
+    Home: 'Home',
+    Products: 'Products',
+    NaturalHempFabric: 'Natural Hemp Fabric',
+    HempBioplasticsCompoundMaterials: 'Hemp bioplastics compound materials',
+    Services: 'Services',
+    Teams: 'Teams',
+    ContactUs: 'Contact Us',
+    ENG: 'ENG',
+    THA: 'THA',
+}
+const activeButton = ref(null);
+const isActive = ref(false);
+
+
+function setActiveButton(button) {
+  if (activeButton.value) {
+    activeButton.value.classList.remove('active');
+  }
+  activeButton.value = button;
+  button.classList.add('active');
+}
+function setActivea() {
+  isActive.value = true;
+}
 </script>
 <template>
     <header>
@@ -11,46 +40,49 @@ import logo from '@/images/logo.jpg'; // Replace with the correct path to your i
                 </a>
                 <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-key="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item ">
-                            <a class=" nav-link nav-nav active ps-3 pe-3 no-transition" style="color: black;"
-                                href="/">Home</a>
+                            <a class=" nav-link nav-nav active ps-3 pe-3 no-transition" @click="setActivea" style="color: black;" href="/">{{
+                                CONSTANT_WORD.Home }}</a>
                         </li>
                         <li class="nav-item ">
-                            <div class="dropdown nav-link nav-nav text-center no-transition" id="dropdown1">
+                            <div class="dropdown nav-link nav-nav text-center no-transition" @click="() => setActiveButton($event.target)"  id="dropdown1">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3 " type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a>Products</a>
+                                    <a>{{ CONSTANT_WORD.Products }}</a>
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Natural Hemp Fabric</a></li>
-                                    <li><a class="dropdown-item" href="#">Hemp bioplastics compound materials</a></li>
+                                <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">{{ CONSTANT_WORD.NaturalHempFabric }}</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">{{ CONSTANT_WORD.HempBioplasticsCompoundMaterials }}</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" href="#">Services</a>
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" @click="setActivea" href="#">{{
+                                CONSTANT_WORD.Services }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" href="/team">Team</a>
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" @click="setActivea"
+                                href="/team">{{ CONSTANT_WORD.Teams }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" href="#">Contact
-                                us</a>
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" @click="setActivea" href="#">{{
+                                CONSTANT_WORD.ContactUs }}</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown nav-link nav-nav text-center no-transition" id="dropdown2">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
                                     id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span id="selectedLanguage2">ENG</span>
+                                    <span id="selectedLanguage2">{{ CONSTANT_WORD.ENG }}</span>
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    <li><a class="dropdown-item" href="#" data-value="ENG">ENG</a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="THA">THA</a></li>
+                                <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item" href="#" data-value="ENG">{{ CONSTANT_WORD.ENG }}</a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="THA">{{ CONSTANT_WORD.THA }}</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -59,18 +91,7 @@ import logo from '@/images/logo.jpg'; // Replace with the correct path to your i
             </div>
         </nav>
     </header>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-
     <RouterView />
-    
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
     <footer class="text-center text-lg-start bg-cream text-muted">
         <section class="pt-2 pb-2">
             <div class="container text-center text-md-start mt-5">
@@ -101,6 +122,6 @@ import logo from '@/images/logo.jpg'; // Replace with the correct path to your i
                 </div>
             </div>
         </section>
-    </footer>
+</footer>
 </template>
   
