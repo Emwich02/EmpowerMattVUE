@@ -1,10 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import officepic from '@/images/officepic3.png'; // Replace with the correct path to your image
+import officepic from '@/images/officepic3.jpg'; // Replace with the correct path to your image
 </script>
 <template>
+
+         
         <div class="picture">
-            
+        <img :src="officepic" alt="">  
+        </div>   
         <div class="text-center">
             <h1 class="welcome-text">Welcome to <span class="empower-text">Empower</span></h1>
             
@@ -24,7 +27,7 @@ import officepic from '@/images/officepic3.png'; // Replace with the correct pat
                 Thank you very much for your kindness. 
             </p>
          </div> 
-        </div>  
+        
 </template>
 <style lang="scss">
 // Import Main styles for this application
