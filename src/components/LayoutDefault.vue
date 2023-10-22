@@ -59,18 +59,7 @@ import logo from '@/images/logo.jpg'; // Replace with the correct path to your i
             </div>
         </nav>
     </header>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-
     <RouterView />
-    
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
     <footer class="text-center text-lg-start bg-cream text-muted">
         <section class="pt-2 pb-2">
             <div class="container text-center text-md-start mt-5">
