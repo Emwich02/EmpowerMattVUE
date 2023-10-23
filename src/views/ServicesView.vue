@@ -28,11 +28,6 @@ const listdata_1 = ref({
     Spec_Detail_Hempcar_12: "Color Options: Light blue, white, black, and natural hemp fiber",
     Spec_Detail_Hempcar_13: "Decorative Art: Customizable for customers with an additional charge",
 })
-
-const mech_list = ref({
-    Prop_Mech_1 : "Tensile strength [MPa]",
-    Prop_Mech_2 : "Ultimate tensile strain [usn]"
-})
 </script>
 <template>
     <div class="continer-fluid bg-container">
