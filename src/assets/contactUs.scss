@@ -1,0 +1,69 @@
+:root {
+	--green-primary-color: #538E6E;
+}
+
+$color_1: var(--green-primary-color);
+
+.line-contact-head {
+	opacity: 100%;
+	height: 4px;
+	width: 20%;
+	margin: auto;
+	border-radius: 3.125rem;
+    border: 0;
+	size: 50px;
+	background-color: $color_1;
+}
+
+.bg-image {
+	background: linear-gradient( rgba(255,255,255,0.5), rgba(255,255,255,0.5) ), url("/images/Emoffice1_0.png");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+.map {
+	border-radius: 0px 20px 20px 0px;
+}
+.font-default {
+	font-size: 16px;
+}
+.contact-head {
+	margin-top: 10%;
+	margin-bottom: 5%;
+	margin-left: 10%;
+	font-size: 2.25em;
+	font-weight: 700;
+}
+.green-text {
+	color: $color_1;
+}
+.contact-detial {
+	font-size: 1.5em;
+}
+.margin-head {
+	margin-bottom: 30px;
+}
+.margin-space {
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+.margin-text-detail {
+	margin-left: 10%;
+	margin-bottom: 0;
+}
+.margin-text-bottom {
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+.image-office {
+	float: left;
+	width: 100%;
+}
+.column {
+	float: left;
+	width: 33.33%;
+}
+.margin-padding-0 {
+	margin: 0;
+	padding: 0;
+}

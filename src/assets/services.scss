@@ -1,0 +1,84 @@
+$color_1: white;
+$color_2: var(--green-primary-color);
+$background-color_1: var(--cream-bg-color);
+$background-color_2: var(--green-primary-color);
+$background-color_3: var(--green-line-color);
+
+:root {
+	--green-primary-color: #538E6E;
+	--green-line-color: #8BC9A7;
+	--cream-bg-color: #FFFDF5;
+}
+.bg-container {
+	background-color: $background-color_1;
+}
+.bg-head {
+	background-color: $background-color_2;
+	border-radius: 20px;
+	font-size: 2.25rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	color: $color_1;
+}
+.head-text {
+	font-size: 2.25rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.detail-text {
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.services-text {
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.text-head-box {
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-bottom: 50px;
+}
+.bg-image-hempcar {
+	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0 )), url("/images/hempcar-bg.png");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+.bg-green-color {
+	background-color: $background-color_2;
+	opacity: 0.6;
+}
+.opacity-container {
+	opacity: 1;
+}
+.bg-image-research {
+	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/images/hempcar-art.png");
+	background-size: cover;
+	background-position: center;
+	height: 40vh;
+	border-radius: 20px;
+	margin-right: 10px;
+}
+.bg-image-consult {
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/images/solar-sheet-1.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 40vh;
+	border-radius: 20px;
+	margin-left: 10px;
+}
+.hemp-car-text {
+	color: $color_2;
+}
+.line-section {
+	width: 50%;
+	margin: auto;
+	border-radius: 3.125rem;
+	background-color: $background-color_3;
+}
