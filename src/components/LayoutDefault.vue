@@ -4,30 +4,40 @@ import { ref } from 'vue'
 import logo from '@/images/logo.jpg';
 
 //จำลอง api ส่งภาษามา
-// const CONSTANT_WORD = {
-//     Home: 'Home',
-//     Products: 'Products',
-//     NaturalHempFabric: 'Natural Hemp Fabric',
-//     HempBioplasticsCompoundMaterials: 'Hemp bioplastics compound materials',
-//     Services: 'Services',
-//     Teams: 'Teams',
-//     ContactUs: 'Contact Us',
-//     Selectlang: 'ENG',
-//     ENG: 'ENG',
-//     THA: 'THA',
-// }
 const CONSTANT_WORD = {
-    Home: 'หน้าหลัก',
-    Products: 'สินค้า',
-    NaturalHempFabric: 'ผ้าใยกัญชงธรรมชาติ',
-    HempBioplasticsCompoundMaterials: 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ',
-    Services: 'บริการ',
-    Teams: 'ทีม',
-    ContactUs: 'ติดต่อเรา',
+    Home: 'Home',
+    Products: 'Products',
+    NaturalHempFabric: 'Natural Hemp Fabric',
+    HempBioplasticsCompoundMaterials: 'Hemp bioplastics compound materials',
+    Services: 'Services',
+    Teams: 'Teams',
+    ContactUs: 'Contact Us',
     Selectlang: 'ENG',
     ENG: 'ENG',
     THA: 'THA',
+    Desctiption: 'IF YOU HAVE ANY QUESTIONS',
+    Tel: 'TEL : (+66)81-988-5787',
+    Email: 'E-MAIL : empowermatt2021@gmail.com',
+    Tax: 'TAX ID : 0135564006410',
+    Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130'
 }
+// const CONSTANT_WORD = {
+//     Home: 'หน้าหลัก',
+//     Products: 'สินค้า',
+//     NaturalHempFabric: 'ผ้าใยกัญชงธรรมชาติ',
+//     HempBioplasticsCompoundMaterials: 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ',
+//     Services: 'บริการ',
+//     Teams: 'ทีม',
+//     ContactUs: 'ติดต่อเรา',
+//     Selectlang: 'ENG',
+//     ENG: 'ENG',
+//     THA: 'THA',
+//     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
+//     Tel: 'TEL : (+66)81-988-5787',
+//     Email: 'E-MAIL : empowermatt2021@gmail.com',
+//     Tax: 'TAX ID : 0135564006410',
+//     Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130'
+// }
 const activeButton = ref(null);
 function setActiveButton(buttonId) {
     activeButton.value = buttonId;
@@ -37,9 +47,9 @@ function setActiveButton(buttonId) {
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
             <div class="container d-flex justify-content-between">
-                <a class="navbar-brand" href="/">
+                <router-link to="/" class="navbar-brand">
                     <img :src="logo" alt="" width="200" height="80">
-                </a>
+                </router-link>
                 <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-key="Toggle navigation">
@@ -57,13 +67,12 @@ function setActiveButton(buttonId) {
                             <div class="dropdown nav-link nav-nav text-center no-transition"
                                 @click="setActiveButton('dropdown1')" :class="{ active: activeButton === 'dropdown1' }"
                                 id="dropdown1" style="margin-right: 0px; margin-left: 0px;">
-                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3 " type="button"
+                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3 shadow-none" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <router-link to="#">
                                         <a>{{ CONSTANT_WORD.Products }}</a>
                                     </router-link>
                                 </button>
-
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
                                     <li><router-link to="#" class="dropdown-item">{{ CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
@@ -101,9 +110,9 @@ function setActiveButton(buttonId) {
                                     </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li ><router-link to="#" class="dropdown-item" href="#" data-value="ENG">{{
+                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="ENG">{{
                                         CONSTANT_WORD.ENG }}</router-link></li>
-                                    <li ><router-link to="#" class="dropdown-item" href="#" data-value="THA">{{
+                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="THA">{{
                                         CONSTANT_WORD.THA }}</router-link></li>
                                 </ul>
                             </div>
@@ -120,26 +129,25 @@ function setActiveButton(buttonId) {
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-5 col-xl-4 mx-auto ">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            If you have any questions
+                            {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
-                            <i class="bi bi-telephone-fill"></i> TEL : (+66)81-988-5787
+                            <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
                         </p>
                         <p>
-                            E-MAIL : empowermatt2021@gmail.com
+                            {{ CONSTANT_WORD.Email }}
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-5 col-xl-4 mx-auto mb-4">
                         <br><br>
                         <p>
-                            TAX ID : 0135564006410
+                            {{ CONSTANT_WORD.Tax }}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-9 col-lg-11 col-xl-10 mx-auto mb-4">
                     <p>
-                        ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE)
-                        26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130
+                        {{ CONSTANT_WORD.Address }}
                     </p>
                 </div>
             </div>
