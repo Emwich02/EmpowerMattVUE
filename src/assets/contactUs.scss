@@ -16,7 +16,8 @@ $color_1: var(--green-primary-color);
 }
 
 .bg-image {
-	background: linear-gradient( rgba(255,255,255,0.5), rgba(255,255,255,0.5) ), url("/images/Emoffice1_0.png");
+	background-color: rgba(255,255,255,0.6);
+	padding-top : 7rem ;
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
