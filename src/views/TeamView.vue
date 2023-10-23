@@ -11,8 +11,8 @@ const Data = {
 }
 </script>
 <template>
-    <div class="container">
-        <div class="container center" style="padding-top: 10rem;">
+    <div class="container bg-color">
+        <div class="container center" >
             <p class="margin-0 team-text">{{ Data.MainTitle_1 }}</p>
             <hr class="line-team-head" size="5px" />
             <p class="margin-0 meet-text">{{ Data.MainTitle_2 }}</p>

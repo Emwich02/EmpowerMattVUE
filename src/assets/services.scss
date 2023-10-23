@@ -3,82 +3,138 @@ $color_2: var(--green-primary-color);
 $background-color_1: var(--cream-bg-color);
 $background-color_2: var(--green-primary-color);
 $background-color_3: var(--green-line-color);
+$background-color_4: var(--green-bg-color);
+$background-table-color: var(--gray-bg-table-color);
 
 :root {
-	--green-primary-color: #538E6E;
-	--green-line-color: #8BC9A7;
-	--cream-bg-color: #FFFDF5;
+  --green-primary-color: #538e6e;
+  --green-line-color: #8bc9a7;
+  --cream-bg-color: #fffdf5;
+  --green-bg-color: rgba(83, 142, 110, 0.4);
+  --gray-bg-table-color: #DDE7DA;
 }
 .bg-container {
-	background-color: $background-color_1;
+  background-color: $background-color_1;
 }
 .bg-head {
-	background-color: $background-color_2;
-	border-radius: 20px;
-	font-size: 2.25rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	color: $color_1;
+  background-color: $background-color_2;
+  border-radius: 20px;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $color_1;
 }
 .head-text {
-	font-size: 2.25rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 .detail-text {
-	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .services-text {
-	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 .text-head-box {
-	padding-top: 50px;
-	padding-left: 20px;
-	padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-bottom: 50px;
 }
 .bg-image-hempcar {
-	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0 )), url("/images/hempcar-bg.png");
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    url('/images/hempcar-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 .bg-green-color {
-	background-color: $background-color_2;
-	opacity: 0.6;
+  background-color: $background-color_4;
 }
 .opacity-container {
-	opacity: 1;
+  opacity: 1;
 }
 .bg-image-research {
-	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/images/hempcar-art.png");
-	background-size: cover;
-	background-position: center;
-	height: 40vh;
-	border-radius: 20px;
-	margin-right: 10px;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('/images/hempcar-art.png');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 .bg-image-consult {
-	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/images/solar-sheet-1.jpg");
-	background-size: cover;
-	background-position: center;
-	height: 40vh;
-	border-radius: 20px;
-	margin-left: 10px;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('/images/solar-sheet-1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  border-radius: 20px;
+  margin-left: 10px;
 }
+
 .hemp-car-text {
-	color: $color_2;
+  color: $color_2;
 }
+
 .line-section {
+  width: 50%;
+  margin: auto;
+  border: 0;
+  border-radius: 3.125rem;
+  background-color: $background-color_3;
+}
+
+.line-section-2{
 	width: 50%;
 	margin: auto;
+	border: 0;
 	border-radius: 3.125rem;
-	background-color: $background-color_3;
+	background-color: $color_2;
+}
+
+
+table {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: $background-table-color;
+  width: 80%;
+  margin: auto;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+/* Apply a border to the bottom of all but the last row */
+thead > tr:not(:last-child) > th,
+thead > tr:not(:last-child) > td,
+tbody > tr:not(:last-child) > th,
+tbody > tr:not(:last-child) > td,
+tfoot > tr:not(:last-child) > th,
+tfoot > tr:not(:last-child) > td,
+tr:not(:last-child) > td,
+tr:not(:last-child) > th,
+thead:not(:last-child),
+tbody:not(:last-child),
+tfoot:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+th{
+	text-align: center;
+	padding: 8px;
+}
+td{
+	padding: 10px;
 }
