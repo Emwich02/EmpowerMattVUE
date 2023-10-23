@@ -1,100 +1,114 @@
 :root {
-    --green-primary-color:#538E6E;
-    --white-primary-color:#fff;
-    --black-primary-color:black;
-    --cream-nav-primary-color:#FCF7E7;
-    --cream-bg-primary-color:#FFFDF5;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .dropdown-menu {
-    text-align: left;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .bg-cream {
-    background-color: var(--cream-nav-primary-color);
-  }
-  
-  .logo {
-    color: #333;
-    font-size: 24px;
-    padding: 10px;
-    text-decoration: none;
-  }
-  
-  .navbar a {
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  
-    &:hover {
-      color: inherit;
-    }
-  }
-  
-  .nav-nav {
-    margin: 1rem;
-  }
-  
-  .text-black-nav {
-    color: #333;
-  }
-  
+  --green-primary-color: #538E6E;
+  --white-primary-color: #fff;
+  --black-primary-color: black;
+  --cream-nav-primary-color: #FCF7E7;
+  --cream-bg-primary-color: #FFFDF5;
+}
 
-  .active {
-    background-color: var(--green-primary-color);
+/* src/assets/main.css */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-menu {
+  text-align: left;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-cream {
+  background-color: var(--cream-nav-primary-color);
+}
+
+.logo {
+  color: #333;
+  font-size: 24px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-item button {
+  border: none;
+}
+
+.navbar a {
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.nav-nav {
+  margin: 1rem;
+}
+
+.text-black-nav {
+  color: #333;
+}
+
+
+.active {
+  background-color: var(--green-primary-color);
+  color: var(--white-primary-color) !important;
+  border-radius: 20px;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.active .btn-custom {
+
+  a,
+  span {
     color: var(--white-primary-color) !important;
-    border-radius: 20px;
   }
-  
-  .navbar-right {
-    justify-content: flex-end;
-  }
-  
-  .topnav-right {
-    float: right;
-  }
-  
-  .active .btn-custom {
-    a, span {
-      color: var(--white-primary-color) !important;
-    }
-  }
-  
-  .dropdown-menu.show {
-    display: block;
-    border-radius: 20px;
-  }
-  
-  .container-fluid {
-    background-color: var(--cream-bg-primary-color);
-  }
-  
-  ul.dropdown-menu {
-    background-color: var(--green-primary-color);
-  
-    a {
-      text-align: start;
+}
+
+.dropdown-menu.show {
+  display: block;
+  border-radius: 20px;
+}
+
+.container-fluid {
+  background-color: var(--cream-bg-primary-color);
+}
+
+ul.dropdown-menu {
+  background-color: var(--green-primary-color);
+
+  a {
+    text-align: start;
+    color: var(--white-primary-color);
+
+    &:hover {
+      background-color: transparent;
       color: var(--white-primary-color);
-  
-      &:hover {
-        background-color: transparent;
-        color: var(--white-primary-color);
-      }
     }
   }
-  
-  .nav-link {
-    transition: none !important;
-  }
-  
+}
+
+.nav-link {
+  transition: none !important;
+}

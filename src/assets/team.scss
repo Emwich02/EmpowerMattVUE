@@ -2,11 +2,19 @@ $color_1: var(--green-primary-color);
 $color_2: var(--gray-detail-color);
 $background-color_1: var(--green-primary-color);
 $background-color_2: white;
+$background-color_3: var(--cream-bg-color);
 
-// &:root {
-// 	--green-primary-color: #538E6E;
-// 	--gray-detail-color: #8B8B8B;
-// }
+:root {
+	--green-primary-color: #538E6E;
+	--gray-detail-color: #8B8B8B;
+	--cream-bg-color: #FFFDF5;
+}
+.bg-color{
+	background-color: $background-color_3;
+	padding-top: 10rem;
+	padding-bottom: 15%;
+}
+
 .margin-0 {
 	margin: 0;
 }

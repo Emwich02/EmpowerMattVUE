@@ -3,6 +3,7 @@ import { RouterView } from 'vue-router'
 import { ref } from 'vue'
 import logo from '@/images/logo.jpg';
 
+//จำลอง api ส่งภาษามา
 const CONSTANT_WORD = {
     Home: 'Home',
     Products: 'Products',
@@ -11,42 +12,44 @@ const CONSTANT_WORD = {
     Services: 'Services',
     Teams: 'Teams',
     ContactUs: 'Contact Us',
+    Selectlang: 'ENG',
     ENG: 'ENG',
     THA: 'THA',
-    Description: 'As a Platform Our approach to developing and creating empower material innovations steps up to Intellectual Properties(IP)'
+    Desctiption: 'IF YOU HAVE ANY QUESTIONS',
+    Tel: 'TEL : (+66)81-988-5787',
+    Email: 'E-MAIL : empowermatt2021@gmail.com',
+    Tax: 'TAX ID : 0135564006410',
+    Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130'
 }
+// const CONSTANT_WORD = {
+//     Home: 'หน้าหลัก',
+//     Products: 'สินค้า',
+//     NaturalHempFabric: 'ผ้าใยกัญชงธรรมชาติ',
+//     HempBioplasticsCompoundMaterials: 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ',
+//     Services: 'บริการ',
+//     Teams: 'ทีม',
+//     ContactUs: 'ติดต่อเรา',
+//     Selectlang: 'ENG',
+//     ENG: 'ENG',
+//     THA: 'THA',
+//     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
+//     Tel: 'TEL : (+66)81-988-5787',
+//     Email: 'E-MAIL : empowermatt2021@gmail.com',
+//     Tax: 'TAX ID : 0135564006410',
+//     Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130'
+// }
 const activeButton = ref(null);
-const isActive = ref(false);
-const buttons = ref([
-    { id: 1, label: 'Home', key: 'Home', isActive: false },
-    { id: 2, label: 'Products', key: 'Products', isActive: false },
-    { id: 3, label: 'Natural Hemp Fabric', key: 'NaturalHempFabric', isActive: false },
-    { id: 4, label: 'Hemp bioplastics compound materials', key: 'HempBioplasticsCompoundMaterials', isActive: false },
-    { id: 5, label: 'Services', key: 'Services', isActive: false },
-    { id: 6, label: 'Teams', key: 'Teams', isActive: false },
-    { id: 7, label: 'Contact Us', key: 'ContactUs', isActive: false },
-    { id: 8, label: 'ENG', key: 'ENG', isActive: false },
-    { id: 9, label: 'THA', key: 'THA', isActive: false },
-]);
-
-function setActiveButton(button) {
-    if (activeButton.value) {
-        activeButton.value.classList.remove('active');
-    }
-    activeButton.value = button;
-    button.classList.add('active');
-}
-function setActivea() {
-    isActive.value = true;
+function setActiveButton(buttonId) {
+    activeButton.value = buttonId;
 }
 </script>
 <template>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
             <div class="container d-flex justify-content-between">
-                <a class="navbar-brand" href="/">
+                <router-link to="/" class="navbar-brand">
                     <img :src="logo" alt="" width="200" height="80">
-                </a>
+                </router-link>
                 <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-key="Toggle navigation">
@@ -55,47 +58,62 @@ function setActivea() {
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item ">
-                            <a class=" nav-link nav-nav active ps-3 pe-3 no-transition" :class="{ active: isActive }"
-                                @click="setActivea" style="color: black;" href="/">
-                                {{ CONSTANT_WORD.Home }}</a>
+                            <router-link to="/" class=" nav-link nav-nav ps-3 pe-3 no-transition" id="button1"
+                                @click="setActiveButton('button1')" :class="{ active: activeButton === 'button1' }"
+                                style="color: black;">
+                                {{ CONSTANT_WORD.Home }}</router-link>
                         </li>
                         <li class="nav-item ">
                             <div class="dropdown nav-link nav-nav text-center no-transition"
-                                @click="() => setActiveButton($event.target)" id="dropdown1">
-                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3 " type="button"
+                                @click="setActiveButton('dropdown1')" :class="{ active: activeButton === 'dropdown1' }"
+                                id="dropdown1" style="margin-right: 0px; margin-left: 0px;">
+                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3 shadow-none" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a>{{ CONSTANT_WORD.Products }}</a>
+                                    <router-link to="#">
+                                        <a>{{ CONSTANT_WORD.Products }}</a>
+                                    </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">{{ CONSTANT_WORD.NaturalHempFabric }}</a></li>
-                                    <li><a class="dropdown-item" href="#">{{ CONSTANT_WORD.HempBioplasticsCompoundMaterials
-                                    }}</a></li>
+                                    <li><router-link to="#" class="dropdown-item">{{ CONSTANT_WORD.NaturalHempFabric
+                                    }}</router-link></li>
+                                    <li><router-link to="#" class="dropdown-item">{{
+                                        CONSTANT_WORD.HempBioplasticsCompoundMaterials
+                                    }}</router-link></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
-                                :class="{ active: isActive }" @click="setActivea" href="#">{{
+                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" id="button2"
+                                @click="setActiveButton('button2')" :class="{ active: activeButton === 'button2' }"
+                                href="#">{{
                                     CONSTANT_WORD.Services }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
-                                :class="{ active: isActive }" @click="setActivea" href="/team">{{ CONSTANT_WORD.Teams }}</a>
+                            <router-link to="/team" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                                id="button3" @click="setActiveButton('button3')"
+                                :class="{ active: activeButton === 'button3' }">{{ CONSTANT_WORD.Teams }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
-                                :class="{ active: isActive }" @click="setActivea" href="#">{{
-                                    CONSTANT_WORD.ContactUs }}</a>
+                            <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                                id="button4" @click="setActiveButton('button4')"
+                                :class="{ active: activeButton === 'button4' }">{{
+                                    CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <div class="dropdown nav-link nav-nav text-center no-transition" id="dropdown2">
+                            <div class="dropdown nav-link nav-nav text-center no-transition" id="dropdown2"
+                                @click="setActiveButton('dropdown2')" :class="{ active: activeButton === 'dropdown2' }"
+                                style="margin-right: 0px; margin-left: 0px;">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
                                     id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span id="selectedLanguage2">{{ CONSTANT_WORD.ENG }}</span>
+                                    <router-link to="#">
+                                        <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
+                                    </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li><a class="dropdown-item" href="#" data-value="ENG">{{ CONSTANT_WORD.ENG }}</a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="THA">{{ CONSTANT_WORD.THA }}</a></li>
+                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="ENG">{{
+                                        CONSTANT_WORD.ENG }}</router-link></li>
+                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="THA">{{
+                                        CONSTANT_WORD.THA }}</router-link></li>
                                 </ul>
                             </div>
                         </li>
@@ -111,26 +129,25 @@ function setActivea() {
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-5 col-xl-4 mx-auto ">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            If you have any questions
+                            {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
-                            <i class="bi bi-telephone-fill"></i> TEL : (+66)81-988-5787
+                            <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
                         </p>
                         <p>
-                            E-MAIL : empowermatt2021@gmail.com
+                            {{ CONSTANT_WORD.Email }}
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-5 col-xl-4 mx-auto mb-4">
                         <br><br>
                         <p>
-                            TAX ID : 0135564006410
+                            {{ CONSTANT_WORD.Tax }}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-9 col-lg-11 col-xl-10 mx-auto mb-4">
                     <p>
-                        ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE)
-                        26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130
+                        {{ CONSTANT_WORD.Address }}
                     </p>
                 </div>
             </div>
