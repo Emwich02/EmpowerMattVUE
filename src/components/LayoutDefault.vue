@@ -94,7 +94,7 @@ function setActiveButton(buttonId) {
                                 :class="{ active: activeButton === 'button3' }">{{ CONSTANT_WORD.Teams }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="#" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                            <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
                                 id="button4" @click="setActiveButton('button4')"
                                 :class="{ active: activeButton === 'button4' }">{{
                                     CONSTANT_WORD.ContactUs }}</router-link>
