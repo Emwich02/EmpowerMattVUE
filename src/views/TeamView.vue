@@ -1,6 +1,10 @@
+<script setup>
+import CEO_photo from '@/images/IU3.jpg'; // Replace with the correct path to your image
+import CTO_photo from '@/images/IU1.jpg';
+</script>
 <template>
 <div class="container">
-    <div class="container center" >
+    <div class="container center" style="padding-top: 10rem;" >
         <p class="margin-0 team-text">THE TEAM</p>
         <hr class="line-team-head" size="5px"/>
         <p class="margin-0 meet-text">MEET Our Team.</p>
@@ -8,9 +12,8 @@
     <div class="row">
         <div class="col-lg-6" style=" padding: 2%;">
             <div class="row row-bg-color" >
-            
                 <div class="col-md-5" style="padding: 0%;">
-                    <img src="./images/IU3.jpg" alt="person1" class="image-person">
+                    <img :src="CEO_photo" alt="person1" class="image-person">
                 </div>
                 <div class="col-md-7">
                     <p class="name">dlwlrma</p>
@@ -24,7 +27,7 @@
         <div class="col-lg-6" style=" padding: 2%;">
             <div class="row row-bg-color" >
                 <div class="col-md-5" style="padding: 0%;">
-                    <img src="./images/IU1.jpg" alt="person2" class="image-person">
+                    <img :src="CTO_photo" alt="person2" class="image-person">
                 </div>
                 <div class="col-md-7">
                     <p class="name">อี จี-อึน</p>
