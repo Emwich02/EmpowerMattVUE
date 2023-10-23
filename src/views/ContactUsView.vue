@@ -8,7 +8,7 @@ import Office_photo3 from '@/images/Emoffice1_0.png';
     <div class="container">
         <div class="container center margin-head">
             <p class="margin-0 team-text">GET IN TOUCH</p>
-            <hr class="line-team-head" size="5px" />
+            <hr class="line-contact-head" size="5px" />
             <p class="meet-text">Contact us</p>
         </div>
         <div>
