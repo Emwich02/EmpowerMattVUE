@@ -50,10 +50,7 @@
     color: #333;
   }
   
-  .nav-link.active, .nav-item.active {
-    color: var(--white-primary-color) !important;
-  }
-  
+
   .active {
     background-color: var(--green-primary-color);
     color: var(--white-primary-color) !important;
@@ -66,14 +63,6 @@
   
   .topnav-right {
     float: right;
-  }
-  
-  .btn-custom {
-    &:active, &:focus {
-      background-color: transparent;
-      color: var(--white-primary-color) !important;
-      box-shadow: none;
-    }
   }
   
   .active .btn-custom {
