@@ -32,90 +32,73 @@ Thank you very much for your kindness. `,
 <template>
 
          
-        <div class="picture" :style="{ backgroundImage: 'url(src/images/officepic3.jpg)' }" style="margin-top: 2rem; ">
-          <div class="container-fluid picture">
-            <div class="text-center">
-              <h1 class="blackbold-text">{{ Data.MainTitle_1 }} <span class="greenbold-text">{{ Data.MainTitle_2 }}  </span></h1> 
-            </div> <br>
-
+    <div class="picture" :style="{ backgroundImage: 'url(src/images/officepic3.jpg)' }" style="margin-top: 2rem; ">
+      <div class="container-fluid picture">
+          <div class="text-center">      
+            <h1 class="blackbold-text-welcome">{{ Data.MainTitle_1 }} <span class="greenbold-text">{{ Data.MainTitle_2 }}  </span></h1>   
+          </div> <br>
+              
           <div class="box" >
                 <h4 class="text-center" style="color:white" >{{ Data.PrimaryTitle }}  </h4>
           </div><br><br>
-        
+             
           <div class="container">   
-            <p class="text-center">
-                {{ Data.Description }}
-            </p>
-         </div> 
-        </div>   
-      </div>  
+            <p class="text-center">{{ Data.Description }}</p>
+          </div> 
+      </div>   
+    </div>  
 
      
-      <div class="background-cream">
+    <div class="background-cream">
       <div class="text-center">   
-            <h5 class="blackbold-text"><br><br><br>
-                {{ Data.HexagonalTopic_1 }}
-                <span class="greenbold-text">{{ Data.HexagonalTopic_2 }} </span>
-            </h5>
+        <h5 class="blackbold-text"><br><br><br>
+              {{ Data.HexagonalTopic_1 }}<span class="greenbold-text">{{ Data.HexagonalTopic_2 }} </span>
+        </h5> 
       </div> <br><br>
-        
+
       <div class="text-center ">
-        <img :src="Hexagonal" alt="" width="510" height="550">
+       <img :src="Hexagonal" alt="" width="510" height="550">
       </div><br><br><br>
     </div>
 
-      <div class="background-green">
-        <div class="text-center">   
-            <h5 class="whitebold-text"><br><br><br>
-                {{ Data.GrapheneTopic }}
-            </h5>
-        </div> <br>
-        
-        <div class="text-center ">
+    <div class="background-green">
+      <div class="text-center">   
+        <h5 class="whitebold-text"><br><br><br>{{ Data.GrapheneTopic }}</h5>
+      </div> <br>
+
+      <div class="text-center ">
           <img :src="Graphene" alt="" width="570" height="480">
-        </div><br>
+      </div><br>
 
-        <div class="container-closer">  
-          <div class="text-center">   
-            <p class="white-text">
-                {{ Data.GrapheneDetail }}
-            </p>
+      <div class="container-closer">  
+        <div class="text-center">   
+            <p class="white-text"> {{ Data.GrapheneDetail }}</p>
+        </div>
+      </div> <br><br><br><br>
+    </div>
+
+      <div :style="{ backgroundImage: 'url(src/images/Oak_bg.png)' }">  
+        <div class="text-center">   
+            <h5 class="blackbold-text"><br><br><br>{{ Data.IP_title }}</h5><br>
+        </div>
+
+        <div class="container-closer"> 
+          <div class="grey-text"> 
+            <p>{{ Data.IP_description }}</p>
           </div>
-        </div> <br><br><br><br>
-      </div>
-
-<div :style="{ backgroundImage: 'url(src/images/Oak_bg.png)' }">  
-  <div class="text-center">   
-            <h5 class="blackbold-text"><br><br><br>
-                {{ Data.IP_title }}
-            </h5>
-       <br>
-  </div>
-      <div class="container-closer"> 
-        <div class="grey-text"> 
-        <p>{{ Data.IP_description }}</p>
-      </div>
-        <ul>
-            <li >
-              {{ Data.IP_detail_1_1  }}
-            </li>
-          {{ Data.IP_detail_1_2 }}
-          {{ Data.IP_detail_1_3 }}
-          {{ Data.IP_detail_1_4 }}<br><br>
-            <li >
-              {{ Data.IP_detail_2_1  }}
-            </li>
-          {{ Data.IP_detail_2_2 }}<br><br>
-            <li >
-              {{ Data.IP_detail_3_1  }}
-            </li>
-         </ul>
+            <ul> <li >{{ Data.IP_detail_1_1  }} </li>
+                      {{ Data.IP_detail_1_2 }}
+                      {{ Data.IP_detail_1_3 }}
+                      {{ Data.IP_detail_1_4 }}<br><br>
+                <li >{{ Data.IP_detail_2_1  }}</li>
+                      {{ Data.IP_detail_2_2 }}<br><br>
+                <li >{{ Data.IP_detail_3_1  }}</li>
+            </ul>
        </div> <br><br><br>
-</div>        
-      
+      </div>        
 
        <div class="text-center">   
-            <h5 class="blackbold-text"><br><br><br>
+          <h5 class="blackbold-text"><br><br><br>
                 {{ Data.PartnersTopic_1 }}
                 <span class="greenbold-text">{{ Data.PartnersTopic_2 }} </span>
             </h5>
@@ -126,7 +109,6 @@ Thank you very much for your kindness. `,
           <img :src="Partners" alt="" width="800" height="260">
         </div>
       </div><br><br><br>
-
 
 
 </template>
