@@ -59,6 +59,13 @@ $background-table-color: var(--gray-bg-table-color);
   padding-bottom: 50px;
 }
 
+.bg-image {
+	background-color: rgba(255,255,255,0.6);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+
 .bg-image-hempcar {
   background-size: cover;
   background-position: center;
@@ -139,7 +146,7 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .Spec-main-text{
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -159,7 +166,7 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .Prop-main-text{
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -226,4 +233,64 @@ th {
 }
 td {
   padding: 10px;
+}
+
+.bg-image-farm{
+  background-color: rgba(255,255,255,0.8);
+  background-size: cover;
+	background-position: center;
+  width: 100%;
+}
+
+.custom-width{
+  width: 15%;
+}
+
+.m-solar-image{
+  margin-bottom: 4%;
+}
+
+.solar-image-1{
+  width: 100%;
+  padding-bottom: 5px;
+  border-radius: 20px;
+
+}
+
+.solar-image-2{
+  width: 100%;
+  padding-top: 5px;
+  border-radius: 20px;
+}
+
+.solar-image-3{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.m-solar-main-text{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+.p-table-solar{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.graphene-photo{
+  width: 100%;
+}
+
+.graphene-detail-text{
+  font-size: calc(16px + 0.3vw);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.graphene-text{
+  margin-top: auto; 
+  margin-bottom: auto;
 }
