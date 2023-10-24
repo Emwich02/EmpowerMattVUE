@@ -69,14 +69,12 @@ function setActiveButton(buttonId) {
                                 id="dropdown1" style="margin-right: 0px; margin-left: 0px;">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3 shadow-none" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <router-link to="#">
-                                        <a>{{ CONSTANT_WORD.Products }}</a>
-                                    </router-link>
+                                    <a>{{ CONSTANT_WORD.Products }}</a>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
-                                    <li><router-link to="#" class="dropdown-item">{{ CONSTANT_WORD.NaturalHempFabric
+                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item">{{ CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
-                                    <li><router-link to="#" class="dropdown-item">{{
+                                    <li><router-link to="/ProductBioPlastic" class="dropdown-item">{{
                                         CONSTANT_WORD.HempBioplasticsCompoundMaterials
                                     }}</router-link></li>
                                 </ul>
@@ -94,8 +92,8 @@ function setActiveButton(buttonId) {
                                 :class="{ active: activeButton === 'button3' }">{{ CONSTANT_WORD.Teams }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
-                                id="button4" @click="setActiveButton('button4')"
+                            <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3 no-transition"
+                                style="color: black;" id="button4" @click="setActiveButton('button4')"
                                 :class="{ active: activeButton === 'button4' }">{{
                                     CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
