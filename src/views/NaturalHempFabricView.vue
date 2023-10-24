@@ -66,7 +66,7 @@ making possible lightweight structure.`,
                 </div>
             </div>
             <div class="col-md-6">
-                <img :src="Solarpic" class="img-fluid">
+                <img :src="Solarpic" class="img-fluid" style="max-width: 100%; height: auto;">
             </div>
         </div>
     </div>
