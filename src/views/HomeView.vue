@@ -1,6 +1,5 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import officepic from '@/images/officepic3.jpg'; // Replace with the correct path to your image
 import Hexagonal from '@/images/Hexagonal.png';
 import Graphene from '@/images/Graphene.png';
 import Partners from '@/images/partners.png';
