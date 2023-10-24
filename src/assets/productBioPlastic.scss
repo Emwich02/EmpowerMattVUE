@@ -1,0 +1,33 @@
+$color_1: black;
+$color_2: #538E6E;
+$color_3: white;
+$color_5: #FFFDF5;
+
+.box {
+    background: $color_2;
+    max-width: 170px;
+    height: 52px;
+    padding: 13px 35px;
+    border-width: 50px;
+    border-radius: 20px;
+}
+
+.text-center {
+    text-align: center;
+    justify-content: center;
+}
+
+.blackbold-text {
+    color: $color_1;
+    font-weight: 1000; 
+}
+
+.greenbold-text {
+    color: $color_2;
+    font-weight: 1000;
+}
+
+.whitebold-text {
+    color: $color_3;
+    font-weight: bold;
+}

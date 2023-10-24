@@ -76,7 +76,7 @@ function setActiveButton(buttonId) {
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
                                     <li><router-link to="#" class="dropdown-item">{{ CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
-                                    <li><router-link to="#" class="dropdown-item">{{
+                                    <li><router-link to="/ProductBioPlastic" class="dropdown-item">{{
                                         CONSTANT_WORD.HempBioplasticsCompoundMaterials
                                     }}</router-link></li>
                                 </ul>
