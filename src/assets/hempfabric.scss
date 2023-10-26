@@ -1,20 +1,41 @@
 .picture {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
     background-position: center;
-    height: 600px;
     max-width: 100%;
     display: grid;
 }
+
 .box {
-	background: #538E6E;
-	max-width: 100%;
-	height: 52px;
-	padding: 13px 25px;
-	border-width: 50px;
-	border-radius: 20px;
-	margin: 0 auto;
+    background: #538E6E;
+    max-width: 100%;
+    height: 52px;
+    padding: 13px 25px;
+    border-width: 50px;
+    border-radius: 20px;
+    margin: 0 auto;
 }
-.greencolor{
+
+.greencolor {
     color: var(--green-primary-color);
 }
+
+.full-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+body {
+    overflow: hidden;
+}
+.img-fluid {
+    max-width: 50%; /* ปรับความกว้างของรูปภาพ */
+    height: auto;
+  }
