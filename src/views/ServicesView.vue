@@ -7,7 +7,7 @@ import solar_3 from '@/images/solar-sheet-3.jpg';
 import hempcar from '@/images/hempcar.jpg';
 import hempcar_art from '@/images/hempcar-art.png';
 import graphene from '@/images/graphene_graphic_Aui_1.png';
-import bg_hempcar from '@/images/hempcar-bg.png';
+import bg_hempcar from '@/images/hempcar.png';
 import hempcar_video from '@/videos/hemp-car.mp4';
 const Data = {
     MainTitle: "Our services",
@@ -79,12 +79,15 @@ const listdata_1 = ref({
         </div>
         <hr class="line-section-1" size="5px">
     </div>
-
     <div class="bg-image-hempcar" v-bind:style="{ backgroundImage: 'url(' + bg_hempcar + ')' }">
-        <!-- {{!-- <img src="/images/hempcar-bg.png" alt="hempcar" style="width: 100%;"> --}} -->
+        <div class="container d-flex align-items-center justify-content-center">
+            <p class="head-text mt-5">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
+            }}</span>’</p>
+        </div>
     </div>
 
     <div class="bg-green-color">
+
         <div class="container opacity-container ">
             <div class="row pt-5 mb-5">
                 <div class="col-1"></div>

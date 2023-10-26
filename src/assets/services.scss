@@ -67,8 +67,10 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .bg-image-hempcar {
+  background-color: white;
   background-size: cover;
   background-position: center;
+  width: 100%;
   height: 100vh;
 }
 
@@ -125,6 +127,10 @@ $background-table-color: var(--gray-bg-table-color);
   border-radius: 3.125rem;
   background-color: $green-color;
   opacity: 1;
+}
+
+.hempfiber{
+  margin-left: 10%;
 }
 
 .hempcar-head-text{
@@ -196,6 +202,8 @@ $background-table-color: var(--gray-bg-table-color);
   line-height: normal;
   margin-left: 20%;
 }
+
+
 
 table {
   border-spacing: 0;
@@ -293,4 +301,11 @@ td {
 .graphene-text{
   margin-top: auto; 
   margin-bottom: auto;
+}
+
+.hempfiber_image {
+  object-fit: cover;
+  width: calc(100px + 5vw);
+  height: calc(100px + 5vw);
+  border-radius: 20px;
 }
