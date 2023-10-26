@@ -1,5 +1,14 @@
 <script setup>
 import { ref } from 'vue'
+import hemp_farm from '@/images/412798_0.jpg';
+import solar_1 from '@/images/solar-sheet-1.jpg';
+import solar_2 from '@/images/solar-sheet-2.jpg';
+import solar_3 from '@/images/solar-sheet-3.jpg';
+import hempcar from '@/images/hempcar.jpg';
+import hempcar_art from '@/images/hempcar-art.png';
+import graphene from '@/images/graphene_graphic_Aui_1.png';
+import bg_hempcar from '@/images/hempcar-bg.png';
+import hempcar_video from '@/videos/hemp-car.mp4';
 const Data = {
     MainTitle: "Our services",
     MainDetail_1: "Research & Consultant services",
@@ -11,7 +20,17 @@ const Data = {
     Spec_Hempcar: "Specification of",
     Prop_Hempcar: "Properties of materials for ",
     Prop_Hempcar_Lab: "Testing Laboratory : GALAXI (GISTDA’s Aerospace Laboratory of Excellence and Innovation),GISTDA.",
-    Prop_Hempcar_Method: "Test method :"
+    Prop_Hempcar_Method: "Test method :",
+    Research_Solar_Title: "Research meterials for ",
+    Solar: "Solar Satellite Panels",
+    Hempcar: "Hemp car",
+    Prop_solar_1: "Properties of materials for",
+    Graphene: "Graphene",
+    Graphene_Detail_1: "We have done the research and development in “Graphene Composites”.",
+    Graphene_Detail_2: "We are collaboration with Graphene Creation Co.,Ltd. to do some research",
+    Graphene_Detail_3: "projects to create some innovation products with based on graphene such as",
+    Graphene_Detail_4: "special functional textile."
+
 }
 const listdata_1 = ref({
     Spec_Detail_Hempcar_1: "Body Material: Structural car body made with Hemp Fiber Composite Material",
@@ -43,15 +62,14 @@ const listdata_1 = ref({
                 </div>
                 <div class="col-lg-6 row ">
                     <div class="col-1"></div>
-                    <div class="col-5 bg-image-research p-0"
-                        :style="{ backgroundImage: 'url(src/images/hempcar-art.png)' }">
+                    <div class="col-5 bg-image-research p-0" v-bind:style="{ backgroundImage: 'url(' + hempcar_art + ')' }">
                         <div class="container-fluid bg-image-research d-flex align-items-center justify-content-center m-0">
-                            <p class="services-text">{{ Data.Research_1 }}<span class="hemp-car-text">Hemp Car</span>’</p>
+                            <p class="services-text">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
+                            }}</span>’</p>
                         </div>
 
                     </div>
-                    <div class="col-5 bg-image-consult p-0"
-                        :style="{ backgroundImage: 'url(src/images/solar-sheet-1.jpg)' }">
+                    <div class="col-5 bg-image-consult p-0" v-bind:style="{ backgroundImage: 'url(' + solar_1 + ')' }">
                         <div class="container-fluid bg-image-consult d-flex align-items-center justify-content-center m-0">
                             <p class="services-text">{{ Data.Research_2 }}</p>
                         </div>
@@ -62,41 +80,49 @@ const listdata_1 = ref({
         <hr class="line-section-1" size="5px">
     </div>
 
-    <div class="bg-image-hempcar">
+    <div class="bg-image-hempcar" v-bind:style="{ backgroundImage: 'url(' + bg_hempcar + ')' }">
         <!-- {{!-- <img src="/images/hempcar-bg.png" alt="hempcar" style="width: 100%;"> --}} -->
     </div>
-    
+
     <div class="bg-green-color">
         <div class="container opacity-container ">
-            <!-- Spec hemp car -->
             <div class="row pt-5 mb-5">
                 <div class="col-1"></div>
                 <div class="col-5">
-                    <img src="/src/images/hempcar.jpg" alt="" class="hempcar-photo">
+                    <img :src="hempcar" alt="" class="hempcar-photo">
                 </div>
                 <div class="col-5">
-                    <p class="hempcar-head-text">Hemp Car</p>
+                    <p class="hempcar-head-text">{{ Data.Hempcar }}</p>
                     <p class="hempcar-detail-text">{{ Data.Research_Detail_1 }}</p>
                 </div>
             </div>
             <div class="m-spec">
-                <p class="Spec-main-text">{{ Data.Spec_Hempcar }} ‘<span class="hemp-car-text">Hemp Car</span>’</p>
+                <p class="Spec-main-text">{{ Data.Spec_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
+                </p>
                 <ul>
-                    <li class="Spec-detail-text"  v-for="(value, key) in listdata_1" :key="key">
+                    <li class="Spec-detail-text" v-for="(value, key) in listdata_1" :key="key">
                         {{ value }}
                     </li>
                 </ul>
-                <p>video hemp car</p>
+                test
+                <video width="30%" controls>
+                    <source :src=hempcar_video type="video/mp4">
+                </video>
+                <video width="320" height="240" controls>
+                    <source src="src/videos/hemp-car.mp4" type="video/mp4">
+                </video>
             </div>
-            <!-- Prop hemp car -->
             <div class="m-prop">
-                <p class="Prop-main-text">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">Hemp Car</span>’</p>
+                <p class="Prop-main-text">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
+                </p>
                 <p class="Prop-detail-text">{{ Data.Prop_Hempcar_Lab }}</p>
                 <p class="Prop-detail-text">{{ Data.Prop_Hempcar_Method }}</p>
                 <p class="Prop-Method-detail-text-1">1. ASTM D3039/D3039M-17 : </p>
-                <p class="Prop-Method-detail-text-2">Standard test method for tensile properties of polymer matrix composite materials.</p>
+                <p class="Prop-Method-detail-text-2">Standard test method for tensile properties of polymer matrix composite
+                    materials.</p>
                 <p class="Prop-Method-detail-text-1">2. ASTM D790-17 : </p>
-                <p class="Prop-Method-detail-text-2">Standard test method for flexural properties of unreinforced and reinforced plastics and electrical.</p>
+                <p class="Prop-Method-detail-text-2">Standard test method for flexural properties of unreinforced and
+                    reinforced plastics and electrical.</p>
                 <table>
                     <tr>
                         <th>Mechanical and physical properties</th>
@@ -161,10 +187,84 @@ const listdata_1 = ref({
                 </table>
             </div>
         </div>
-
         <br>
         <br>
         <hr class="line-section-2" size="5px">
+    </div>
+    <div class="bg-image-farm" v-bind:style="{ backgroundImage: 'url(' + hemp_farm + ')' }">
+        <div class="container-fluid bg-image-farm">
+            <div class="container d-flex justify-content-center pt-5">
+                <p class="head-text ">{{ Data.Research_Solar_Title }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
+                </p>
+            </div>
+            <div class="row d-flex justify-content-center m-solar-image">
+                <div class="col-2">
+                    <img :src="solar_2" alt="solar-1" class="solar-image-1">
+                    <img :src="solar_3" alt="solar-2" class="solar-image-2">
+                </div>
+                <div class="col-2 custom-width">
+                    <img :src="solar_1" alt="solar-3" class="solar-image-3">
+                </div>
+            </div>
+            <div class="container">
+                <div class="m-solar-main-text">
+                    <p class="Prop-main-text">{{ Data.Prop_solar_1 }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
+                    </p>
+                </div>
+                <div class="p-table-solar">
+                    <table>
+                        <tr>
+                            <th>Mechanical and physical properties</th>
+                            <th>Testing results</th>
+                            <th>Standard method</th>
+                        </tr>
+                        <tr>
+                            <td>Weight [g/m2]</td>
+                            <td>282.40</td>
+                            <td>ASTM D3776</td>
+                        </tr>
+                        <tr>
+                            <td>Tensile strength, Warp [Lbf]</td>
+                            <td>297.50</td>
+                            <td>ASTM D5034</td>
+                        </tr>
+                        <tr>
+                            <td>Tensile strength, Filling [Lbf]</td>
+                            <td>426.74</td>
+                            <td>ASTM D5034</td>
+                        </tr>
+                        <tr>
+                            <td>Tongue Tear strength, Warp [Lbf]</td>
+                            <td>48.82</td>
+                            <td>ASTM D2261</td>
+                        </tr>
+                        <tr>
+                            <td>Tongue Tear strength, Filling [Lbf]</td>
+                            <td>82.92</td>
+                            <td>ASTM D2261</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="continer-fluid bg-container">
+        <hr class="line-section-2" size="5px">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4">
+                    <img :src="graphene" alt="graphene" class="graphene-photo">
+
+                </div>
+                <div class="col-lg-8 graphene-text">
+                    <p class="head-text hemp-car-text">{{ Data.Graphene }}</p>
+                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_1 }}</p>
+                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_2 }}</p>
+                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_3 }}</p>
+                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_4 }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <style lang="scss">

@@ -2,6 +2,7 @@
 import Office_photo1 from '@/images/Emoffice4_0.png'; // Replace with the correct path to your image
 import Office_photo2 from '@/images/Emoffice5_0.png';
 import Office_photo3 from '@/images/Emoffice1_0.png';
+
 const Data = {
     MainTitle_1: "GET IN TOUCH",
     MainTitle_2: "Contact us",
@@ -14,7 +15,7 @@ const Data = {
 }
 </script>
 <template>
-    <div class=" bg-image" :style="{ backgroundImage: 'url(src/images/Emoffice1_0.png)' }">
+    <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')'}">
         <div class="container-fluid bg-image padding-head">
             <div class="container">
                 <div class="center margin-head">
