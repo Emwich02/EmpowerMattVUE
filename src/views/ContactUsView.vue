@@ -24,7 +24,7 @@ const Data = {
                     <p class="contact-text">{{ Data.MainTitle_2 }}</p>
                 </div>
                 <div class="row row-bg-color">
-                    <div class="col-md-6 font-default">
+                    <div class="col-lg-6">
                         <p class="contact-head">{{ Data.ContactTitle }}<span class="green-text">{{ Data.InfoTitle
                         }}</span> </p>
                         <p class="contact-detial margin-text-detail">{{ Data.IP_1 }}</p>
@@ -32,7 +32,7 @@ const Data = {
                         <p class="contact-detial margin-space">{{ Data.IP_3 }}</p>
                         <p class="contact-detial margin-text-bottom">{{ Data.IP_4 }}</p>
                     </div>
-                    <div class="col-md-6" style="padding: 0%;">
+                    <div class="col-lg-6" style="padding: 0%;">
                         <iframe class="map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.3657045720265!2d100.52967970780543!3d13.756806298129396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29eca66e4c955%3A0x7ad36ff34a2a9adb!2sClickNext%20Co.%2CLtd.!5e0!3m2!1sth!2sth!4v1696256797489!5m2!1sth!2sth"
                             width="100%" height="100%" allowfullscreen="" loading="lazy"
@@ -44,10 +44,10 @@ const Data = {
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-8 m-0 p-0 ">
+            <div class="col-8 m-0 p-0 ">
                 <img :src="Office_photo1" alt="Office_photo_1" class="image-office">
             </div>
-            <div class="col-lg-4 m-0 p-0 ">
+            <div class="col-4 m-0 p-0 ">
                 <img :src="Office_photo2" alt="Office_photo2" class="image-office">
                 <img :src="Office_photo3" alt="Office_photo3" class="image-office">
             </div>
