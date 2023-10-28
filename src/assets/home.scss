@@ -5,6 +5,15 @@ $color_4: #4F4F4F;
 $color_5: #FFFDF5;
 $color_6: #1C1D23;
 
+// body {
+//     overflow: hidden;
+// }
+.full-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .picture {
         background-color: rgba(255,255,255,0.5);

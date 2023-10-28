@@ -50,21 +50,19 @@ $background-color_2: white;
 .map {
 	border-radius: 0px 20px 20px 0px;
 }
-.font-default {
-	font-size: 16px;
-}
+
 .contact-head {
+	font-size: calc(26px + 0.42vw);
+	font-weight: 700;
 	margin-top: 10%;
 	margin-bottom: 5%;
 	margin-left: 10%;
-	font-size: 2.25em;
-	font-weight: 700;
 }
 .green-text {
 	color: $color_1;
 }
 .contact-detial {
-	font-size: 1.5em;
+	font-size: calc(14px + 0.39vw);
 }
 .padding-head {
 	padding-bottom: 8%;
@@ -88,4 +86,11 @@ $background-color_2: white;
 .column {
 	float: left;
 	width: 33.33%;
+}
+
+@media only screen and (max-width: 991px) {
+	.map {
+		border-radius: 0px 0px 20px 20px;
+		margin-bottom: 15%;
+	}
 }
