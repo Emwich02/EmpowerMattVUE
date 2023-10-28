@@ -1,4 +1,4 @@
-.picture {
+.bgpic {
     background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
     background-position: center;
@@ -27,15 +27,31 @@
     justify-content: center;
 }
 
-.section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+// .section {
+//     margin-top: 50px;
+//     height: 100vh;
+//     scroll-snap-type: y mandatory;
+//     overflow-y: scroll;
+//     overflow: hidden;
+// }
+
+// body {
+//     overflow: hidden;
+// }
+
+.img-fluid {
+    max-width: 50%;
+    height: auto;
 }
 
-body {
+.image-container {
+    max-width: 80%;
+    max-height: 65%;
     overflow: hidden;
 }
-.img-fluid {
-    max-width: 50%; /* ปรับความกว้างของรูปภาพ */
+
+.image {
+    width: auto;
     height: auto;
-  }
+    background-size: cover;
+}

@@ -1,12 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
-import bioplastic1 from '@/images/bioplastic1.png';
-import bioplastic2 from '@/images/bioplastic2.png';
-import bioplastic3 from '@/images/bioplastic3.png';
-import bioplastic4 from '@/images/bioplastic4.png';
-import CoffeeCup from '@/images/CoffeeCup.png';
-import ForkSpoon from '@/images/ForkSpoon.png';
-import Straw from '@/images/Straw.png';
+import Bioplastic from '@/images/Bioplastic.png';
+import Plasticproducts from '@/images/Plasticproducts.png';
 
 
 const Data = {
@@ -27,31 +22,26 @@ const Data = {
 <br><br><br><br><br><br><br><br>
 
     <div class="container">
-        <div class="box" >
-                <h4 style="color:white" >{{ Data.Products }}  </h4>
-        </div>
-    </div><br><br>
+        <div class="box mt-5 col-2" style="margin-left: 0px;">
+                    <h4 class="text-center" style="color:white">{{ Data.Products }} </h4>
+                </div>
+    <br><br>
 
     <div class="text-center"> 
-        <p class="blackbold-text">{{ Data.Our }} <span class="greenbold-text">{{ Data.product }} </span> </p> 
-        <h5 class="greenbold-text"> {{ Data.HempBioPlastics }} <span class="blackbold-text">{{ Data.CompoundMaterials }} </span> </h5> 
-    </div>
+        <h4 class="blackbold-text">{{ Data.Our }} <span class="greenbold-text">{{ Data.product }} </span> </h4> 
+        <h2 class="greenbold-text"> {{ Data.HempBioPlastics }} <span class="blackbold-text">{{ Data.CompoundMaterials }} </span> </h2> 
+        <br>
 
-    <div class="text-center ">
-       <img :src="bioplastic1" alt="" width="115" height="150">
-       <img :src="bioplastic2" alt="" width="115" height="150">
-       <img :src="bioplastic3" alt="" width="115" height="150">
-       <img :src="bioplastic4" alt="" width="115" height="150">
-    </div><br><br><br><br><br>
+  
+                <img :src="Bioplastic" class="img-fluid" style="max-width: 100%; height: auto;">
+    <br><br><br><br><br>
 
-    <div class="text-center"> 
-        <h5 class="greenbold-text"> {{ Data.HempBioPlastics }} <span class="blackbold-text">{{ Data.product }} </span> </h5> 
-    </div>
+        <h2 class="greenbold-text"> {{ Data.HempBioPlastics }} <span class="blackbold-text">{{ Data.product }} </span> </h2> 
+        <br><br>
+    <img :src="Plasticproducts" class="img-fluid" style="max-width: 100%; height: auto;">
+</div> 
+</div>
 
-
-        <img :src="Straw" alt="" width="150" height="150">
-        <img :src="CoffeeCup" alt="" width="150" height="150">
-        <img :src="ForkSpoon" alt="" width="150" height="150">
 
 </template>
 
