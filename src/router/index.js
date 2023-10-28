@@ -38,6 +38,12 @@ const router = createRouter({
       path: '/ProductBioPlastic',
       name: 'ProductBioPlastic',
       component: () => import('@/views/ProductBioPlasticView.vue')
+    },
+
+    {
+      path: '/ProductMain',
+      name: 'ProductMain',
+      component: () => import('@/views/ProductMainView.vue')
     }
   ]
 })
