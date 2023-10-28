@@ -42,7 +42,7 @@ const Data = {
                             <p class="name">{{ Data.Name_CTO }}</p>
                             <p class="career-position">CTO</p>
                             <p class="detail">{{ Data.Exp_CTO }}</p>
-                            <label class="contact">Contact</label>
+                            <p class="contact">Contact</p>
                         </div>
                     </div>
                 </div>
