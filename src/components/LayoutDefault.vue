@@ -1,47 +1,39 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { ref } from 'vue'
+import { onMounted, ref, computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
 import logo from '@/images/logo.jpg';
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
 
-//จำลอง api ส่งภาษามา
-const CONSTANT_WORD = {
-    Home: 'Home',
-    Products: 'Products',
-    NaturalHempFabric: 'Natural Hemp Fabric',
-    HempBioplasticsCompoundMaterials: 'Hemp bioplastics compound materials',
-    Services: 'Services',
-    Teams: 'Teams',
-    ContactUs: 'Contact Us',
-    Selectlang: 'ENG',
-    ENG: 'ENG',
-    THA: 'THA',
-    Desctiption: 'IF YOU HAVE ANY QUESTIONS',
-    Tel: 'TEL : (+66)81-988-5787',
-    Email: 'E-MAIL : empowermatt2021@gmail.com',
-    Tax: 'TAX ID : 0135564006410',
-    Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130'
-}
-// const CONSTANT_WORD = {
-//     Home: 'หน้าหลัก',
-//     Products: 'สินค้า',
-//     NaturalHempFabric: 'ผ้าใยกัญชงธรรมชาติ',
-//     HempBioplasticsCompoundMaterials: 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ',
-//     Services: 'บริการ',
-//     Teams: 'ทีม',
-//     ContactUs: 'ติดต่อเรา',
-//     Selectlang: 'ENG',
-//     ENG: 'ENG',
-//     THA: 'THA',
-//     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
-//     Tel: 'TEL : (+66)81-988-5787',
-//     Email: 'E-MAIL : empowermatt2021@gmail.com',
-//     Tax: 'TAX ID : 0135564006410',
-//     Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT,PATHUM THANI PROVINCE, 12130'
-// }
+const CONSTANT_WORD = reactive({
+  Home: computed(() => isLang.value == 'THA' ? 'หน้าหลัก' : 'Home'),
+  Products: computed(() => isLang.value == 'THA' ? 'สินค้า' : 'Products'),
+  NaturalHempFabric: computed(() => isLang.value == 'THA' ? 'ผ้าใยกัญชงธรรมชาติ' : 'Natural Hemp Fabric'),
+  HempBioplasticsCompoundMaterials: computed(() => isLang.value == 'THA' ? 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ' : 'Hemp bioplastics compound materials'),
+  Services: computed(() => isLang.value == 'THA' ? 'บริการ' : 'Services'),
+  Teams: computed(() => isLang.value == 'THA' ? 'ทีม' : 'Teams'),
+  ContactUs: computed(() => isLang.value == 'THA' ? 'ติดต่อเรา' : 'Contact Us'),
+  Selectlang: computed(() => isLang.value == 'THA' ? 'ไทย' : 'ENG'),
+  ENG: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'ENG'),
+  THA: computed(() => isLang.value == 'THA' ? 'ไทย' : 'THA'),
+  Desctiption: 'IF YOU HAVE ANY QUESTIONS',
+  Tel: 'TEL : (+66)81-988-5787',
+  Email: 'E-MAIL : empowermatt2021@gmail.com',
+  Tax: 'TAX ID : 0135564006410',
+  Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
+});
+
 const activeButton = ref(null);
 function setActiveButton(buttonId) {
     activeButton.value = buttonId;
 }
+function setLang(lang){
+    languageStores.switchLang(lang)
+}
+onMounted(() => {
+    setLang('ENG')
+})
 </script>
 <template>
     <header>
@@ -56,7 +48,7 @@ function setActiveButton(buttonId) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                         <li class="nav-item ">
                             <router-link to="/" class=" nav-link nav-nav ps-3 pe-3 no-transition" id="button1"
                                 @click="setActiveButton('button1')" :class="{ active: activeButton === 'button1' }"
@@ -72,7 +64,8 @@ function setActiveButton(buttonId) {
                                     <a>{{ CONSTANT_WORD.Products }}</a>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
-                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item">{{ CONSTANT_WORD.NaturalHempFabric
+                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item">{{
+                                        CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
                                     <li><router-link to="/ProductBioPlastic" class="dropdown-item">{{
                                         CONSTANT_WORD.HempBioplasticsCompoundMaterials
@@ -108,10 +101,12 @@ function setActiveButton(buttonId) {
                                     </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="ENG">{{
-                                        CONSTANT_WORD.ENG }}</router-link></li>
-                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="THA">{{
-                                        CONSTANT_WORD.THA }}</router-link></li>
+                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="ENG"
+                                            @click="setLang('ENG')">{{
+                                                CONSTANT_WORD.ENG }}</router-link></li>
+                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="THA"
+                                            @click="setLang('THA')">{{
+                                                CONSTANT_WORD.THA }}</router-link></li>
                                 </ul>
                             </div>
                         </li>
