@@ -3,6 +3,9 @@
 // import Graphene from '@/images/Graphene.png';
 import Solarpic from '@/images/Hempfabric/SolarSatellitePanels.png';
 import fabric from '@/images/Hempfabric/fabric.png';
+import aktableone from '@/images/Hempfabric/aktableone.png';
+import aktabletwo from '@/images/Hempfabric/aktabletwo.png';
+import aktablethree from '@/images/Hempfabric/aktablethree.png';
 
 
 const Data = {
@@ -33,19 +36,59 @@ GALAXI (GISTDA’s Aerospace Laboratory of
 Excellence and Innovation), GISTDA.`,
     DescriptionNaturalhempfabric: `Natural hemp fabric for bio-composite materials, 
 making possible lightweight structure.`,
+    Propertiesof: 'Properties of ',
+    AKNaturalFabric: `'AK Natural Fabric'`
+}
+</script>
+<script>
+export default {
+    data() {
+        return {
+            currentSection: null
+        };
+    },
+    mounted() {
+        window.addEventListener('wheel', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('wheel', this.handleScroll);
+    },
+    methods: {
+        handleScroll(event) {
+            const sections = this.$refs;
+
+            for (const sectionName in sections) {
+                const section = sections[sectionName];
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight / 2) {
+                    this.currentSection = sectionName;
+                }
+            }
+
+            if (event.deltaY > 0 && this.currentSection) {
+                const nextSection = sections[`section${parseInt(this.currentSection.charAt(this.currentSection.length - 1)) + 1}`];
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (event.deltaY < 0 && this.currentSection) {
+                const previousSection = sections[`section${parseInt(this.currentSection.charAt(this.currentSection.length - 1)) - 1}`];
+                if (previousSection) {
+                    previousSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    }
 }
 </script>
 <template>
-    <div>
-        <br><br><br>
-        <div class="picture" :style="{ backgroundImage: 'url(src/images/Hempfabric/hempcar.png)' }"
+    <div class="section" ref="section1">
+        <div class="picture full-height" :style="{ backgroundImage: 'url(src/images/Hempfabric/hempcar.png)' }"
             style="margin-top: 2rem; ">
-            <div class="container"><br><br>
+            <div class="container">
                 <div class="box mt-5 col-2" style="margin-left: 0px;">
                     <h4 class="text-center" style="color:white">{{ Data.Title }} </h4>
                 </div>
-                <br><br>
-                <div class="row ">
+                <div class="row pt-5">
                     <div class="col-md-1"></div>
                     <div class="col-md-11">
                         <h4>{{ Data.Our }} <span class="greencolor">{{ Data.Product }}</span></h4>
@@ -55,8 +98,8 @@ making possible lightweight structure.`,
                 </div>
             </div>
         </div>
-    </div><br><br>
-    <div class="container ps-5">
+    </div>
+    <div class="container ps-5 full-height section" ref="section2">
         <div class="row">
             <div class="col-md-6 d-flex align-items-center">
                 <div>
@@ -70,22 +113,75 @@ making possible lightweight structure.`,
             </div>
         </div>
     </div>
-    <br><br>
-    <div class="container ps-5 mt-5 align-self-center">
+    <div class="container ps-5 mt-5 align-self-center full-height section" ref="section3">
         <div class="row justify-content-center">
-            <div class="col-md-6 d-flex align-items-center">
+            <div class="col-md-5 d-flex align-items-center">
                 <div>
                     <h2><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
                     {{ Data.DescriptionNaturalhempfabric }}
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <img :src="fabric" class="img-fluid" style="max-width: 100%; height: auto;">
             </div>
+        </div>
+    </div>
+    <div class="container ps-5 full-height section" ref="section4">
+        <div class="row d-flex align-items-center">
+            <div>
+                <h4><span class="greencolor">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric }}</h4>
+            </div>
+            <div class="mt-5 item">
+                <img :src="aktableone" class="img-fluid">
+            </div>
+            <div class="mt-5">
+                <img :src="aktabletwo" class="img-fluid">
+            </div>
+            <div class="mt-5">
+                <img :src="aktablethree" class="img-fluid">
+            </div>
+            <!-- <div class="p-5 text-center">
+                <div class="image-container">
+                    <img :src="aktableone" class="img-fluid pb-5" style="max-width: 100%; height: auto;">
+                </div>
+
+                <div class="image-container">
+                    <img :src="aktabletwo" class="img-fluid pb-5" style="max-width: 100%; height: auto;">
+                </div>
+
+                <div class="image-container">
+                    <img :src="aktablethree" class="img-fluid pb-5" style="max-width: 100%; height: auto;">
+                </div>
+
+            </div> -->
         </div>
     </div>
 </template>
 <style lang="scss">
 // Import Main styles for this application
 @import '/src/assets/hempfabric.scss';
+</style>
+<style scoped>
+.section {
+    margin-top: 50px;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow: hidden;
+    /* เพิ่มการสครอลแอ็คชันให้เกิดขึ้น */
+}
+
+/* ปรับขนาดของ div ที่มีรูปภาพในนั้น */
+.image-container {
+  max-width: 800px; /* กำหนดความกว้างสูงสุดของ div ที่มีรูปภาพ */
+  max-height: 650px; /* กำหนดความสูงสูงสุดของ div ที่มีรูปภาพ */
+  overflow: hidden; /* คำสั่งตัดขอบของรูปที่ข้ามขนาด */
+}
+
+/* ปรับขนาดของรูปภาพที่อยู่ใน div */
+.image {
+  width: auto; /* กำหนดให้รูปภาพเต็มความกว้างของ div */
+  height: auto; /* ให้ความสูงของรูปเป็นอัตโนมัติ */
+  background-size: cover; /* ทำให้รูปภาพครอบเครื่องหรือประเภทการตัดรูปภาพ */
+}
 </style>

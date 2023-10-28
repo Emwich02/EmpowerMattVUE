@@ -7,7 +7,7 @@ import solar_3 from '@/images/solar-sheet-3.jpg';
 import hempcar from '@/images/hempcar.jpg';
 import hempcar_art from '@/images/hempcar-art.png';
 import graphene from '@/images/graphene_graphic_Aui_1.png';
-import bg_hempcar from '@/images/hempcar-bg.png';
+import bg_hempcar from '@/images/hempcar.png';
 import hempcar_video from '@/videos/hemp-car.mp4';
 const Data = {
     MainTitle: "Our services",
@@ -79,19 +79,21 @@ const listdata_1 = ref({
         </div>
         <hr class="line-section-1" size="5px">
     </div>
-
-    <div class="bg-image-hempcar" v-bind:style="{ backgroundImage: 'url(' + bg_hempcar + ')' }">
-        <!-- {{!-- <img src="/images/hempcar-bg.png" alt="hempcar" style="width: 100%;"> --}} -->
+    <div class="bg-green-color  d-flex align-items-center justify-content-center">
+        <p class="head-text-2 mt-3">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
+        }}</span>’</p>
     </div>
-
+    <div class="bg-image-hempcar">
+        <img :src="bg_hempcar" alt="" style="width: 100%;">
+    </div>
     <div class="bg-green-color">
         <div class="container opacity-container ">
             <div class="row pt-5 mb-5">
-                <div class="col-1"></div>
-                <div class="col-5">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
                     <img :src="hempcar" alt="" class="hempcar-photo">
                 </div>
-                <div class="col-5">
+                <div class="col-lg-5">
                     <p class="hempcar-head-text">{{ Data.Hempcar }}</p>
                     <p class="hempcar-detail-text">{{ Data.Research_Detail_1 }}</p>
                 </div>
@@ -123,68 +125,71 @@ const listdata_1 = ref({
                 <p class="Prop-Method-detail-text-1">2. ASTM D790-17 : </p>
                 <p class="Prop-Method-detail-text-2">Standard test method for flexural properties of unreinforced and
                     reinforced plastics and electrical.</p>
-                <table>
-                    <tr>
-                        <th>Mechanical and physical properties</th>
-                        <th>Testing results</th>
-                        <th>Standard method</th>
-                    </tr>
-                    <tr>
-                        <td>Tensile strength [MPa]</td>
-                        <td>34.445±1.194</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Ultimate tensile strain [usn]</td>
-                        <td>7875.167±793.89</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Tensile modulus (chord 1000-3000 usn) [GPa]</td>
-                        <td>4.883±0.115</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Flexural strength [MPa]</td>
-                        <td>43.221±3.359</td>
-                        <td>ASTM D790-17</td>
-                    </tr>
-                    <tr>
-                        <td>Flexural modulus (chord 50-100 N) [MPa]</td>
-                        <td>590.944±41.81</td>
-                        <td>ASTM D790-17</td>
-                    </tr>
-                    <tr>
-                        <td>Maximum Load [kN]</td>
-                        <td>2.85±0.202</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Tensile strength [MPa]</td>
-                        <td>34.445±1.194</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Ultimate tensile strain [usn]</td>
-                        <td>7875.167±793.89</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Tensile modulus (chord 1000-3000 usn) [GPa]</td>
-                        <td>4.883±0.115</td>
-                        <td>ASTM D3039/D3039M-17</td>
-                    </tr>
-                    <tr>
-                        <td>Flexural strength [MPa]</td>
-                        <td>43.221±3.359</td>
-                        <td>ASTM D790-17</td>
-                    </tr>
-                    <tr>
-                        <td>Flexural modulus (chord 50-100 N) [MPa]</td>
-                        <td>590.944±41.81</td>
-                        <td>ASTM D790-17</td>
-                    </tr>
-                </table>
+                <div class="table-responsive">
+                    <table>
+                        <tr>
+                            <th>Mechanical and physical properties</th>
+                            <th>Testing results</th>
+                            <th>Standard method</th>
+                        </tr>
+                        <tr>
+                            <td>Tensile strength [MPa]</td>
+                            <td>34.445±1.194</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Ultimate tensile strain [usn]</td>
+                            <td>7875.167±793.89</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Tensile modulus (chord 1000-3000 usn) [GPa]</td>
+                            <td>4.883±0.115</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Flexural strength [MPa]</td>
+                            <td>43.221±3.359</td>
+                            <td>ASTM D790-17</td>
+                        </tr>
+                        <tr>
+                            <td>Flexural modulus (chord 50-100 N) [MPa]</td>
+                            <td>590.944±41.81</td>
+                            <td>ASTM D790-17</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Load [kN]</td>
+                            <td>2.85±0.202</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Tensile strength [MPa]</td>
+                            <td>34.445±1.194</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Ultimate tensile strain [usn]</td>
+                            <td>7875.167±793.89</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Tensile modulus (chord 1000-3000 usn) [GPa]</td>
+                            <td>4.883±0.115</td>
+                            <td>ASTM D3039/D3039M-17</td>
+                        </tr>
+                        <tr>
+                            <td>Flexural strength [MPa]</td>
+                            <td>43.221±3.359</td>
+                            <td>ASTM D790-17</td>
+                        </tr>
+                        <tr>
+                            <td>Flexural modulus (chord 50-100 N) [MPa]</td>
+                            <td>590.944±41.81</td>
+                            <td>ASTM D790-17</td>
+                        </tr>
+                    </table>
+                </div>
+
             </div>
         </div>
         <br>
@@ -198,11 +203,11 @@ const listdata_1 = ref({
                 </p>
             </div>
             <div class="row d-flex justify-content-center m-solar-image">
-                <div class="col-2">
+                <div class="col-6 custom-width">
                     <img :src="solar_2" alt="solar-1" class="solar-image-1">
                     <img :src="solar_3" alt="solar-2" class="solar-image-2">
                 </div>
-                <div class="col-2 custom-width">
+                <div class="col-6 custom-width-2">
                     <img :src="solar_1" alt="solar-3" class="solar-image-3">
                 </div>
             </div>
@@ -252,9 +257,8 @@ const listdata_1 = ref({
         <hr class="line-section-2" size="5px">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-4">
+                <div class="col-lg-4 d-flex justify-content-center">
                     <img :src="graphene" alt="graphene" class="graphene-photo">
-
                 </div>
                 <div class="col-lg-8 graphene-text">
                     <p class="head-text hemp-car-text">{{ Data.Graphene }}</p>
