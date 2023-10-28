@@ -39,12 +39,18 @@ making possible lightweight structure.`,
     Propertiesof: 'Properties of ',
     AKNaturalFabric: `'AK Natural Fabric'`
 }
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 </script>
-<script>
+<!-- <script>
 export default {
     data() {
         return {
-            currentSection: null
+            current : null
         };
     },
     mounted() {
@@ -55,36 +61,36 @@ export default {
     },
     methods: {
         handleScroll(event) {
-            const sections = this.$refs;
+            const  s = this.$refs;
 
-            for (const sectionName in sections) {
-                const section = sections[sectionName];
-                const rect = section.getBoundingClientRect();
+            for (const  Name in  s) {
+                const   =  s[ Name];
+                const rect =  .getBoundingClientRect();
                 if (rect.top < window.innerHeight / 2) {
-                    this.currentSection = sectionName;
+                    this.current  =  Name;
                 }
             }
 
-            if (event.deltaY > 0 && this.currentSection) {
-                const nextSection = sections[`section${parseInt(this.currentSection.charAt(this.currentSection.length - 1)) + 1}`];
-                if (nextSection) {
-                    nextSection.scrollIntoView({ behavior: 'smooth' });
+            if (event.deltaY > 0 && this.current ) {
+                const next  =  s[` ${parseInt(this.current .charAt(this.current .length - 1)) + 1}`];
+                if (next ) {
+                    next .scrollIntoView({ behavior: 'smooth' });
                 }
-            } else if (event.deltaY < 0 && this.currentSection) {
-                const previousSection = sections[`section${parseInt(this.currentSection.charAt(this.currentSection.length - 1)) - 1}`];
-                if (previousSection) {
-                    previousSection.scrollIntoView({ behavior: 'smooth' });
+            } else if (event.deltaY < 0 && this.current ) {
+                const previous  =  s[` ${parseInt(this.current .charAt(this.current .length - 1)) - 1}`];
+                if (previous ) {
+                    previous .scrollIntoView({ behavior: 'smooth' });
                 }
             }
         }
     }
 }
-</script>
+</script> -->
 <template>
-    <div class="section" ref="section1">
-        <div class="picture full-height" :style="{ backgroundImage: 'url(src/images/Hempfabric/hempcar.png)' }"
-            style="margin-top: 2rem; ">
-            <div class="container">
+    <div class="bgpic full-height" :style="{ backgroundImage: 'url(src/images/Hempfabric/hempcar.png)' }"
+        style="margin-top: 2rem; ">
+        <div class="container">
+            <div class="row">
                 <div class="box mt-5 col-2" style="margin-left: 0px;">
                     <h4 class="text-center" style="color:white">{{ Data.Title }} </h4>
                 </div>
@@ -97,91 +103,72 @@ export default {
                     </div>
                 </div>
             </div>
+            <div class="text-center " >
+                <span style="cursor: pointer;  " @click="scrollToSection('first')">↓ ↓ ↓</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="first">
+        <div class="container ps-5 full-height  ">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <h4><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h4>
+                        <h2 class="greencolor">{{ Data.SolarSatellitePanels }}</h2>
+                        {{ Data.DescriptionSolarSatellitePanels }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img :src="Solarpic" class="img-fluid" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="text-center ">
+                    <span style="cursor: pointer;  " @click="scrollToSection('second')">↓ ↓ ↓</span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container ps-5 full-height section" ref="section2">
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-center">
+    <div id="second">
+        <div class="container ps-5  align-self-center full-height  ">
+            <div class="row justify-content-center">
+                <div class="col-md-5 d-flex align-items-center">
+                    <div>
+                        <h2><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
+                        {{ Data.DescriptionNaturalhempfabric }}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img :src="fabric" class="img-fluid" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="text-center ">
+                    <span style="cursor: pointer;  " @click="scrollToSection('third')">↓ ↓ ↓</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="third">
+        <div class="container ps-5 full-height  ">
+            <div class="row d-flex align-items-center">
                 <div>
-                    <h4><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h4>
-                    <h2 class="greencolor">{{ Data.SolarSatellitePanels }}</h2>
-                    {{ Data.DescriptionSolarSatellitePanels }}
+                    <h4><span class="greencolor">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric }}</h4>
+                </div>
+                <div class="text-center">
+                    <div class="mt-5 item">
+                        <img :src="aktableone" class="img-fluid">
+                    </div>
+                    <div class="mt-5">
+                        <img :src="aktabletwo" class="img-fluid">
+                    </div>
+                    <div class="mt-5">
+                        <img :src="aktablethree" class="img-fluid">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img :src="Solarpic" class="img-fluid" style="max-width: 100%; height: auto;">
-            </div>
-        </div>
-    </div>
-    <div class="container ps-5 mt-5 align-self-center full-height section" ref="section3">
-        <div class="row justify-content-center">
-            <div class="col-md-5 d-flex align-items-center">
-                <div>
-                    <h2><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
-                    {{ Data.DescriptionNaturalhempfabric }}
-                </div>
-            </div>
-            <div class="col-md-3">
-                <img :src="fabric" class="img-fluid" style="max-width: 100%; height: auto;">
-            </div>
-        </div>
-    </div>
-    <div class="container ps-5 full-height section" ref="section4">
-        <div class="row d-flex align-items-center">
-            <div>
-                <h4><span class="greencolor">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric }}</h4>
-            </div>
-            <div class="mt-5 item">
-                <img :src="aktableone" class="img-fluid">
-            </div>
-            <div class="mt-5">
-                <img :src="aktabletwo" class="img-fluid">
-            </div>
-            <div class="mt-5">
-                <img :src="aktablethree" class="img-fluid">
-            </div>
-            <!-- <div class="p-5 text-center">
-                <div class="image-container">
-                    <img :src="aktableone" class="img-fluid pb-5" style="max-width: 100%; height: auto;">
-                </div>
-
-                <div class="image-container">
-                    <img :src="aktabletwo" class="img-fluid pb-5" style="max-width: 100%; height: auto;">
-                </div>
-
-                <div class="image-container">
-                    <img :src="aktablethree" class="img-fluid pb-5" style="max-width: 100%; height: auto;">
-                </div>
-
-            </div> -->
         </div>
     </div>
 </template>
 <style lang="scss">
-// Import Main styles for this application
 @import '/src/assets/hempfabric.scss';
-</style>
-<style scoped>
-.section {
-    margin-top: 50px;
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    overflow: hidden;
-    /* เพิ่มการสครอลแอ็คชันให้เกิดขึ้น */
-}
-
-/* ปรับขนาดของ div ที่มีรูปภาพในนั้น */
-.image-container {
-  max-width: 800px; /* กำหนดความกว้างสูงสุดของ div ที่มีรูปภาพ */
-  max-height: 650px; /* กำหนดความสูงสูงสุดของ div ที่มีรูปภาพ */
-  overflow: hidden; /* คำสั่งตัดขอบของรูปที่ข้ามขนาด */
-}
-
-/* ปรับขนาดของรูปภาพที่อยู่ใน div */
-.image {
-  width: auto; /* กำหนดให้รูปภาพเต็มความกว้างของ div */
-  height: auto; /* ให้ความสูงของรูปเป็นอัตโนมัติ */
-  background-size: cover; /* ทำให้รูปภาพครอบเครื่องหรือประเภทการตัดรูปภาพ */
-}
 </style>
