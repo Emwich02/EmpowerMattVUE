@@ -8,7 +8,6 @@ import hempcar from '@/images/hempcar.jpg';
 import hempcar_art from '@/images/hempcar-art.png';
 import graphene from '@/images/graphene_graphic_Aui_1.png';
 import bg_hempcar from '@/images/hempcar.png';
-import hempcar_video from '@/videos/hemp-car.mp4';
 const Data = {
     MainTitle: "Our services",
     MainDetail_1: "Research & Consultant services",
@@ -106,13 +105,12 @@ const listdata_1 = ref({
                         {{ value }}
                     </li>
                 </ul>
-                test
-                <video width="30%" controls>
-                    <source :src=hempcar_video type="video/mp4">
-                </video>
-                <video width="320" height="240" controls>
-                    <source src="src/videos/hemp-car.mp4" type="video/mp4">
-                </video>
+                <div class="d-flex justify-content-center my-5">
+                    <iframe width="560" height="315" class="hempcar-video" src="https://www.youtube.com/embed/ORSSZ4_SciY?si=DmyACDWtKKPcfw7g"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                </div>
             </div>
             <div class="m-prop">
                 <p class="Prop-main-text">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
@@ -271,7 +269,5 @@ const listdata_1 = ref({
         </div>
     </div>
 </template>
-<style lang="scss">
-// Import Main styles for this application
-@import '/src/assets/services.scss';
-</style>
+<style lang="scss">// Import Main styles for this application
+@import '/src/assets/services.scss';</style>
