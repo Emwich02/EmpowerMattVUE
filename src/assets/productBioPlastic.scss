@@ -4,12 +4,13 @@ $color_3: white;
 $color_5: #FFFDF5;
 
 .box {
-    background: $color_2;
-    max-width: 170px;
-    height: 52px;
-    padding: 13px 35px;
-    border-width: 50px;
-    border-radius: 20px;
+	background: $color_2;
+	max-width: 100%;
+	height: 52px;
+	padding: 13px 25px;
+	border-width: 50px;
+	border-radius: 20px;
+	margin: 0 auto;
 }
 
 .text-center {
