@@ -24,7 +24,7 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .title-text{
-  font-size: 1.875vw;
+  font-size: calc(16px + 0.5vw) ;
   margin: 1vw;
   font-style: normal;
   font-weight: 700;
@@ -357,6 +357,12 @@ td {
 }
 
 @media only screen and (max-width: 970px) {
+  .bg-head{
+    width: 40%;
+
+    border-radius: 10px;
+  }
+
   .custom-width{
     width:50%;
   }

@@ -1,14 +1,28 @@
 <script setup>
+import { computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
 import CEO_photo from '@/images/IU3.jpg'; // Replace with the correct path to your image
 import CTO_photo from '@/images/IU1.jpg';
-const Data = {
-    MainTitle_1: "THE TEAM",
-    MainTitle_2: "MEET Our Team.",
-    Name_CEO: "dlwlrma",
-    Exp_CEO: "Experience in computer science",
-    Name_CTO: "Ee Ji Eun",
-    Exp_CTO: "Experience in computer engineering"
-}
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
+
+const Data = reactive({
+    MainTitle_1: computed(() => isLang.value == 'THA' ? 'ทีม' : 'THE TEAM'),
+    MainTitle_2: computed(() => isLang.value == 'THA' ? 'พบกับทีมของเรา' : 'MEET Our Team'),
+    Name_CEO: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'dlwlrma'),
+    Exp_CEO: computed(() => isLang.value == 'THA' ? 'วิทยาการคอมพิวเตอร์' : 'Experience in computer science'),
+    Name_CTO: computed(() => isLang.value == 'THA' ? 'อีจีอึน' : 'Ee Ji Eun'),
+    Exp_CTO: computed(() => isLang.value == 'THA' ? 'วิศวกรรมศาสตร์คอมพิวเตอร์' : 'Experience in computer engineering')
+});
+
+// const Data = {
+//     MainTitle_1: "THE TEAM",
+//     MainTitle_2: "MEET Our Team.",
+//     Name_CEO: "dlwlrma",
+//     Exp_CEO: "Experience in computer science",
+//     Name_CTO: "Ee Ji Eun",
+//     Exp_CTO: "Experience in computer engineering"
+// }
 </script>
 <template>
     <div class="container-fluid bg-color">

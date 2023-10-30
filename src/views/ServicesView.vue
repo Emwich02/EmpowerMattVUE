@@ -1,5 +1,9 @@
 <script setup>
+import { computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
 import { ref } from 'vue'
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
 import hemp_farm from '@/images/412798_0.jpg';
 import solar_1 from '@/images/solar-sheet-1.jpg';
 import solar_2 from '@/images/solar-sheet-2.jpg';
@@ -8,50 +12,51 @@ import hempcar from '@/images/hempcar.jpg';
 import hempcar_art from '@/images/hempcar-art.png';
 import graphene from '@/images/graphene_graphic_Aui_1.png';
 import bg_hempcar from '@/images/hempcar.png';
-const Data = {
-    MainTitle: "Our services",
-    MainDetail_1: "Research & Consultant services",
-    MainDetail_2: "Research and development in composite and green materials including nanotechnology.",
-    MainDetail_3: "Consultant for an innovation project in the field of composite and green materials including nanotechnology.",
-    Research_1: "Research meterials for ‘",
-    Research_2: "Research & Consultant service",
-    Research_Detail_1: "Empowermatt Co.,Ltd. and YATT Co., Ltd. are doing the development of electric automotive. The energy is an electrical battery and the body is produced by hemp fiber reinforced polymer as called ‘Hemp Car’. By the way, we will never stop to develop our products, and we will update our progressing project as soon as possible. It is coming soon, Thank you.",
-    Spec_Hempcar: "Specification of",
-    Prop_Hempcar: "Properties of materials for ",
-    Prop_Hempcar_Lab: "Testing Laboratory : GALAXI (GISTDA’s Aerospace Laboratory of Excellence and Innovation),GISTDA.",
-    Prop_Hempcar_Method: "Test method :",
-    Research_Solar_Title: "Research meterials for ",
-    Solar: "Solar Satellite Panels",
-    Hempcar: "Hemp car",
-    Prop_solar_1: "Properties of materials for",
-    Graphene: "Graphene",
-    Graphene_Detail_1: "We have done the research and development in “Graphene Composites”.",
-    Graphene_Detail_2: "We are collaboration with Graphene Creation Co.,Ltd. to do some research",
-    Graphene_Detail_3: "projects to create some innovation products with based on graphene such as",
-    Graphene_Detail_4: "special functional textile."
-
-}
+const Data = reactive({
+    MainTitle: computed(() => isLang.value == 'THA' ? 'บริการของเรา' : 'Our services'),
+    MainDetail_1: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'Research & Consultant services'),
+    MainDetail_2: computed(() => isLang.value == 'THA' ? '1111' : "Research and development in composite and green materials including nanotechnology."),
+    MainDetail_3: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Consultant for an innovation project in the field of composite and green materials including nanotechnology."),
+    Research_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Research meterials for ‘"),
+    Research_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Research & Consultant service"),
+    Research_Detail_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Empowermatt Co.,Ltd. and YATT Co., Ltd. are doing the development of electric automotive. The energy is an electrical battery and the body is produced by hemp fiber reinforced polymer as called ‘Hemp Car’. By the way, we will never stop to develop our products, and we will update our progressing project as soon as possible. It is coming soon, Thank you."),
+    Spec_Hempcar: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Specification of"),
+    Prop_Hempcar: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Properties of materials for "),
+    Prop_Hempcar_Lab: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Testing Laboratory : GALAXI (GISTDA’s Aerospace Laboratory of Excellence and Innovation),GISTDA."),
+    Prop_Hempcar_Method: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Test method :"),
+    Research_Solar_Title: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Research meterials for "),
+    Solar: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Solar Satellite Panels"),
+    Hempcar: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Hemp car"),
+    Prop_solar_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Properties of materials for"),
+    Graphene: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Graphene"),
+    Graphene_Detail_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"We have done the research and development in “Graphene Composites”."),
+    Graphene_Detail_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"We are collaboration with Graphene Creation Co.,Ltd. to do some research"),
+    Graphene_Detail_3: computed(() => isLang.value == 'THA' ? 'ไอยู' :"projects to create some innovation products with based on graphene such as"),
+    Graphene_Detail_4: computed(() => isLang.value == 'THA' ? 'ไอยู' :"special functional textile."),
+    Method_Detail_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Standard test method for tensile properties of polymer matrix composite materials."),
+    Method_Detail_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Standard test method for flexural properties of unreinforced and reinforced plastics and electrical.")
+});
 const listdata_1 = ref({
-    Spec_Detail_Hempcar_1: "Body Material: Structural car body made with Hemp Fiber Composite Material",
-    Spec_Detail_Hempcar_2: "Electrical System: Rechargeable electric motor with BLDC (Brushless DC) 1,000 W, 60 V",
-    Spec_Detail_Hempcar_3: "Controller: EM30s",
-    Spec_Detail_Hempcar_4: "Battery: Lead acid, 72V, 20 Ah, with a rechargeable box (2.5 Ah)",
-    Spec_Detail_Hempcar_5: "Differential Gear: Hi-Lo/Wheel & Tire: Upside-down/4-link",
-    Spec_Detail_Hempcar_6: "Brakes: Front and Rear Disc",
-    Spec_Detail_Hempcar_7: "Lighting: LED Headlight, Taillight",
-    Spec_Detail_Hempcar_8: "Display: 5-inch screen",
-    Spec_Detail_Hempcar_9: "Security: Anti-theft Remote (No GPS)",
-    Spec_Detail_Hempcar_10: "Weight: 150 kg",
-    Spec_Detail_Hempcar_11: "Dimensions: 105 cm width x 210 cm length x 160 cm height",
-    Spec_Detail_Hempcar_12: "Color Options: Light blue, white, black, and natural hemp fiber",
-    Spec_Detail_Hempcar_13: "Decorative Art: Customizable for customers with an additional charge",
+    Spec_Detail_Hempcar_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Body Material: Structural car body made with Hemp Fiber Composite Material"),
+    Spec_Detail_Hempcar_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Electrical System: Rechargeable electric motor with BLDC (Brushless DC) 1,000 W, 60 V"),
+    Spec_Detail_Hempcar_3: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Controller: EM30s"),
+    Spec_Detail_Hempcar_4: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Battery: Lead acid, 72V, 20 Ah, with a rechargeable box (2.5 Ah)"),
+    Spec_Detail_Hempcar_5: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Differential Gear: Hi-Lo/Wheel & Tire: Upside-down/4-link"),
+    Spec_Detail_Hempcar_6: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Brakes: Front and Rear Disc"),
+    Spec_Detail_Hempcar_7: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Lighting: LED Headlight, Taillight"),
+    Spec_Detail_Hempcar_8: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Display: 5-inch screen"),
+    Spec_Detail_Hempcar_9: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Security: Anti-theft Remote (No GPS)"),
+    Spec_Detail_Hempcar_10: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Weight: 150 kg"),
+    Spec_Detail_Hempcar_11: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Dimensions: 105 cm width x 210 cm length x 160 cm height"),
+    Spec_Detail_Hempcar_12: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Color Options: Light blue, white, black, and natural hemp fiber"),
+    Spec_Detail_Hempcar_13: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Decorative Art: Customizable for customers with an additional charge"),
 })
 </script>
 <template>
     <div class="continer-fluid bg-container">
         <div class="container mb-5 bg-container" style="padding-top: 10rem;">
             <div class="col-3 bg-head d-flex align-items-center justify-content-center">
-                <p class="title-text">{{ Data.MainTitle }}</p>
+                <p class="title-text service-text">{{ Data.MainTitle }}</p>
             </div>
             <div class="row">
                 <div class="col-lg-6 text-head-box">
@@ -118,11 +123,9 @@ const listdata_1 = ref({
                 <p class="Prop-detail-text">{{ Data.Prop_Hempcar_Lab }}</p>
                 <p class="Prop-detail-text">{{ Data.Prop_Hempcar_Method }}</p>
                 <p class="Prop-Method-detail-text-1">1. ASTM D3039/D3039M-17 : </p>
-                <p class="Prop-Method-detail-text-2">Standard test method for tensile properties of polymer matrix composite
-                    materials.</p>
+                <p class="Prop-Method-detail-text-2">{{ Data.Method_Detail_1 }}</p>
                 <p class="Prop-Method-detail-text-1">2. ASTM D790-17 : </p>
-                <p class="Prop-Method-detail-text-2">Standard test method for flexural properties of unreinforced and
-                    reinforced plastics and electrical.</p>
+                <p class="Prop-Method-detail-text-2">{{ Data.Method_Detail_2 }}</p>
                 <div class="table-responsive">
                     <table>
                         <tr>

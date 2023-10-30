@@ -1,18 +1,22 @@
 <script setup>
+import { computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
 import Office_photo1 from '@/images/Emoffice4_0.png'; // Replace with the correct path to your image
 import Office_photo2 from '@/images/Emoffice5_0.png';
 import Office_photo3 from '@/images/Emoffice1_0.png';
 
-const Data = {
-    MainTitle_1: "GET IN TOUCH",
-    MainTitle_2: "Contact us",
-    ContactTitle: "Contact ",
-    InfoTitle: "Information",
-    IP_1: "Tel : (+66)84 914 4787, (+66)81-988-5787",
-    IP_2: "Email : empowermatt2021@gmail.com",
-    IP_3: "Tax ID : 0135564006410",
-    IP_4: "Empowermatt Company Limited (Head Office) 26/17 Moo 5, Khu Khot Subdistrict, Lam Luk Ka District, Pathum Thani Province, 12130, Thailand."
-}
+const Data = reactive({
+    MainTitle_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"GET IN TOUCH"),
+    MainTitle_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Contact us"),
+    ContactTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Contact "),
+    InfoTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Information"),
+    IP_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Tel : (+66)84 914 4787, (+66)81-988-5787"),
+    IP_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Email : empowermatt2021@gmail.com"),
+    IP_3: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Tax ID : 0135564006410"),
+    IP_4: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Empowermatt Company Limited (Head Office) 26/17 Moo 5, Khu Khot Subdistrict, Lam Luk Ka District, Pathum Thani Province, 12130, Thailand.")
+});
 </script>
 <template>
     <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')'}">
