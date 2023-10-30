@@ -1,0 +1,28 @@
+$color_1: black;
+$color_2: #538E6E;
+$color_3: white;
+$color_4: #4F4F4F;
+$color_5: #FFFDF5;
+$color_6: #1C1D23;
+
+
+.picture {
+        background-color: rgba(255, 255, 255, 0.8);
+        background-size: cover;
+        background-position: center;
+        height: 790px;
+        max-width: 100%;
+        display: grid;
+        align-content: center;
+}
+
+.blackbold-text {
+	color: $color_1;
+	font-weight: bolder;
+    
+}
+
+.greenbold-text {
+	color: $color_2;
+	font-weight: bolder;
+}

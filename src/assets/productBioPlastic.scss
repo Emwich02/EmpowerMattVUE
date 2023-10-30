@@ -2,6 +2,8 @@ $color_1: black;
 $color_2: #538E6E;
 $color_3: white;
 $color_5: #FFFDF5;
+$color_6: #8BC9A7;
+
 
 .box {
 	background: $color_2;
@@ -31,4 +33,32 @@ $color_5: #FFFDF5;
 .whitebold-text {
     color: $color_3;
     font-weight: bold;
+}
+
+
+hr.style1 {
+	opacity: 100%;
+	height: 4px;
+	width: 85%;
+	margin: auto;
+	border-radius: 3.125rem;
+	border: 0;
+	size: 50px;
+	background-color: $color_6;
+}
+
+.pull-left {
+    float:left;
+}
+
+.pull-right {
+    float:right;
+}
+
+.text-center {
+    text-align:center;
+}
+
+.background-cream{
+    background-color: $color_5;
 }
