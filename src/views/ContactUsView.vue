@@ -27,8 +27,8 @@ function scrollToSection(sectionId) {
 </script>
 <template>
     <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')' }">
-        <div class="container-fluid bg-image padding-head ">
-            <div class="container" data-aos="fade-up">
+        <div class="container-fluid bg-image padding-head">
+            <div class="container">
                 <div class="center margin-head">
                     <p class="m-0 Touch-text">{{ Data.MainTitle_1 }}</p>
                     <hr class="line-contact-head" size="5px" />
@@ -44,8 +44,8 @@ function scrollToSection(sectionId) {
                         <p class="contact-detial margin-text-bottom">{{ Data.IP_4 }}</p>
                     </div>
                     <div class="col-lg-6" style="padding: 0%;">
-                        <iframe class="map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.3657045720265!2d100.52967970780543!3d13.756806298129396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29eca66e4c955%3A0x7ad36ff34a2a9adb!2sClickNext%20Co.%2CLtd.!5e0!3m2!1sth!2sth!4v1696256797489!5m2!1sth!2sth"
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15500.671625122215!2d100.52852859022104!3d13.768745988822806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29eb0f28f5e81%3A0xd4594d75ebaee10d!2z4Lit4LiZ4Li44Liq4Liy4Lin4Lij4Li14Lii4LmM4LiK4Lix4Lii4Liq4Lih4Lij4Lig4Li54Lih4Li0!5e0!3m2!1sth!2sth!4v1698504282345!5m2!1sth!2sth"
                             width="100%" height="100%" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -68,7 +68,5 @@ function scrollToSection(sectionId) {
         </div>
     </div>
 </template>
-<style lang="scss">
-// Import Main styles for this application
-@import '/src/assets/contactUs.scss';
-</style>
+<style lang="scss">// Import Main styles for this application
+@import '/src/assets/contactUs.scss';</style>

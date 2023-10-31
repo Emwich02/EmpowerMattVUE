@@ -5,34 +5,38 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
 import { useLanguage } from '/src/stores/useLanguage.js'
 import logo from '@/images/logo.jpg';
+
 const languageStores = useLanguage()
 const isLang = computed(() => languageStores.activeLang)
-
 const CONSTANT_WORD = reactive({
-  Home: computed(() => isLang.value == 'THA' ? 'หน้าหลัก' : 'Home'),
-  Products: computed(() => isLang.value == 'THA' ? 'สินค้า' : 'Products'),
-  NaturalHempFabric: computed(() => isLang.value == 'THA' ? 'ผ้าใยกัญชงธรรมชาติ' : 'Natural Hemp Fabric'),
-  HempBioplasticsCompoundMaterials: computed(() => isLang.value == 'THA' ? 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ' : 'Hemp bioplastics compound materials'),
-  Services: computed(() => isLang.value == 'THA' ? 'บริการ' : 'Services'),
-  Teams: computed(() => isLang.value == 'THA' ? 'ทีม' : 'Teams'),
-  ContactUs: computed(() => isLang.value == 'THA' ? 'ติดต่อเรา' : 'Contact Us'),
-  Selectlang: computed(() => isLang.value == 'THA' ? 'ไทย' : 'ENG'),
-  ENG: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'ENG'),
-  THA: computed(() => isLang.value == 'THA' ? 'ไทย' : 'THA'),
-  Desctiption: 'IF YOU HAVE ANY QUESTIONS',
-  Tel: 'TEL : (+66)81-988-5787',
-  Email: 'E-MAIL : empowermatt2021@gmail.com',
-  Tax: 'TAX ID : 0135564006410',
-  Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
+    Home: computed(() => isLang.value == 'THA' ? 'หน้าหลัก' : 'Home'),
+    Products: computed(() => isLang.value == 'THA' ? 'สินค้า' : 'Products'),
+    NaturalHempFabric: computed(() => isLang.value == 'THA' ? 'ผ้าใยกัญชงธรรมชาติ' : 'Natural Hemp Fabric'),
+    HempBioplasticsCompoundMaterials: computed(() => isLang.value == 'THA' ? 'ป่านพลาสติกชีวภาพสารประกอบวัสดุ' : 'Hemp bioplastics compound materials'),
+    Services: computed(() => isLang.value == 'THA' ? 'บริการ' : 'Services'),
+    Teams: computed(() => isLang.value == 'THA' ? 'ทีม' : 'Teams'),
+    ContactUs: computed(() => isLang.value == 'THA' ? 'ติดต่อเรา' : 'Contact Us'),
+    Selectlang: computed(() => isLang.value == 'THA' ? 'ไทย' : 'ENG'),
+    ENG: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'ENG'),
+    THA: computed(() => isLang.value == 'THA' ? 'ไทย' : 'THA'),
+    Desctiption: 'IF YOU HAVE ANY QUESTIONS',
+    Tel: 'TEL : (+66)81-988-5787',
+    Email: 'E-MAIL : empowermatt2021@gmail.com',
+    Tax: 'TAX ID : 0135564006410',
+    Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
 });
 
-const activeButton = ref(null);
+const activeButton = ref('button1');
 function setActiveButton(buttonId) {
     activeButton.value = buttonId;
 }
-function setLang(lang){
+function setLang(lang) {
     languageStores.switchLang(lang)
 }
+function changePath(path) {
+    console.log(this.$router);
+        this.$router.push(path);
+    }
 onMounted(() => {
     setLang('ENG')
     AOS.init({
@@ -43,6 +47,7 @@ onMounted(() => {
     });
 })
 </script>
+
 <template>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
@@ -58,15 +63,15 @@ onMounted(() => {
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                         <li class="nav-item ">
-                            <router-link to="/" class=" nav-link nav-nav ps-3 pe-3 no-transition" id="button1"
-                                @click="setActiveButton('button1')" :class="{ active: activeButton === 'button1' }"
-                                style="color: black;">
+                            <router-link to="/" class="nav-link nav-nav ps-3 pe-3 no-transition" id="button1"
+                                :class="{ active: $route.path === '/' }" style="color: black;">
                                 {{ CONSTANT_WORD.Home }}</router-link>
                         </li>
                         <li class="nav-item ">
                             <div class="dropdown nav-link nav-nav text-center no-transition"
-                                @click="setActiveButton('dropdown1')" :class="{ active: activeButton === 'dropdown1' }"
-                                id="dropdown1" style="margin-right: 0px; margin-left: 0px;">
+                                :class="{ active: $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' && activeButton == 'dropdown1' }"
+                                id="dropdown1" style="margin-right: 0px; margin-left: 0px;"
+                                @click="changePath('Naturalhempfabric')">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3 shadow-none" type="button"
                                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <a>{{ CONSTANT_WORD.Products }}</a>
@@ -88,14 +93,13 @@ onMounted(() => {
                                     CONSTANT_WORD.Services }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/Team" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
-                                id="button3" @click="setActiveButton('button3')"
-                                :class="{ active: activeButton === 'button3' }">{{ CONSTANT_WORD.Teams }}</router-link>
+                            <router-link to="/team" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                                id="button3" :class="{ active: $route.path === '/team' }">{{
+                                    CONSTANT_WORD.Teams }}</router-link>
                         </li>
                         <li class="nav-item">
                             <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3 no-transition"
-                                style="color: black;" id="button4" @click="setActiveButton('button4')"
-                                :class="{ active: activeButton === 'button4' }">{{
+                                style="color: black;" id="button4" :class="{ active: $route.path === '/ContactUs' }">{{
                                     CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
                         <li class="nav-item">
@@ -109,10 +113,10 @@ onMounted(() => {
                                     </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="ENG"
+                                    <li><router-link to="#" class="dropdown-item"  data-value="ENG"
                                             @click="setLang('ENG')">{{
                                                 CONSTANT_WORD.ENG }}</router-link></li>
-                                    <li><router-link to="#" class="dropdown-item" href="#" data-value="THA"
+                                    <li><router-link to="#" class="dropdown-item"  data-value="THA"
                                             @click="setLang('THA')">{{
                                                 CONSTANT_WORD.THA }}</router-link></li>
                                 </ul>
