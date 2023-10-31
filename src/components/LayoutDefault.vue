@@ -1,6 +1,8 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import { onMounted, ref, computed, reactive } from 'vue'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS CSS
 import { useLanguage } from '/src/stores/useLanguage.js'
 import logo from '@/images/logo.jpg';
 const languageStores = useLanguage()
@@ -33,6 +35,12 @@ function setLang(lang){
 }
 onMounted(() => {
     setLang('ENG')
+    AOS.init({
+        duration: 800, // Animation duration in milliseconds
+        offset: 120, // Offset (in pixels) from the top of the element when the animation starts
+        easing: 'ease', // Easing function for animation
+        once: true, // Whether to only trigger the animation once
+    });
 })
 </script>
 <template>
@@ -74,13 +82,13 @@ onMounted(() => {
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" id="button2"
+                            <router-link to="/Services" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" id="button2"
                                 @click="setActiveButton('button2')" :class="{ active: activeButton === 'button2' }"
                                 href="#">{{
-                                    CONSTANT_WORD.Services }}</a>
+                                    CONSTANT_WORD.Services }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/team" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
+                            <router-link to="/Team" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;"
                                 id="button3" @click="setActiveButton('button3')"
                                 :class="{ active: activeButton === 'button3' }">{{ CONSTANT_WORD.Teams }}</router-link>
                         </li>
