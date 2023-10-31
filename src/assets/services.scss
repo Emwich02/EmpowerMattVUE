@@ -4,6 +4,7 @@ $background-color_1: var(--cream-bg-color);
 $background-color_2: var(--green-primary-color);
 $background-color_3: var(--green-line-color);
 $background-color_4: var(--green-bg-color);
+$background-color_5: var(--green-linear-gradient-color);
 $background-table-color: var(--gray-bg-table-color);
 
 :root {
@@ -12,6 +13,7 @@ $background-table-color: var(--gray-bg-table-color);
   --cream-bg-color: #fffdf5;
   --green-bg-color: rgba(83, 142, 110, 0.4);
   --gray-bg-table-color: #dde7da;
+  --green-linear-gradient-color: linear-gradient(180deg, #FFFDF5 0%, #BAD1BF 100%)
 }
 
 .bg-container {
@@ -21,6 +23,10 @@ $background-table-color: var(--gray-bg-table-color);
 .bg-head {
   background-color: $background-color_2;
   border-radius: 20px;
+}
+
+.bg-cream-green-color{
+  background: $background-color_5;
 }
 
 .title-text{
@@ -75,9 +81,14 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .bg-image-hempcar {
-  background-color: white;
   background-size: cover;
   background-position: center;
+  width: 100%;
+}
+
+.hempcar-box{
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .bg-green-color {
@@ -321,6 +332,29 @@ td {
 
 .hempcar-video{
   border-radius: 20px;
+}
+
+.full-height{
+	height: 100vh;
+}
+
+.pt-13{
+  padding-top: 13rem;
+}
+
+.pt-8{
+  padding-top: 8rem;
+}
+
+
+.arrow{
+	width: 24px;
+	height: 24px;
+	transform: rotate(45deg);
+	border-left: none;
+	border-top: none;
+	border-right: 2px #000000 solid;
+	border-bottom: 2px #000000 solid;
 }
 
 @media only screen and (max-width: 766px) {

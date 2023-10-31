@@ -8,26 +8,33 @@ import Office_photo2 from '@/images/Emoffice5_0.png';
 import Office_photo3 from '@/images/Emoffice1_0.png';
 
 const Data = reactive({
-    MainTitle_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"GET IN TOUCH"),
-    MainTitle_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Contact us"),
-    ContactTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Contact "),
-    InfoTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Information"),
-    IP_1: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Tel : (+66)84 914 4787, (+66)81-988-5787"),
-    IP_2: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Email : empowermatt2021@gmail.com"),
-    IP_3: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Tax ID : 0135564006410"),
-    IP_4: computed(() => isLang.value == 'THA' ? 'ไอยู' :"Empowermatt Company Limited (Head Office) 26/17 Moo 5, Khu Khot Subdistrict, Lam Luk Ka District, Pathum Thani Province, 12130, Thailand.")
+    MainTitle_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : "GET IN TOUCH"),
+    MainTitle_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Contact us"),
+    ContactTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Contact "),
+    InfoTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Information"),
+    IP_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Tel : (+66)84 914 4787, (+66)81-988-5787"),
+    IP_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Email : empowermatt2021@gmail.com"),
+    IP_3: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Tax ID : 0135564006410"),
+    IP_4: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Empowermatt Company Limited (Head Office) 26/17 Moo 5, Khu Khot Subdistrict, Lam Luk Ka District, Pathum Thani Province, 12130, Thailand.")
 });
+
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 </script>
 <template>
-    <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')'}">
-        <div class="container-fluid bg-image padding-head">
-            <div class="container">
+    <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')' }">
+        <div class="container-fluid bg-image padding-head ">
+            <div class="container" data-aos="fade-up">
                 <div class="center margin-head">
                     <p class="m-0 Touch-text">{{ Data.MainTitle_1 }}</p>
                     <hr class="line-contact-head" size="5px" />
                     <p class="contact-text">{{ Data.MainTitle_2 }}</p>
                 </div>
-                <div class="row row-bg-color">
+                <div class="row row-bg-color ">
                     <div class="col-lg-6">
                         <p class="contact-head">{{ Data.ContactTitle }}<span class="green-text">{{ Data.InfoTitle
                         }}</span> </p>
@@ -43,10 +50,13 @@ const Data = reactive({
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="first" data-aos="fade-up">
         <div class="row">
             <div class="col-8 m-0 p-0 ">
                 <img :src="Office_photo1" alt="Office_photo_1" class="image-office">

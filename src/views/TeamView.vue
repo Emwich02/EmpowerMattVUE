@@ -14,21 +14,12 @@ const Data = reactive({
     Name_CTO: computed(() => isLang.value == 'THA' ? 'อีจีอึน' : 'Ee Ji Eun'),
     Exp_CTO: computed(() => isLang.value == 'THA' ? 'วิศวกรรมศาสตร์คอมพิวเตอร์' : 'Experience in computer engineering')
 });
-
-// const Data = {
-//     MainTitle_1: "THE TEAM",
-//     MainTitle_2: "MEET Our Team.",
-//     Name_CEO: "dlwlrma",
-//     Exp_CEO: "Experience in computer science",
-//     Name_CTO: "Ee Ji Eun",
-//     Exp_CTO: "Experience in computer engineering"
-// }
 </script>
 <template>
-    <div class="container-fluid bg-color">
+    <div class="container-fluid bg-color" data-aos="fade-up">
         <div class="container">
             <div class="container center mb-5">
-                <p class="margin-0 team-text">{{ Data.MainTitle_1 }}</p>
+                <p class="margin-0 team-text animation-begin">{{ Data.MainTitle_1 }}</p>
                 <hr class="line-team-head" size="5px" />
                 <p class="margin-0 meet-text">{{ Data.MainTitle_2 }}</p>
             </div>

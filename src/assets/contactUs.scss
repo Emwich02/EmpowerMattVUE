@@ -10,6 +10,18 @@ $background-color_2: white;
 	border-radius: 20px;
 }
 
+
+
+.arrow{
+	width: 24px;
+	height: 24px;
+	transform: rotate(45deg);
+	border-left: none;
+	border-top: none;
+	border-right: 2px #000000 solid;
+	border-bottom: 2px #000000 solid;
+}
+
 .center {
 	text-align: center;
 }
@@ -65,7 +77,7 @@ $background-color_2: white;
 	font-size: calc(14px + 0.39vw);
 }
 .padding-head {
-	padding-bottom: 8%;
+	padding-bottom: 4.5%;
 }
 .margin-space {
 	margin-left: 10%;
