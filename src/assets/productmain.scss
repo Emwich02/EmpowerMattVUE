@@ -4,6 +4,7 @@ $color_3: white;
 $color_4: #4F4F4F;
 $color_5: #FFFDF5;
 $color_6: #1C1D23;
+$color_7: #8BC9A7;
 
 
 .picture {
@@ -25,4 +26,31 @@ $color_6: #1C1D23;
 .greenbold-text {
 	color: $color_2;
 	font-weight: bolder;
+}
+
+.black-text {
+	color: $color_1;
+    
+}
+
+.green-text {
+	color: $color_2;
+}
+
+.right {
+        text-align: right;
+    }
+
+.full-height {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-details {
+        background-color: $color_7;
+        padding: 6px 40px; 
+        float:right;
+        border-radius: 30px;
 }
