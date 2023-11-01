@@ -59,9 +59,9 @@ function scrollToSection(sectionId) {
 }
 </script>
 <template>
-
+    <div class="bg-container"><br><br><br><br><br><br><br></div>
     <div class="bg-container full-height">
-        <div class="container-fluid mb-5 pt-13" data-aos="fade-up">
+        <div class="container-fluid mb-5" data-aos="fade-up">
             <div class="container">
                 <div class="col-3 bg-head d-flex align-items-center justify-content-center">
                     <p class="title-text service-text">{{ Data.MainTitle }}</p>
@@ -98,10 +98,10 @@ function scrollToSection(sectionId) {
             </div>
         </div>
     </div>
-    <div class="bg-container" >
+    <div class="bg-container">
         <hr class="line-section-2 mt-10" size="5px" data-aos="fade-up">
     </div>
-    <div class="container-fluid full-height bg-container bg-cream-green-color " id="first" >
+    <div class="container-fluid full-height-2 bg-container bg-cream-green-color " id="first">
         <div class="pt-8">
             <div class="d-flex align-items-center justify-content-center" data-aos="fade-up">
                 <p class="head-text-2">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
@@ -240,7 +240,7 @@ function scrollToSection(sectionId) {
                     <img :src="solar_1" alt="solar-3" class="solar-image-3">
                 </div>
             </div>
-            <div class="container" data-aos="fade-up" >
+            <div class="container" data-aos="fade-up">
                 <div class="m-solar-main-text">
                     <p class="Prop-main-text">{{ Data.Prop_solar_1 }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
                     </p>
@@ -283,17 +283,18 @@ function scrollToSection(sectionId) {
                     <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('fourt')"></div>
                 </div>
             </div>
-            
+
         </div>
-        <div class="bg-image-farm" >
+        <div class="bg-image-farm">
             <hr class="line-section-2" size="5px" data-aos="fade-up">
         </div>
     </div>
-    <div class=" bg-container full-height" id="fourt" >
-        <div class="container pt-13">
-            
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-4 d-flex justify-content-center" data-aos="fade-up">
+    <div class=" bg-container full-height " id="fourt">
+        <div class="py-5 mb-5 ">
+        </div>
+        <div class="container d-flex justify-content-center">
+            <div class="row ">
+                <div class="col-lg-4 " data-aos="fade-up">
                     <img :src="graphene" alt="graphene" class="graphene-photo">
                 </div>
                 <div class="col-lg-8 graphene-text" data-aos="fade-up">

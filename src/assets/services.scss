@@ -13,7 +13,7 @@ $background-table-color: var(--gray-bg-table-color);
   --cream-bg-color: #fffdf5;
   --green-bg-color: rgba(83, 142, 110, 0.4);
   --gray-bg-table-color: #dde7da;
-  --green-linear-gradient-color: linear-gradient(180deg, #FFFDF5 0%, #BAD1BF 100%)
+  --green-linear-gradient-color: linear-gradient(180deg, #FFFDF5 0%, rgba(83, 142, 110, 0.4) 100%)
 }
 
 .bg-container {
@@ -338,6 +338,11 @@ td {
 	height: 100vh;
 }
 
+
+.full-height-2{
+  height: 100vh;
+}
+
 .pt-13{
   padding-top: 13rem;
 }
@@ -358,6 +363,16 @@ td {
 }
 
 @media only screen and (max-width: 766px) {
+
+
+  .full-height-2{
+    height: 50vh;
+  }
+
+  .hempcar-box{
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .pt-13{
     padding-top: 18rem;
