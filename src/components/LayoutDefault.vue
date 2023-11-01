@@ -88,7 +88,7 @@ onMounted(() => {
                         </li>
                         <li class="nav-item">
                             <router-link to="/Services" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" id="button2"
-                                @click="setActiveButton('button2')" :class="{ active: activeButton === 'button2' }"
+                            :class="{ active: $route.path === '/Services' }"
                                 href="#">{{
                                     CONSTANT_WORD.Services }}</router-link>
                         </li>
