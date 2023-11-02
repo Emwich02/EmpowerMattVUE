@@ -1,0 +1,30 @@
+:root{
+    --green-primary-color: #538E6E;
+
+}
+.dropdown:hover .dropdown-menu {
+    // animation-delay: 1000ms;
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+
+.dropdown:hover .custom-link{
+    border-radius: 20px 20px 0px 0px;
+}
+
+a .custom-link:hover{
+    background-color: var(--green-primary-color);
+    
+}
+
+.custom-dropdown{
+    color: white;
+}
+
+.custom-dropdown:hover{
+    background-color: var(--green-primary-color);
+}
+
+
+

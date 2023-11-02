@@ -29,12 +29,12 @@ function scrollToSection(sectionId) {
     <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')' }">
         <div class="container-fluid bg-image padding-head">
             <div class="container">
-                <div class="center margin-head">
+                <div class="center margin-head" data-aos="fade-up">
                     <p class="m-0 Touch-text">{{ Data.MainTitle_1 }}</p>
                     <hr class="line-contact-head" size="5px" />
                     <p class="contact-text">{{ Data.MainTitle_2 }}</p>
                 </div>
-                <div class="row row-bg-color ">
+                <div class="row row-bg-color " data-aos="fade-up">
                     <div class="col-lg-6">
                         <p class="contact-head">{{ Data.ContactTitle }}<span class="green-text">{{ Data.InfoTitle
                         }}</span> </p>
@@ -50,13 +50,13 @@ function scrollToSection(sectionId) {
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-center ">
+                <div class="d-flex align-items-center justify-content-center " data-aos="fade-up">
                     <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="first" data-aos="fade-up">
+    <div class="container-fluid" id="first" data-aos="fade-up" >
         <div class="row">
             <div class="col-8 m-0 p-0 ">
                 <img :src="Office_photo1" alt="Office_photo_1" class="image-office">

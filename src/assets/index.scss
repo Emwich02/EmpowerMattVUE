@@ -76,6 +76,12 @@ body {
   border-radius: 20px;
 }
 
+.active-product {
+  background-color: var(--green-primary-color);
+  color: var(--white-primary-color) !important;
+  border-radius: 20px;
+}
+
 .navbar-right {
   justify-content: flex-end;
 }
@@ -103,7 +109,7 @@ body {
 
 ul.dropdown-menu {
   background-color: var(--green-primary-color);
-
+  
   a {
     text-align: start;
     color: var(--white-primary-color);
@@ -115,6 +121,29 @@ ul.dropdown-menu {
   }
 }
 
+ul.dropdown-custom{
+  border-radius: 0px 20px 20px 20px;;
+  border: 0;
+}
+
+
 .nav-link {
   transition: none !important;
+}
+
+@media only screen and (max-width: 991px) {
+  ul.dropdown-menu {
+    background-color: var(--green-primary-color);
+    border-radius: 0px 0px 20px 20px;
+    border: 0;
+    a {
+      text-align: start;
+      color: var(--white-primary-color);
+  
+      &:hover {
+        background-color: transparent;
+        color: var(--white-primary-color);
+      }
+    }
+  }
 }
