@@ -54,19 +54,25 @@ Thank you very much for your kindness. `,
               {{ Data.HexagonalTopic_1 }}<span class="greenbold-text">{{ Data.HexagonalTopic_2 }} </span>
         </h5> 
       </div> <br><br>
-
-      <div class="text-center ">
-       <img :src="Hexagonal" alt="" width="510" height="550">
+      
+      <div class="container full-center">
+        <div class="col-md-5 d-flex align-items-center"> 
+       <img :src="Hexagonal" class="img-fluid" style="max-width: 100%; height: auto;">
       </div><br><br><br>
     </div>
+  </div><br><br>
+
+ 
 
     <div class="background-green">
       <div class="text-center">   
         <h5 class="whitebold-text"><br><br><br>{{ Data.GrapheneTopic }}</h5>
       </div> <br>
 
-      <div class="text-center ">
-          <img :src="Graphene" alt="" width="570" height="480">
+      <div class="container full-center">
+        <div class="col-md-5 d-flex align-items-center"> 
+       <img :src="Graphene" class="img-fluid" style="max-width: 100%; height: auto;">
+      </div>
       </div><br>
 
       <div class="container-closer">  
@@ -103,9 +109,9 @@ Thank you very much for your kindness. `,
             </h5>
       </div> <br>
 
-      <div class="container"> 
-        <div class="text-center ">
-          <img :src="Partners" alt="" width="800" height="260">
+      <div class="container full-center">
+        <div class="col-md-5 d-flex align-items-center"> 
+       <img :src="Partners" class="img-fluid" style="max-width: 100%; height: auto;">
         </div>
       </div><br><br><br>
 
