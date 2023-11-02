@@ -38,7 +38,7 @@ Thank you very much for your kindness. `,
           </div> <br>
               
           <div class="box" >
-                <h4 class="text-center" style="color:white" >{{ Data.PrimaryTitle }}  </h4>
+                <h5 class="text-center" style="color:white" >{{ Data.PrimaryTitle }}  </h5>
           </div><br><br>
              
           <div class="container">   
@@ -110,7 +110,7 @@ Thank you very much for your kindness. `,
       </div> <br>
 
       <div class="container full-center">
-        <div class="col-md-5 d-flex align-items-center"> 
+        <div class="col-md-8 d-flex align-items-center"> 
        <img :src="Partners" class="img-fluid" style="max-width: 100%; height: auto;">
         </div>
       </div><br><br><br>
