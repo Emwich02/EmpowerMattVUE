@@ -136,9 +136,8 @@ function scrollToSection(sectionId) {
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center my-5" data-aos="fade-up">
-                    <iframe width="560" height="315" class="hempcar-video"
-                        src="https://www.youtube.com/embed/ORSSZ4_SciY?si=DmyACDWtKKPcfw7g" title="YouTube video player"
-                        frameborder="0"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hJ-DNyCZ8qI?si=HlKji4Vp42JqXasq"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
@@ -308,7 +307,5 @@ function scrollToSection(sectionId) {
         </div>
     </div>
 </template>
-<style lang="scss">
-// Import Main styles for this application
-@import '/src/assets/services.scss';
-</style>
+<style lang="scss">// Import Main styles for this application
+@import '/src/assets/services.scss';</style>
