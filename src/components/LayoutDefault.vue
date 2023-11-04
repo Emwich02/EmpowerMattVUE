@@ -94,14 +94,14 @@ onMounted(() => {
                         <li class="nav-item">
                             <div class="dropdown nav-link nav-nav text-center no-transition custom-dropdown-2" id="dropdown2"
                                 style="margin-right: 0px; margin-left: 0px;">
-                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
+                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3 s" type="button"
                                     id="dropdownMenuButton2" aria-expanded="false">
                                     <router-link to="" data-value="ENG" @click="setLang('ENG')">
                                         <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
                                     </router-link>
                                 </button>
-                                <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li><router-link to="" class="dropdown-item" data-value="ENG" @click="setLang(CONSTANT_WORD.Optionlang)">{{
+                                <ul class="dropdown-menu dropdown-custom p-0 m-0" aria-keyledby="dropdownMenuButton2">
+                                    <li><router-link to="" class="dropdown-item lang-dropdown" data-value="ENG" @click="setLang(CONSTANT_WORD.Optionlang)">{{
                                         CONSTANT_WORD.Optionlang }}</router-link></li>
                                 </ul>
                             </div>

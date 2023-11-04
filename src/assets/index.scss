@@ -140,11 +140,17 @@ ul.dropdown-menu {
       color: var(--white-primary-color);
     }
   }
-  
-  .router-link-active {
-    background-color: var(--green-secondary-color);
-    color: var(--white-primary-color);
+
+  .lang-dropdown {
+    text-align: start;
+    background-color: var(--green-primary-color);
+    border-radius: 0px 0px 20px 20px;
   }
+
+  // .router-link-active {
+  //   background-color: var(--green-secondary-color);
+  //   color: var(--white-primary-color);
+  // }
 }
 
 ul.dropdown-custom {
