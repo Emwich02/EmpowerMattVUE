@@ -1,6 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { onMounted, ref, computed, reactive } from 'vue'
+import { onMounted, computed, reactive } from 'vue'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
 import { useLanguage } from '/src/stores/useLanguage.js'
@@ -25,10 +25,7 @@ const CONSTANT_WORD = reactive({
     Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
 });
 
-const activeButton = ref('button1');
-function setActiveButton(buttonId) {
-    activeButton.value = buttonId;
-}
+
 function setLang(lang) {
     console.log(lang);
     languageStores.switchLang(lang)
@@ -43,16 +40,6 @@ onMounted(() => {
     });
 })
 </script>
-<script>
-export default {
-    data() {
-        return {
-            isHovered: false,
-        };
-    },
-};
-</script>
-
 <template>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
@@ -73,14 +60,14 @@ export default {
                                 {{ CONSTANT_WORD.Home }}</router-link>
                         </li>
                         <li class="nav-item ">
-                            <div class="dropdown nav-link pt-0 m-0 ">
+                            <div class="dropdown nav-link pt-0 m-0 " >
                                     <router-link to="/Products"
                                         class=" nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown"
                                         :class="{ active: $route.path === '/Products' || $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' }"
                                         @click="toggleClass" style="color: black;">
                                         {{ CONSTANT_WORD.Products }}</router-link>
-                                <ul class="dropdown-menu dropdown-custom p-0" aria-keyledby="dropdownMenuButton1 ">
-                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item product-1">{{
+                                <ul class="dropdown-menu dropdown-custom p-0" aria-keyledby="dropdownMenuButton1 " >
+                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item product-1" >{{
                                         CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
                                     <li><router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{
@@ -105,12 +92,11 @@ export default {
                                     CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <div class="dropdown nav-link nav-nav text-center no-transition" id="dropdown2"
-                                @click="setActiveButton('dropdown2')" :class="{ active: activeButton === 'dropdown2' }"
+                            <div class="dropdown nav-link nav-nav text-center no-transition custom-dropdown-2" id="dropdown2"
                                 style="margin-right: 0px; margin-left: 0px;">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
                                     id="dropdownMenuButton2" aria-expanded="false">
-                                    <router-link to="">
+                                    <router-link to="" data-value="ENG" @click="setLang('ENG')">
                                         <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
                                     </router-link>
                                 </button>
