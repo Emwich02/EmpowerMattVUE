@@ -33,10 +33,6 @@ function setActiveButton(buttonId) {
 function setLang(lang) {
     languageStores.switchLang(lang)
 }
-function changePath(path) {
-    console.log(this.$router);
-        this.$router.push(path);
-    }
 onMounted(() => {
     setLang('ENG')
     AOS.init({
@@ -46,6 +42,15 @@ onMounted(() => {
         once: true, // Whether to only trigger the animation once
     });
 })
+</script>
+<script>
+export default {
+    data() {
+        return {
+            isHovered: false,
+        };
+    },
+};
 </script>
 
 <template>
@@ -68,28 +73,25 @@ onMounted(() => {
                                 {{ CONSTANT_WORD.Home }}</router-link>
                         </li>
                         <li class="nav-item ">
-                            <div class="dropdown nav-link nav-nav text-center no-transition"
-                                :class="{ active: $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' && activeButton == 'dropdown1' }"
-                                id="dropdown1" style="margin-right: 0px; margin-left: 0px;"
-                                @click="changePath('Naturalhempfabric')">
-                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3 shadow-none" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <a>{{ CONSTANT_WORD.Products }}</a>
-                                </button>
-                                <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton1">
-                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item">{{
+                            <div class="dropdown nav-link pt-0 m-0 ">
+                                    <router-link to="/Products"
+                                        class=" nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown"
+                                        :class="{ active: $route.path === '/Products' || $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' }"
+                                        @click="toggleClass" style="color: black;">
+                                        {{ CONSTANT_WORD.Products }}</router-link>
+                                <ul class="dropdown-menu dropdown-custom p-0" aria-keyledby="dropdownMenuButton1 ">
+                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item product-1">{{
                                         CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
-                                    <li><router-link to="/ProductBioPlastic" class="dropdown-item">{{
+                                    <li><router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{
                                         CONSTANT_WORD.HempBioplasticsCompoundMaterials
                                     }}</router-link></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <router-link to="/Services" class="nav-link nav-nav ps-3 pe-3 no-transition" style="color: black;" id="button2"
-                            :class="{ active: $route.path === '/Services' }"
-                                href="#">{{
+                            <router-link to="/Services" class="nav-link nav-nav ps-3 pe-3 no-transition"
+                                style="color: black;" id="button2" :class="{ active: $route.path === '/Services' }">{{
                                     CONSTANT_WORD.Services }}</router-link>
                         </li>
                         <li class="nav-item">
@@ -107,18 +109,16 @@ onMounted(() => {
                                 @click="setActiveButton('dropdown2')" :class="{ active: activeButton === 'dropdown2' }"
                                 style="margin-right: 0px; margin-left: 0px;">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
-                                    id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <router-link to="#">
+                                    id="dropdownMenuButton2" aria-expanded="false">
+                                    <router-link to="">
                                         <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
                                     </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li><router-link to="#" class="dropdown-item"  data-value="ENG"
-                                            @click="setLang('ENG')">{{
-                                                CONSTANT_WORD.ENG }}</router-link></li>
-                                    <li><router-link to="#" class="dropdown-item"  data-value="THA"
-                                            @click="setLang('THA')">{{
-                                                CONSTANT_WORD.THA }}</router-link></li>
+                                    <li><router-link to="" class="dropdown-item" data-value="ENG" @click="setLang('ENG')">{{
+                                        CONSTANT_WORD.ENG }}</router-link></li>
+                                    <li><router-link to="" class="dropdown-item" data-value="THA" @click="setLang('THA')">{{
+                                        CONSTANT_WORD.THA }}</router-link></li>
                                 </ul>
                             </div>
                         </li>
@@ -159,4 +159,8 @@ onMounted(() => {
         </section>
     </footer>
 </template>
+<style lang="scss">
+// Import Main styles for this application
+@import '/src/assets/layoutDefault.scss';
+</style>
   
