@@ -17,8 +17,7 @@ const CONSTANT_WORD = reactive({
     Teams: computed(() => isLang.value == 'THA' ? 'ทีม' : 'Teams'),
     ContactUs: computed(() => isLang.value == 'THA' ? 'ติดต่อเรา' : 'Contact Us'),
     Selectlang: computed(() => isLang.value == 'THA' ? 'ไทย' : 'ENG'),
-    ENG: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'ENG'),
-    THA: computed(() => isLang.value == 'THA' ? 'ไทย' : 'THA'),
+    Optionlang: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'THA'),
     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
     Tel: 'TEL : (+66)81-988-5787',
     Email: 'E-MAIL : empowermatt2021@gmail.com',
@@ -31,6 +30,7 @@ function setActiveButton(buttonId) {
     activeButton.value = buttonId;
 }
 function setLang(lang) {
+    console.log(lang);
     languageStores.switchLang(lang)
 }
 onMounted(() => {
@@ -115,10 +115,8 @@ export default {
                                     </router-link>
                                 </button>
                                 <ul class="dropdown-menu" aria-keyledby="dropdownMenuButton2">
-                                    <li><router-link to="" class="dropdown-item" data-value="ENG" @click="setLang('ENG')">{{
-                                        CONSTANT_WORD.ENG }}</router-link></li>
-                                    <li><router-link to="" class="dropdown-item" data-value="THA" @click="setLang('THA')">{{
-                                        CONSTANT_WORD.THA }}</router-link></li>
+                                    <li><router-link to="" class="dropdown-item" data-value="ENG" @click="setLang(CONSTANT_WORD.Optionlang)">{{
+                                        CONSTANT_WORD.Optionlang }}</router-link></li>
                                 </ul>
                             </div>
                         </li>
