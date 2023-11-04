@@ -18,11 +18,7 @@ a .custom-link:hover{
     
 }
 
-.custom-dropdown{
-    color: white;
-}
-
-.custom-dropdown:hover{
+.custom-dropdown:hover,.dropdown:hover .custom-dropdown{
     background-color: var(--green-primary-color);
 }
 

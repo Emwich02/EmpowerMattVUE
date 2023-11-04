@@ -74,17 +74,16 @@ export default {
                         </li>
                         <li class="nav-item ">
                             <div class="dropdown nav-link pt-0 m-0 ">
-                                <router-link to="/Products"
-                                    class="dropdown nav-link nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown"
-                                    :class="{ active: $route.path === '/Products' || $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' }"
-                                    @click="toggleClass" style="color: black;">
-                                    {{ CONSTANT_WORD.Products }}</router-link>
-                                    
-                                <ul class="dropdown-menu dropdown-custom" aria-keyledby="dropdownMenuButton1 ">
-                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item ">{{
+                                    <router-link to="/Products"
+                                        class=" nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown"
+                                        :class="{ active: $route.path === '/Products' || $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' }"
+                                        @click="toggleClass" style="color: black;">
+                                        {{ CONSTANT_WORD.Products }}</router-link>
+                                <ul class="dropdown-menu dropdown-custom p-0" aria-keyledby="dropdownMenuButton1 ">
+                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item product-1">{{
                                         CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
-                                    <li><router-link to="/ProductBioPlastic" class="dropdown-item">{{
+                                    <li><router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{
                                         CONSTANT_WORD.HempBioplasticsCompoundMaterials
                                     }}</router-link></li>
                                 </ul>
@@ -110,7 +109,7 @@ export default {
                                 @click="setActiveButton('dropdown2')" :class="{ active: activeButton === 'dropdown2' }"
                                 style="margin-right: 0px; margin-left: 0px;">
                                 <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
-                                    id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    id="dropdownMenuButton2" aria-expanded="false">
                                     <router-link to="">
                                         <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
                                     </router-link>
