@@ -47,6 +47,8 @@ hr.style1 {
 	background-color: $color_6;
 }
 
+
+
 .pull-left {
     float:left;
 }
@@ -61,4 +63,16 @@ hr.style1 {
 
 .background-cream{
     background-color: $color_5;
+}
+
+@media (max-width: 768px) {
+    .front-17px {
+        font-size: 17px;
+    }
+	.front-15px {
+        font-size: 15px;
+    }
+    .front-13px {
+        font-size: 13px;
+    }
 }
