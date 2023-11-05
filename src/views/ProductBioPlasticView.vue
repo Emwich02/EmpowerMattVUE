@@ -46,32 +46,31 @@ const Data = {
                 <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
                         class="blackbold-text">{{ Data.product }}
                     </span> </h2>
-                    <br>
-
-                    
-
+                <br>
             </div>
+
             <div class="figure">
-            <div class="row">
-                <div class="col" data-aos="fade-up">
-                <img :src="Straw" class="img-fluid" style="max-width: 80%; height: auto;"  >
-                <p>{{ Data.straw }} </p>
-            </div>
-            <div class="col" data-aos="fade-up">
-                <span><img :src="FlockSpoon" class="img-fluid" style="max-width: 80%; height: auto;" ></span>
-                <p>{{ Data.cup }} </p>
-            </div>
-            <div class="col" data-aos="fade-up">
-                <img :src="coffeecup" class="img-fluid" style="max-width: 80%; height: auto;" >
-                <p>{{ Data.SpoonAndFork }} </p>
-            </div>
+                <div class="row">
+                    <div class="col" data-aos="fade-up">
+                        <img :src="Straw" class="img-fluid" style="max-width: 80%; height: auto;">
+                        <p>{{ Data.straw }} </p>
+                    </div>
+                    <div class="col" data-aos="fade-up">
+                        <span><img :src="FlockSpoon" class="img-fluid" style="max-width: 80%; height: auto;"></span>
+                        <p>{{ Data.cup }} </p>
+                    </div>
+                    <div class="col" data-aos="fade-up">
+                        <img :src="coffeecup" class="img-fluid" style="max-width: 80%; height: auto;">
+                        <p>{{ Data.SpoonAndFork }} </p>
+                    </div>
+                </div>
+            </div><br><br>
         </div>
-        </div><br><br>
-    </div>
     </div>
 </template>
 
 
 <style lang="scss">
 // Import Main styles for this application
-@import '/src/assets/productBioPlastic.scss';</style>
+@import '/src/assets/productBioPlastic.scss';
+</style>
