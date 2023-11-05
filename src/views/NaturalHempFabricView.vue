@@ -97,9 +97,9 @@ export default {
                 <div class="row pt-5">
                     <div class="col-md-1"></div>
                     <div class="col-md-11">
-                        <h4>{{ Data.Our }} <span class="greencolor">{{ Data.Product }}</span></h4>
-                        <h2><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Data.Descriptionmain }}</p>
+                        <h4 class="front-17px">{{ Data.Our }} <span class="greencolor">{{ Data.Product }}</span></h4>
+                        <h2 class="front-20px"><span class="greencolor ">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
+                        <p class="front-13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Data.Descriptionmain }}</p>
                     </div>
                 </div>
             </div>
@@ -115,9 +115,9 @@ export default {
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
                     <div>
-                        <h4><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h4>
-                        <h2 class="greencolor">{{ Data.SolarSatellitePanels }}</h2>
-                        {{ Data.DescriptionSolarSatellitePanels }}
+                        <h4><span class="greencolor front-17px">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h4>
+                        <h2 class="greencolor front-17px">{{ Data.SolarSatellitePanels }}</h2>
+                        <p class="front-13px" >{{ Data.DescriptionSolarSatellitePanels }}</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -134,8 +134,8 @@ export default {
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center">
                     <div>
-                        <h2><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
-                        {{ Data.DescriptionNaturalhempfabric }}
+                        <h2 class="front-17px"><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h2>
+                        <p class="front-13px">{{ Data.DescriptionNaturalhempfabric }}</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -152,7 +152,7 @@ export default {
         <div class="container ps-5 full-height  ">
             <div class="row d-flex align-items-center">
                 <div>
-                    <h4><span class="greencolor">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric }}</h4>
+                    <h4 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric }}</h4>
                 </div>
                 <div class="text-center">
                     <div class="mt-5 item">

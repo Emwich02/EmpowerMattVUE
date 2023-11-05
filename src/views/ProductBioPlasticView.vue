@@ -24,29 +24,34 @@ const Data = {
         <br><br><br><br>
 
         <div class="container">
-            <div class="box mt-5  " style="margin-right: 70%;" data-aos="fade-up">
-                <h4 class="text-center" style="color:white">{{ Data.Products }} </h4>
+            <div class="box mt-5 " style="margin-right: 70%;" data-aos="fade-up">
+                <h4 class="text-center " style="color:white">{{ Data.Products }} </h4>
             </div><br>
 
             <div class="text-center">
-                <h4 class="blackbold-text front-15px" data-aos="fade-up">{{ Data.Our }} <span class="greenbold-text">{{ Data.product }} </span> </h4>
-                
-                    <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span class="blackbold-text">{{
-                        Data.CompoundMaterials }} </span> </h2>
-               <br>
+                <h4 class="blackbold-text front-15px" data-aos="fade-up">{{ Data.Our }} <span class="greenbold-text">{{
+                    Data.product }} </span> </h4>
+
+                <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
+                        class="blackbold-text">{{
+                            Data.CompoundMaterials }} </span> </h2>
+                <br>
                 <p class="front-13px" data-aos="fade-up">{{ Data.HempBioPlasticsDetails }}</p><br>
-                <img :src="Bioplastic" class="img-fluid" style="max-width: 90%; height: auto;" data-aos="fade-up"><br><br><br><br>
-                <img :src="downlight" class="img-fluid" style="max-width: 100%; height: auto;" data-aos="fade-up"><br><br><br><br>
+                <img :src="Bioplastic" class="img-fluid" style="max-width: 90%; height: auto;"
+                    data-aos="fade-up"><br><br><br><br>
+                <img :src="downlight" class="img-fluid" style="max-width: 100%; height: auto;"
+                    data-aos="fade-up"><br><br><br><br>
                 <hr class="style1" data-aos="fade-up"><br><br><br>
-                <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span class="blackbold-text">{{ Data.product }}
+                <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
+                        class="blackbold-text">{{ Data.product }}
                     </span> </h2>
                 <br><br><br>
-                <img :src="Plasticproducts" class="img-fluid" style="max-width: 80%; height: auto;" data-aos="fade-up"><br><br><br>
+                <img :src="Plasticproducts" class="img-fluid" style="max-width: 80%; height: auto;"
+                    data-aos="fade-up"><br><br><br>
             </div>
         </div>
 
-    </div>
-</template>
+</div></template>
 
 <style lang="scss">// Import Main styles for this application
 @import '/src/assets/productBioPlastic.scss';</style>
