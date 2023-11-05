@@ -25,8 +25,8 @@ const Data = {
         <br><br><br><br>
 
         <div class="container">
-            <div class="box mt-5  " style="margin-right: 70%;" data-aos="fade-up">
-                <h4 class="text-center" style="color:white">{{ Data.Products }} </h4>
+            <div class="box mt-5 " style="margin-right: 70%;" data-aos="fade-up">
+                <h4 class="text-center " style="color:white">{{ Data.Products }} </h4>
             </div><br>
 
             <div class="text-center">

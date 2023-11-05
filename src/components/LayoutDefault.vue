@@ -17,8 +17,7 @@ const CONSTANT_WORD = reactive({
     Teams: computed(() => isLang.value == 'THA' ? 'ทีม' : 'Teams'),
     ContactUs: computed(() => isLang.value == 'THA' ? 'ติดต่อเรา' : 'Contact Us'),
     Selectlang: computed(() => isLang.value == 'THA' ? 'ไทย' : 'ENG'),
-    ENG: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'ENG'),
-    THA: computed(() => isLang.value == 'THA' ? 'ไทย' : 'THA'),
+    Optionlang: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'THA'),
     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
     Tel: 'TEL : (+66)81-988-5787',
     Email: 'E-MAIL : empowermatt2021@gmail.com',
@@ -28,6 +27,7 @@ const CONSTANT_WORD = reactive({
 
 
 function setLang(lang) {
+    console.log(lang);
     languageStores.switchLang(lang)
 }
 onMounted(() => {
@@ -60,14 +60,14 @@ onMounted(() => {
                                 {{ CONSTANT_WORD.Home }}</router-link>
                         </li>
                         <li class="nav-item ">
-                            <div class="dropdown nav-link pt-0 m-0 " >
-                                    <router-link to="/Products"
-                                        class=" nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown"
-                                        :class="{ active: $route.path === '/Products' || $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' }"
-                                        @click="toggleClass" style="color: black;">
-                                        {{ CONSTANT_WORD.Products }}</router-link>
-                                <ul class="dropdown-menu dropdown-custom p-0" aria-keyledby="dropdownMenuButton1 " >
-                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item product-1" >{{
+                            <div class="dropdown nav-link pt-0 m-0 ">
+                                <router-link to="/Products"
+                                    class=" nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown"
+                                    :class="{ active: $route.path === '/Products' || $route.path === '/Naturalhempfabric' || $route.path === '/ProductBioPlastic' }"
+                                    @click="toggleClass" style="color: black;">
+                                    {{ CONSTANT_WORD.Products }}</router-link>
+                                <ul class="dropdown-menu dropdown-custom p-0" aria-keyledby="dropdownMenuButton1 ">
+                                    <li><router-link to="/Naturalhempfabric" class="dropdown-item product-1">{{
                                         CONSTANT_WORD.NaturalHempFabric
                                     }}</router-link></li>
                                     <li><router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{
@@ -92,19 +92,15 @@ onMounted(() => {
                                     CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
                         <li class="nav-item">
-                            <div class="dropdown nav-link nav-nav text-center no-transition custom-dropdown-2" id="dropdown2"
-                                style="margin-right: 0px; margin-left: 0px;">
-                                <button class="btn dropdown-toggle btn-custom ps-3 pe-3" type="button"
-                                    id="dropdownMenuButton2" aria-expanded="false">
-                                    <router-link to="" data-value="ENG" @click="setLang('ENG')">
-                                        <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
-                                    </router-link>
-                                </button>
-                                <ul class="dropdown-menu dropdown-custom" aria-keyledby="dropdownMenuButton2">
-                                    <li><router-link to="" class="dropdown-item" data-value="ENG" @click="setLang('ENG')">{{
-                                        CONSTANT_WORD.ENG }}</router-link></li>
-                                    <li><router-link to="" class="dropdown-item" data-value="THA" @click="setLang('THA')">{{
-                                        CONSTANT_WORD.THA }}</router-link></li>
+                            <div class="dropdown" id="dropdown2" style="margin-right: 0px; margin-left: 0px;">
+                                <router-link to="" data-value="ENG"
+                                    class="nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown">
+                                    <span id="selectedLanguage2">{{ CONSTANT_WORD.Selectlang }}</span>
+                                </router-link>
+                                <ul class="dropdown-menu dropdown-custom-2 p-0 m-0 content-center" aria-keyledby="dropdownMenuButton2">
+                                    <li><router-link to="" class="dropdown-item lang-dropdown text-center" data-value="ENG"
+                                            @click="setLang(CONSTANT_WORD.Optionlang)">{{
+                                                CONSTANT_WORD.Optionlang }}</router-link></li>
                                 </ul>
                             </div>
                         </li>

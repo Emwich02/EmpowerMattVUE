@@ -55,3 +55,18 @@
     height: auto;
     background-size: cover;
 }
+
+@media (max-width: 768px) {
+    .front-17px {
+        font-size: 17px;
+    }
+    .front-20px {
+        font-size: 20px;
+    }
+	.front-15px {
+        font-size: 15px;
+    }
+    .front-13px {
+        font-size: 13px;
+    }
+}
