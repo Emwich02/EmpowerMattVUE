@@ -21,20 +21,20 @@ const Data = {
 </script>
 
 <template>
-    <div class="background-cream">
+    <div class="background-cream-bioplastic">
         <br><br><br><br>
 
         <div class="container">
-            <div class="box mt-5 " style="margin-right: 70%;" data-aos="fade-up">
-                <h4 class="text-center " style="color:white">{{ Data.Products }} </h4>
+            <div class="box-bioplastic mt-5 " style="margin-right: 70%;" data-aos="fade-up">
+                <h4 class="text-center-bioplastic " style="color:white">{{ Data.Products }} </h4>
             </div><br>
 
-            <div class="text-center">
-                <h4 class="blackbold-text front-15px" data-aos="fade-up">{{ Data.Our }} <span class="greenbold-text">{{
+            <div class="text-center-bioplastic">
+                <h4 class="blackbold-text-bioplastic front-15px" data-aos="fade-up">{{ Data.Our }} <span class="greenbold-text-bioplastic">{{
                     Data.product }} </span> </h4>
 
-                <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
-                        class="blackbold-text">{{
+                <h2 class="greenbold-text-bioplastic front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
+                        class="blackbold-text-bioplastic">{{
                             Data.CompoundMaterials }} </span> </h2>
                 <br>
                 <p class="front-13px" data-aos="fade-up">{{ Data.HempBioPlasticsDetails }}</p><br>
@@ -43,8 +43,8 @@ const Data = {
                 <img :src="downlight" class="img-fluid" style="max-width: 100%; height: auto;"
                     data-aos="fade-up"><br><br><br><br>
                 <hr class="style1" data-aos="fade-up"><br><br><br>
-                <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
-                        class="blackbold-text">{{ Data.product }}
+                <h2 class="greenbold-text-bioplastic front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
+                        class="blackbold-text-bioplastic">{{ Data.product }}
                     </span> </h2>
                 <br>
             </div>
