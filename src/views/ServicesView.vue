@@ -58,7 +58,6 @@ function scrollToSection(sectionId) {
 }
 </script>
 <template>
-    <!-- <div class="bg-container"><br><br><br><br><br><br><br></div> -->
     <div>
         <div class="bg-container fullheight-service">
             <div class="container-fluid mt-5 mb-5" data-aos="fade-up">

@@ -1,22 +1,24 @@
 <script setup>
+import { computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
 import hempview from '@/images/hempview.png';
 import bioPlasticPic from '@/images/bioPlasticPic.png';
 import bioCompositePic from '@/images/bioCompositePic.png';
-
-const Data = {
-    whatis: 'What is ',
-    hemp: 'Hemp',
-    firstparagraph: '               Hemp has been cultivated in the north of Thailand by the hill tribes or the tribesman for long times. There is a typical hemp story in Thailand which is relevant to Hmong people. They believe that hemp plays an important role in their lifestyle and culture. In their houses, they have Hmong clothing made from hemp fiber. For ceremonies, they always wear Hmong clothing. Especially in funeral ceremonies, they use hemp clothing and shoes for the deceased. They believe that hemp fiber serves as a guide for the journey of their deceased ancestors.',
-    secondparagraph: `               Nowadays, hemp is widely used in various industries around the world. Hemp is claimed to be a keyword for sustainable economy on our planet. Eco-friendly products are the core concept of our company that we share with our partners. With care, we meticulously select hemp materials from organic farms in Thailand to produce our high-quality products before delivering them to you.`,
-    our: 'our ',
-    products: 'products',
-    compositeTitle: 'Bio-composite products',
-    compositeDetails: '" The energy is an electrical battery and the body is produced by hemp fiber reinforced polymer. “',
-    moreDetails: 'detail..',
-    plasticTitle: 'Bioplastic hemp pellets product',
-    plasticDetails: '" The hemp bioplastics compound material PH0001HT “'
-}
-
+const Data = reactive({
+    whatis: computed(() => isLang.value == 'THA' ? 'อะไรคือ' : 'What is '),
+    hemp: computed(() => isLang.value == 'THA' ? 'กัญชง' : 'Hemp'),
+    firstparagraph: computed(() => isLang.value == 'THA' ? '1111' : "               Hemp has been cultivated in the north of Thailand by the hill tribes or the tribesman for long times. There is a typical hemp story in Thailand which is relevant to Hmong people. They believe that hemp plays an important role in their lifestyle and culture. In their houses, they have Hmong clothing made from hemp fiber. For ceremonies, they always wear Hmong clothing. Especially in funeral ceremonies, they use hemp clothing and shoes for the deceased. They believe that hemp fiber serves as a guide for the journey of their deceased ancestors."),
+    secondparagraph: computed(() => isLang.value == 'THA' ? 'ไอยู' : "               Nowadays, hemp is widely used in various industries around the world. Hemp is claimed to be a keyword for sustainable economy on our planet. Eco-friendly products are the core concept of our company that we share with our partners. With care, we meticulously select hemp materials from organic farms in Thailand to produce our high-quality products before delivering them to you."),
+    our: computed(() => isLang.value == 'THA' ? 'ไอยู' : "our "),
+    products: computed(() => isLang.value == 'THA' ? 'ไอยู' : "products"),
+    compositeTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Bio-composite products"),
+    compositeDetails: computed(() => isLang.value == 'THA' ? 'ไอยู' : '" The energy is an electrical battery and the body is produced by hemp fiber reinforced polymer. “'),
+    moreDetails: computed(() => isLang.value == 'THA' ? 'ไอยู' : "detail.."),
+    plasticTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Bioplastic hemp pellets product"),
+    plasticDetails: computed(() => isLang.value == 'THA' ? 'ไอยู' : '" The hemp bioplastics compound material PH0001HT “'),
+});
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
