@@ -8,20 +8,20 @@ $color_6: #1C1D23;
 // body {
 //     overflow: hidden;
 // }
-.full-height {
+.full-height-home {
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.full-center {
+.full-center-home {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.picture {
+.picture-home {
     background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
     background-position: center;
@@ -32,49 +32,49 @@ $color_6: #1C1D23;
 }
 
 
-.blackbold-text-welcome {
+.blackbold-text-welcome-home {
     color: $color_1;
     font-weight: 1000;
     font-size: 2.9em;
 
 }
 
-.blackbold-text {
+.blackbold-text-home {
     color: $color_1;
     font-weight: 1000;
 
 }
 
-.greenbold-text {
+.greenbold-text-home {
     color: $color_2;
     font-weight: 1000;
 }
 
-.greeting-size {
+.greeting-size{
     font-size: 0.3em;
 }
 
-.whitebold-text {
+.whitebold-text-home {
     color: $color_3;
     font-weight: bold;
     text-shadow: 1px 2px 7px $color_6;
 }
 
-.white-text {
+.white-text-home {
     color: $color_3;
     text-shadow: 1px 2px 7px $color_6;
 }
 
-.grey-text {
+.grey-text-home {
     color: $color_4;
 }
 
-.text-center {
+.text-center-home {
     text-align: center;
     justify-content: center;
 }
 
-.box {
+.box-home {
     background: #538E6E;
     max-width: 100%;
     height: 52px;
@@ -94,12 +94,12 @@ $color_6: #1C1D23;
     margin: 0 auto;
 }
 
-.background-green {
+.background-green-home {
     background-color: $color_2;
     height: 100vh;
 }
 
-.background-cream {
+.background-cream-home {
     background-color: $color_5;
     height: 100vh;
 }

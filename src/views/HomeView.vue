@@ -30,14 +30,14 @@ Thank you very much for your kindness. `,
 }
 </script>
 <template>
-  <div class="picture" v-bind:style="{ backgroundImage: 'url(' + officepic3 + ')' }">
-    <div class="container-fluid picture">
+  <div class="picture-home" v-bind:style="{ backgroundImage: 'url(' + officepic3 + ')' }">
+    <div class="container-fluid picture-home">
       <div class="text-center " data-aos="fade-up">
-        <h1 class="blackbold-text-welcome front-30px">{{ Data.MainTitle_1 }} <span class="greenbold-text">{{ Data.MainTitle_2 }}
+        <h1 class="blackbold-text-welcome-home front-30px">{{ Data.MainTitle_1 }} <span class="greenbold-text">{{ Data.MainTitle_2 }}
           </span></h1>
       </div> <br>
 
-      <div class="box " data-aos="fade-up">
+      <div class="box-home" data-aos="fade-up">
         <div class="text-center">
         <h5 class="front-18px " style="color:white" data-aos="fade-up">{{ Data.PrimaryTitle }} </h5>
       </div>
@@ -50,26 +50,26 @@ Thank you very much for your kindness. `,
   </div>
 
 
-  <div class="background-cream">
+  <div class="background-cream-home">
     <div class="text-center">
-      <h5 class="blackbold-text front-18px" data-aos="fade-up"><br><br><br>
+      <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
         {{ Data.HexagonalTopic_1 }}<span class="greenbold-text">{{ Data.HexagonalTopic_2 }} </span>
       </h5>
       <br><br></div>
 
-    <div class="container full-center">
+    <div class="container full-center-home">
       <div class="col-md-5 d-flex align-items-center" data-aos="fade-up">
         <img :src="Hexagonal" class="img-fluid" style="max-width: 100%; height: auto;">
       </div><br><br><br>
     </div>
   </div>
 
-  <div class="background-green">
+  <div class="background-green-home">
     <div class="text-center">
-      <h5 class="whitebold-text front-18px" data-aos="fade-up"><br><br><br>{{ Data.GrapheneTopic }}</h5>
+      <h5 class="whitebold-text-home front-18px" data-aos="fade-up"><br><br><br>{{ Data.GrapheneTopic }}</h5>
     </div> <br>
 
-    <div class="container full-center">
+    <div class="container full-center-home ">
       <div class="col-md-5 d-flex align-items-center" data-aos="fade-up">
         <img :src="Graphene" class="img-fluid" style="max-width: 100%; height: auto;">
       </div>
@@ -77,14 +77,14 @@ Thank you very much for your kindness. `,
 
     <div class="container-closer">
       <div class="text-center">
-        <p class="white-text front-13px" data-aos="fade-up"> {{ Data.GrapheneDetail }}</p>
+        <p class="white-text-home front-13px" data-aos="fade-up"> {{ Data.GrapheneDetail }}</p>
       </div>
     </div> <br><br><br><br>
   </div>
 
   <div v-bind:style="{ backgroundImage: 'url(' + Oak + ')' }">
     <div class="text-center">
-      <h5 class="blackbold-text front-18px"><br><br><br>{{ Data.IP_title }}</h5><br>
+      <h5 class="blackbold-text-home front-18px"><br><br><br>{{ Data.IP_title }}</h5><br>
     </div>
 
     <div class="container-closer front-13px" data-aos="fade-up">
@@ -104,13 +104,13 @@ Thank you very much for your kindness. `,
   </div>
 
   <div class="text-center">
-    <h5 class="blackbold-text front-18px" data-aos="fade-up"><br><br><br>
+    <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
       {{ Data.PartnersTopic_1 }}
-      <span class="greenbold-text">{{ Data.PartnersTopic_2 }} </span>
+      <span class="greenbold-text-home ">{{ Data.PartnersTopic_2 }} </span>
     </h5>
   </div> <br>
 
-  <div class="container full-center">
+  <div class="container full-center-home">
     <div class="col-md-8 d-flex align-items-center" data-aos="fade-up">
       <img :src="Partners" class="img-fluid" style="max-width: 100%; height: auto;">
     </div>
