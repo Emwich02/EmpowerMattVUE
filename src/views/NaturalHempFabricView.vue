@@ -156,13 +156,13 @@ export default {
                 </div>
                 <div class="text-center">
                     <div class="mt-5 item">
-                        <img :src="aktableone" class="img-fluid">
+                        <img :src="aktableone" class="img-fluid" style="max-width: 100%; height: auto;" >
                     </div>
                     <div class="mt-5">
-                        <img :src="aktabletwo" class="img-fluid">
+                        <img :src="aktabletwo" class="img-fluid"  style="max-width: 100%; height: auto;">
                     </div>
                     <div class="mt-5">
-                        <img :src="aktablethree" class="img-fluid">
+                        <img :src="aktablethree" class="img-fluid"  style="max-width: 100%; height: auto;">
                     </div>
                 </div>
             </div>

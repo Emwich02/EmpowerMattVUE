@@ -1,9 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import Bioplastic from '@/images/Bioplastic.png';
-import Plasticproducts from '@/images/Plasticproducts.png';
 import downlight from '@/images/downlight.png';
-
+import Straw from '@/images/Straw.png';
+import FlockSpoon from '@/images/FlockSpoon.png';
+import coffeecup from '@/images/coffeecup.png';
 
 
 const Data = {
@@ -45,13 +46,31 @@ const Data = {
                 <h2 class="greenbold-text front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
                         class="blackbold-text">{{ Data.product }}
                     </span> </h2>
-                <br><br><br>
-                <img :src="Plasticproducts" class="img-fluid" style="max-width: 80%; height: auto;"
-                    data-aos="fade-up"><br><br><br>
+                <br>
             </div>
+
+            <div class="figure">
+                <div class="row">
+                    <div class="col" data-aos="fade-up">
+                        <img :src="Straw" class="img-fluid" style="max-width: 80%; height: auto;">
+                        <p>{{ Data.straw }} </p>
+                    </div>
+                    <div class="col" data-aos="fade-up">
+                        <span><img :src="FlockSpoon" class="img-fluid" style="max-width: 80%; height: auto;"></span>
+                        <p>{{ Data.cup }} </p>
+                    </div>
+                    <div class="col" data-aos="fade-up">
+                        <img :src="coffeecup" class="img-fluid" style="max-width: 80%; height: auto;">
+                        <p>{{ Data.SpoonAndFork }} </p>
+                    </div>
+                </div>
+            </div><br><br>
         </div>
+    </div>
+</template>
 
-</div></template>
 
-<style lang="scss">// Import Main styles for this application
-@import '/src/assets/productBioPlastic.scss';</style>
+<style lang="scss">
+// Import Main styles for this application
+@import '/src/assets/productBioPlastic.scss';
+</style>
