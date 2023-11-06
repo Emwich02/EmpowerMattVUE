@@ -5,29 +5,35 @@ import Graphene from '@/images/Graphene.png';
 import Partners from '@/images/partners.png';
 import officepic3 from '@/images/officepic3.jpg';
 import Oak from '@/images/Oak_bg.png';
+import { computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
 
-const Data = {
-  Description: `As a Platform Our approach to developing and creating empower material innovations steps up to Intellectual Properties(IP).We focus on doing the research and development in sustainable materials, which will be the eco-friendly products from hemp composite materials to drive the innovation in your lifestyle. We are also doing the development of graphene manufacturing processes for innovation products. We have some partners on unique opportunities to go throughout the same goal. 
-Thank you very much for your kindness. `,
-  MainTitle_1: 'Welcome to ',
-  MainTitle_2: 'Empower',
-  PrimaryTitle: 'Empower Material Innovations',
-  HexagonalTopic_1: 'Make the world to be ',
-  HexagonalTopic_2: 'sustainability',
-  GrapheneTopic: 'Graphene',
-  GrapheneDetail: `We have done the research and development in “Graphene Composites”. We are collaboration with Graphene Creation Co.,Ltd. to do some research projects to create some innovation products with based on graphene such as special functional textile`,
-  IP_title: 'Intellectual Property (IP)',
-  IP_description: 'With our intellectual properties, we have three as follow below:',
-  IP_detail_1_1: 'Publication Number WO/2021/040629',
-  IP_detail_1_2: 'Publication Date 04.03.2021',
-  IP_detail_1_3: 'International Application No. PCT/TH2019/000035',
-  IP_detail_1_4: 'Title “BULLETPROOF PLATE”',
-  IP_detail_2_1: 'เลขที่คำขอ 2203000473',
-  IP_detail_2_2: 'ชื่อการประดิษฐ์อนุสิทธิบัตร “แผ่นเกราะกันกระสุน”',
-  IP_detail_3_1: `Bioplastic hemp straw with Petty Patent Pending No. 2103002144`,
-  PartnersTopic_1: 'Our ',
-  PartnersTopic_2: 'Partners'
-}
+const Data = reactive({
+    Description: computed(() => isLang.value == 'THA' ? 'บริการของเรา' : `As a Platform Our approach to developing and creating empower material innovations steps up to Intellectual Properties(IP).We focus on doing the research and development in sustainable materials, which will be the eco-friendly products from hemp composite materials to drive the innovation in your lifestyle. We are also doing the development of graphene manufacturing processes for innovation products. We have some partners on unique opportunities to go throughout the same goal. 
+Thank you very much for your kindness. `),
+MainTitle_1: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'Welcome to '),
+MainTitle_2: computed(() => isLang.value == 'THA' ? '1111' : 'Empower'),
+PrimaryTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Empower Material Innovations'),
+HexagonalTopic_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Make the world to be '),
+HexagonalTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'sustainability'),
+GrapheneTopic: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Graphene'),
+GrapheneDetail: computed(() => isLang.value == 'THA' ? 'ไอยู' : `We have done the research and development in “Graphene Composites”. We are collaboration with Graphene Creation Co.,Ltd. to do some research projects to create some innovation products with based on graphene such as special functional textile`),
+IP_title: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Intellectual Property (IP)'),
+IP_description: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'With our intellectual properties, we have three as follow below:'),
+IP_detail_1_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Publication Number WO/2021/040629'),
+IP_detail_1_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Publication Date 04.03.2021'),
+IP_detail_1_3: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'International Application No. PCT/TH2019/000035'),
+IP_detail_1_4: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Title “BULLETPROOF PLATE”'),
+IP_detail_2_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'เลขที่คำขอ 2203000473'),
+IP_detail_2_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'ชื่อการประดิษฐ์อนุสิทธิบัตร “แผ่นเกราะกันกระสุน”'),
+IP_detail_3_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : `Bioplastic hemp straw with Petty Patent Pending No. 2103002144`),
+PartnersTopic_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Our '),
+PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partners'),
+});
+
+
 </script>
 <template>
   <div class="picture-home" v-bind:style="{ backgroundImage: 'url(' + officepic3 + ')' }">
