@@ -59,42 +59,46 @@ function scrollToSection(sectionId) {
 }
 </script>
 <template>
-    <div class="bg-container"><br><br><br><br><br><br><br></div>
-    <div class="bg-container full-height">
-        <div class="container-fluid mb-5" data-aos="fade-up">
-            <div class="container">
-                <div class="col-3 bg-head d-flex align-items-center justify-content-center">
-                    <p class="title-text service-text">{{ Data.MainTitle }}</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 text-head-box">
-                        <p class="head-text">{{ Data.MainDetail_1 }}</p>
-                        <p class="detail-text">{{ Data.MainDetail_2 }}</p>
-                        <p class="detail-text">{{ Data.MainDetail_3 }}</p>
+    <!-- <div class="bg-container"><br><br><br><br><br><br><br></div> -->
+    <div>
+        <div class="bg-container fullheight-service">
+            <div class="container-fluid mb-5" data-aos="fade-up">
+                <div class="container">
+                    <div class="col-3 bg-head d-flex align-items-center justify-content-center">
+                        <p class="title-text service-text">{{ Data.MainTitle }}</p>
                     </div>
-                    <div class="col-lg-6 row ">
-                        <div class="col-1"></div>
-                        <div class="col-5 bg-image-research p-0"
-                            v-bind:style="{ backgroundImage: 'url(' + hempcar_art + ')' }">
-                            <div
-                                class="container-fluid bg-image-research d-flex align-items-center justify-content-center m-0">
-                                <p class="services-text">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
-                                }}</span>’</p>
-                            </div>
-
+                    <div class="row">
+                        <div class="col-lg-6 text-head-box">
+                            <p class="head-text">{{ Data.MainDetail_1 }}</p>
+                            <p class="detail-text">{{ Data.MainDetail_2 }}</p>
+                            <p class="detail-text">{{ Data.MainDetail_3 }}</p>
                         </div>
-                        <div class="col-5 bg-image-consult p-0" v-bind:style="{ backgroundImage: 'url(' + solar_1 + ')' }">
-                            <div
-                                class="container-fluid bg-image-consult d-flex align-items-center justify-content-center m-0">
-                                <p class="services-text">{{ Data.Research_2 }}</p>
+                        <div class="col-lg-6 row ">
+                            <div class="col-1"></div>
+                            <div class="col-5 bg-image-research p-0"
+                                v-bind:style="{ backgroundImage: 'url(' + hempcar_art + ')' }">
+                                <div
+                                    class="container-fluid bg-image-research d-flex align-items-center justify-content-center m-0">
+                                    <p class="services-text">{{ Data.Research_1 }}<span class="hemp-car-text">{{
+                                        Data.Hempcar
+                                    }}</span>’</p>
+                                </div>
+
+                            </div>
+                            <div class="col-5 bg-image-consult p-0"
+                                v-bind:style="{ backgroundImage: 'url(' + solar_1 + ')' }">
+                                <div
+                                    class="container-fluid bg-image-consult d-flex align-items-center justify-content-center m-0">
+                                    <p class="services-text">{{ Data.Research_2 }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="d-flex align-items-center justify-content-center ">
-                <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
+                </div>
             </div>
         </div>
     </div>

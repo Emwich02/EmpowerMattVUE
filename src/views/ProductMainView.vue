@@ -21,8 +21,8 @@ const Data = {
 </script>
 
 <template>
-    <div class="picture" :style="{ backgroundImage: 'url(src/images/hempview.png)' }" style="margin-top: 2rem; " >
-        <div class="container-fluid picture" >
+    <div  v-bind:style="{ backgroundImage: 'url(' + hempview + ')' }" style="margin-top: 2rem; height: 100dvh;" >
+        <div class="container-fluid picture-product-main" >
             <div class="text-center">
                 <br><br><br><br><br><br>
                 <h1 class="blackbold-text front-30px " data-aos="fade-up">{{ Data.whatis }} <span class="greenbold-text">{{ Data.hemp }}
@@ -40,7 +40,7 @@ const Data = {
         </div>
     </div>
 
-    <div class="container full-height  ">
+    <div class="container full-height-starw  ">
         <div class="row justify-content-center">
             <div class="col-md-6" data-aos="fade-up">
                 <img :src="bioCompositePic" class="img-fluid" style="max-width: 100%; height: auto;">
@@ -60,7 +60,7 @@ const Data = {
     </div>
 
 
-    <div class="container full-height  bioplastic-left">
+    <div class="container full-height-starw  bioplastic-left">
         <div class="row justify-content-center">
             <div class="col-md-5 d-flex align-items-center">
                 <div><br>
@@ -80,7 +80,7 @@ const Data = {
 
 
 
-    <div class="container full-height bioplastic-down">
+    <div class="container full-height-starw bioplastic-down">
         <div class="row justify-content-center">
             <div class="col-md-6" data-aos="fade-up">
                 <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">

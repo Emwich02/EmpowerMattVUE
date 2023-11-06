@@ -88,7 +88,7 @@ export default {
 </script> -->
 <template>
     <div class="bgpic full-height" :style="{ backgroundImage: 'url(src/images/Hempfabric/hempcar.png)' }"
-        style="margin-top: 2rem; ">
+        style="margin-top: 2rem; " >
         <div class="container">
             <div class="row">
                 <div class="box mt-5 col-2" style="margin-left: 0px;">
