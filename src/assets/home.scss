@@ -25,11 +25,12 @@ $color_6: #1C1D23;
     background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
     background-position: center;
-    height: 790px;
+    height: 100vh;
     max-width: 100%;
     display: grid;
     align-content: center;
 }
+
 
 .blackbold-text-welcome {
     color: $color_1;
@@ -95,10 +96,12 @@ $color_6: #1C1D23;
 
 .background-green {
     background-color: $color_2;
+    height: 100vh;
 }
 
 .background-cream {
     background-color: $color_5;
+    height: 100vh;
 }
 
 @media (max-width: 480px) {

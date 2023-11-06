@@ -55,14 +55,14 @@ Thank you very much for your kindness. `,
       <h5 class="blackbold-text front-18px" data-aos="fade-up"><br><br><br>
         {{ Data.HexagonalTopic_1 }}<span class="greenbold-text">{{ Data.HexagonalTopic_2 }} </span>
       </h5>
-    </div> <br><br>
+      <br><br></div>
 
     <div class="container full-center">
       <div class="col-md-5 d-flex align-items-center" data-aos="fade-up">
         <img :src="Hexagonal" class="img-fluid" style="max-width: 100%; height: auto;">
       </div><br><br><br>
     </div>
-  </div><br><br>
+  </div>
 
   <div class="background-green">
     <div class="text-center">
