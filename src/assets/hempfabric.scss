@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     max-width: 100%;
+    height: 100vh;
     display: grid;
 }
 
@@ -18,6 +19,11 @@
 
 .greencolor {
     color: var(--green-primary-color);
+}
+
+.text-center{
+    text-align: center;
+    justify-content: center;
 }
 
 // .full-height {
@@ -55,6 +61,8 @@
     height: auto;
     background-size: cover;
 }
+
+
 
 @media (max-width: 768px) {
     .front-17px {
