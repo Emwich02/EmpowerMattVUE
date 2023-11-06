@@ -7,8 +7,8 @@ $color_6: #1c1d23;
 $color_7: #8bc9a7;
 $cream-primary-color: var(--cream-bg-color);
 
-:root{
-        --cream-bg-color: #fffdf5;
+:root {
+  --cream-bg-color: #fffdf5;
 }
 
 .picture-product-main {
@@ -43,8 +43,8 @@ $cream-primary-color: var(--cream-bg-color);
   text-align: right;
 }
 
-.bg-color-productmain{
-  background-color: $cream-primary-color ;
+.bg-color-productmain {
+  background-color: $cream-primary-color;
 }
 
 .full-height-starw-1 {
@@ -55,17 +55,28 @@ $cream-primary-color: var(--cream-bg-color);
 }
 
 .full-height-starw-2 {
-        height: 70dvh;
-        // display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+  height: 70dvh;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .button-details {
-  background-color: $color_7;
+  background-color: $color_2;
   padding: 6px 40px;
   float: right;
   border-radius: 30px;
+}
+
+.button-details:hover {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 2px #000000;
+  transition: 0.5s;
+}
+
+.button-details:active {
+  background-color: $color_7;
 }
 
 .bioplastic-down {
@@ -82,7 +93,7 @@ $cream-primary-color: var(--cream-bg-color);
   border-bottom: 2px #000000 solid;
 }
 
-.mt-product-main-13{
+.mt-product-main-13 {
   padding-top: 13rem;
 }
 

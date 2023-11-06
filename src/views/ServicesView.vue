@@ -1,7 +1,6 @@
 <script setup>
-import { computed, reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { useLanguage } from '/src/stores/useLanguage.js'
-import { ref } from 'vue'
 const languageStores = useLanguage()
 const isLang = computed(() => languageStores.activeLang)
 import hemp_farm from '@/images/412798_0.jpg';
@@ -311,7 +310,5 @@ function scrollToSection(sectionId) {
         </div>
     </div>
 </template>
-<style lang="scss">
-// Import Main styles for this application
-@import '/src/assets/services.scss';
-</style>
+<style lang="scss">// Import Main styles for this application
+@import '/src/assets/services.scss';</style>

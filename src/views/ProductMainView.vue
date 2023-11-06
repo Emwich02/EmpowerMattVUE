@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import hempview from '@/images/hempview.png';
 import bioPlasticPic from '@/images/bioPlasticPic.png';
@@ -64,7 +63,9 @@ function scrollToSection(sectionId) {
                         </p>
                         <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.compositeTitle }}</h5>
                         <p class="front-12px" data-aos="fade-up"> {{ Data.compositeDetails }} </p>
-                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}
+                        <p class="button-details front-12px" style="color:white" data-aos="fade-up">
+                            <router-link to="/Naturalhempfabric" class="dropdown-item product-1">
+                                {{ Data.moreDetails }} </router-link>
                         </p>
                     </div>
                 </div>
@@ -82,7 +83,9 @@ function scrollToSection(sectionId) {
                         </p>
                         <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
                         <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
-                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}
+                        <p class="button-details front-12px" style="color:white" data-aos="fade-up">
+                            <router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{
+                                Data.moreDetails }}</router-link>
                         </p>
                     </div>
                 </div>
@@ -99,12 +102,13 @@ function scrollToSection(sectionId) {
                 <div class="col-md-5 d-flex align-items-center">
                     <div><br>
                         <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
-                                class="green-text">{{
-                                    Data.products }}</span>
+                                class="green-text">{{ Data.products }}</span>
                         </p>
                         <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
                         <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
-                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}
+                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> <router-link
+                                to="/ProductBioPlastic" class="dropdown-item product-2">{{ Data.moreDetails
+                                }}</router-link>
                         </p>
                     </div>
                 </div>
