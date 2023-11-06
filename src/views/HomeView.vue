@@ -32,28 +32,28 @@ Thank you very much for your kindness. `,
 <template>
   <div class="picture-home" v-bind:style="{ backgroundImage: 'url(' + officepic3 + ')' }">
     <div class="container-fluid picture-home">
-      <div class="text-center " data-aos="fade-up">
-        <h1 class="blackbold-text-welcome-home front-30px">{{ Data.MainTitle_1 }} <span class="greenbold-text">{{ Data.MainTitle_2 }}
+      <div class="text-center-home" data-aos="fade-up">
+        <h1 class="blackbold-text-welcome-home front-30px">{{ Data.MainTitle_1 }} <span class="greenbold-text-home">{{ Data.MainTitle_2 }}
           </span></h1>
       </div> <br>
 
       <div class="box-home" data-aos="fade-up">
-        <div class="text-center">
+        <div class="text-center-home">
         <h5 class="front-18px " style="color:white" data-aos="fade-up">{{ Data.PrimaryTitle }} </h5>
       </div>
       </div><br><br>
 
       <div class="container">
-        <p class="text-center front-13px " data-aos="fade-up">{{ Data.Description }}</p>
+        <p class="text-center-home front-13px " data-aos="fade-up">{{ Data.Description }}</p>
       </div>
     </div>
   </div>
 
 
   <div class="background-cream-home">
-    <div class="text-center">
+    <div class="text-center-home">
       <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
-        {{ Data.HexagonalTopic_1 }}<span class="greenbold-text">{{ Data.HexagonalTopic_2 }} </span>
+        {{ Data.HexagonalTopic_1 }}<span class="greenbold-text-home">{{ Data.HexagonalTopic_2 }} </span>
       </h5>
       <br><br></div>
 
@@ -65,7 +65,7 @@ Thank you very much for your kindness. `,
   </div>
 
   <div class="background-green-home">
-    <div class="text-center">
+    <div class="text-center-home">
       <h5 class="whitebold-text-home front-18px" data-aos="fade-up"><br><br><br>{{ Data.GrapheneTopic }}</h5>
     </div> <br>
 
@@ -76,14 +76,14 @@ Thank you very much for your kindness. `,
     </div><br>
 
     <div class="container-closer">
-      <div class="text-center">
+      <div class="text-center-home">
         <p class="white-text-home front-13px" data-aos="fade-up"> {{ Data.GrapheneDetail }}</p>
       </div>
     </div> <br><br><br><br>
   </div>
 
   <div v-bind:style="{ backgroundImage: 'url(' + Oak + ')' }">
-    <div class="text-center">
+    <div class="text-center-home">
       <h5 class="blackbold-text-home front-18px"><br><br><br>{{ Data.IP_title }}</h5><br>
     </div>
 
@@ -103,7 +103,7 @@ Thank you very much for your kindness. `,
     </div> <br><br><br>
   </div>
 
-  <div class="text-center">
+  <div class="text-center-home">
     <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
       {{ Data.PartnersTopic_1 }}
       <span class="greenbold-text-home ">{{ Data.PartnersTopic_2 }} </span>
