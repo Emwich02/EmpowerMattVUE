@@ -5,19 +5,24 @@ import downlight from '@/images/downlight.png';
 import Straw from '@/images/Straw.png';
 import FlockSpoon from '@/images/FlockSpoon.png';
 import coffeecup from '@/images/coffeecup.png';
+import { computed, reactive } from 'vue'
+import { useLanguage } from '/src/stores/useLanguage.js'
+const languageStores = useLanguage()
+const isLang = computed(() => languageStores.activeLang)
 
+const Data = reactive({
+    Products: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'Products' ),
+    Our: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'our '),
+    product: computed(() => isLang.value == 'THA' ? '1111' : 'products'),
+    HempBioPlastics: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Hemp-bioplastics '),
+    CompoundMaterial: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'compound materials'),
+    HempBioPlasticsDetails: computed(() => isLang.value == 'THA' ? 'ไอยู' : `There are some hemp-bioplastic pellets and food utensil products such as straw, flock, spoon and shop stick.`),
+    straw: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'straw'),
+    cup: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'cup'),
+    SpoonAndFork: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'spoon & fork'),
+   
+});
 
-const Data = {
-    Products: 'Products',
-    Our: 'our ',
-    product: 'products',
-    HempBioPlastics: 'Hemp-bioplastics ',
-    CompoundMaterials: 'compound materials',
-    HempBioPlasticsDetails: `There are some hemp-bioplastic pellets and food utensil products such as straw, flock, spoon and shop stick.`,
-    straw: 'straw',
-    cup: 'cup',
-    SpoonAndFork: 'spoon & fork',
-}
 </script>
 
 <template>
@@ -30,8 +35,9 @@ const Data = {
             </div><br>
 
             <div class="text-center-bioplastic">
-                <h4 class="blackbold-text-bioplastic front-15px" data-aos="fade-up">{{ Data.Our }} <span class="greenbold-text-bioplastic">{{
-                    Data.product }} </span> </h4>
+                <h4 class="blackbold-text-bioplastic front-15px" data-aos="fade-up">{{ Data.Our }} <span
+                        class="greenbold-text-bioplastic">{{
+                            Data.product }} </span> </h4>
 
                 <h2 class="greenbold-text-bioplastic front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
                         class="blackbold-text-bioplastic">{{
