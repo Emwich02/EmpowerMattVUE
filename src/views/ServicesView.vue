@@ -62,7 +62,7 @@ function scrollToSection(sectionId) {
     <!-- <div class="bg-container"><br><br><br><br><br><br><br></div> -->
     <div>
         <div class="bg-container fullheight-service">
-            <div class="container-fluid mb-5" data-aos="fade-up">
+            <div class="container-fluid mt-5 mb-5" data-aos="fade-up">
                 <div class="container">
                     <div class="col-3 bg-head d-flex align-items-center justify-content-center">
                         <p class="title-text service-text">{{ Data.MainTitle }}</p>
@@ -311,5 +311,7 @@ function scrollToSection(sectionId) {
         </div>
     </div>
 </template>
-<style lang="scss">// Import Main styles for this application
-@import '/src/assets/services.scss';</style>
+<style lang="scss">
+// Import Main styles for this application
+@import '/src/assets/services.scss';
+</style>

@@ -1,7 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import hempview from '@/images/hempview.png';
-import downlight from '@/images/downlight.png';
 import bioPlasticPic from '@/images/bioPlasticPic.png';
 import bioCompositePic from '@/images/bioCompositePic.png';
 
@@ -18,90 +17,100 @@ const Data = {
     plasticTitle: 'Bioplastic hemp pellets product',
     plasticDetails: '" The hemp bioplastics compound material PH0001HT “'
 }
+
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 </script>
 
 <template>
-    <div  v-bind:style="{ backgroundImage: 'url(' + hempview + ')' }" style="margin-top: 2rem; height: 100dvh;" >
-        <div class="container-fluid picture-product-main" >
+    <div v-bind:style="{ backgroundImage: 'url(' + hempview + ')' }" style="margin-top: 2rem; height: 100dvh;">
+        <div class="container-fluid picture-product-main">
             <div class="text-center">
                 <br><br><br><br><br><br>
-                <h1 class="blackbold-text front-30px " data-aos="fade-up">{{ Data.whatis }} <span class="greenbold-text">{{ Data.hemp }}
+                <h1 class="blackbold-text front-30px " data-aos="fade-up">{{ Data.whatis }} <span class="greenbold-text">{{
+                    Data.hemp }}
                     </span></h1><br>
             </div>
-            <div class="container front-12px">
-                <p data-aos="fade-up">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
-                    Data.firstparagraph }}</p>
-                <p data-aos="fade-up">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
-                    Data.secondparagraph }}</p>
-            </div>
-            <div class="text-center" data-aos="fade-up">
-                <br><br><br> <img :src="downlight" class="img-fluid" style="max-width: 100%; height: auto;">
-            </div>
-        </div>
-    </div>
-
-    <div class="container full-height-starw  ">
-        <div class="row justify-content-center">
-            <div class="col-md-6" data-aos="fade-up">
-                <img :src="bioCompositePic" class="img-fluid" style="max-width: 100%; height: auto;">
-            </div>
-
-            <div class="col-md-5 d-flex align-items-center">
-                <div><br>
-                    <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span class="green-text">{{
-                        Data.products }}</span>
-                    </p>
-                    <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.compositeTitle }}</h5>
-                    <p class="front-12px" data-aos="fade-up"> {{ Data.compositeDetails }} </p>
-                    <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}</p>
+            <div class="container front-12px" data-aos="fade-up">
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                        Data.firstparagraph }}</p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                        Data.secondparagraph }}</p>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container-fluid bg-color-productmain">
 
 
-    <div class="container full-height-starw  bioplastic-left">
-        <div class="row justify-content-center">
-            <div class="col-md-5 d-flex align-items-center">
-                <div><br>
-                    <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span class="green-text">{{
-                        Data.products }}</span>
-                    </p>
-                    <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
-                    <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
-                    <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}</p>
+        <div class="container full-height-starw-1 mt-product-main-13" id="first">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6" data-aos="fade-up">
+                    <img :src="bioCompositePic" class="img-fluid" style="max-width: 100%; height: auto;">
                 </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up">
-                <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container full-height-starw bioplastic-down">
-        <div class="row justify-content-center">
-            <div class="col-md-6" data-aos="fade-up">
-                <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">
-            </div>
-            <div class="col-md-5 d-flex align-items-center">
-                <div><br>
-                    <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span class="green-text">{{
-                        Data.products }}</span>
-                    </p>
-                    <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
-                    <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
-                    <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}</p>
+                <div class="col-md-5 d-flex align-items-center">
+                    <div><br>
+                        <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
+                                class="green-text">{{
+                                    Data.products }}</span>
+                        </p>
+                        <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.compositeTitle }}</h5>
+                        <p class="front-12px" data-aos="fade-up"> {{ Data.compositeDetails }} </p>
+                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <br><br><br>
+    <div class="container-fluid bg-color-productmain" id="second">
+        <div class="container   full-height-starw-2  bioplastic-left">
+            <div class="row justify-content-center">
+                <div class="col-md-5 d-flex align-items-center">
+                    <div><br>
+                        <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
+                                class="green-text">{{
+                                    Data.products }}</span>
+                        </p>
+                        <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
+                        <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
+                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up">
+                    <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+        <div class="container full-height-starw-2 bioplastic-down">
+            <div class="row justify-content-center">
+                <div class="col-md-6" data-aos="fade-up">
+                    <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                    <div><br>
+                        <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
+                                class="green-text">{{
+                                    Data.products }}</span>
+                        </p>
+                        <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
+                        <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
+                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> {{ Data.moreDetails }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss">
