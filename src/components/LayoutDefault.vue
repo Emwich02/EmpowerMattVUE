@@ -109,7 +109,10 @@ onMounted(() => {
             </div>
         </nav>
     </header>
-    <RouterView />
+    <body>
+        <RouterView />
+    </body>
+   
     <footer class="text-center text-lg-start bg-cream text-muted">
         <section class="pt-2 pb-2">
             <div class="container text-center text-md-start mt-5">

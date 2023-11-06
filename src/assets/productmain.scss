@@ -7,11 +7,11 @@ $color_6: #1C1D23;
 $color_7: #8BC9A7;
 
 
-.picture {
+.picture-product-main {
         background-color: rgba(255, 255, 255, 0.8);
         background-size: cover;
         background-position: center;
-        height: 790px;
+        height: 100%;
         max-width: 100%;
         display: grid;
         align-content: center;
@@ -41,9 +41,9 @@ $color_7: #8BC9A7;
         text-align: right;
 }
 
-.full-height {
+.full-height-starw {
         height: 80vh;
-        display: flex;
+        // display: flex;
         align-items: center;
         justify-content: center;
 }

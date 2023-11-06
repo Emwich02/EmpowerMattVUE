@@ -13,7 +13,7 @@ $background-table-color: var(--gray-bg-table-color);
   --cream-bg-color: #fffdf5;
   --green-bg-color: rgba(83, 142, 110, 0.4);
   --gray-bg-table-color: #dde7da;
-  --green-linear-gradient-color: linear-gradient(180deg, #FFFDF5 0%, rgba(83, 142, 110, 0.4) 100%)
+  --green-linear-gradient-color: linear-gradient(180deg, #fffdf5 0%, rgba(83, 142, 110, 0.4) 100%);
 }
 
 .bg-container {
@@ -25,12 +25,12 @@ $background-table-color: var(--gray-bg-table-color);
   border-radius: 20px;
 }
 
-.bg-cream-green-color{
+.bg-cream-green-color {
   background: $background-color_5;
 }
 
-.title-text{
-  font-size: calc(16px + 0.5vw) ;
+.title-text {
+  font-size: calc(16px + 0.5vw);
   margin: 1vw;
   font-style: normal;
   font-weight: 700;
@@ -46,7 +46,7 @@ $background-table-color: var(--gray-bg-table-color);
   line-height: normal;
 }
 
-.head-text-2{
+.head-text-2 {
   font-size: calc(1.5rem + 0.5vw);
   font-style: normal;
   font-weight: 700;
@@ -74,10 +74,10 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .bg-image {
-	background-color: rgba(255,255,255,0.6);
-	background-size: cover;
-	background-position: center;
-	width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
 .bg-image-hempcar {
@@ -86,7 +86,7 @@ $background-table-color: var(--gray-bg-table-color);
   width: 100%;
 }
 
-.hempcar-box{
+.hempcar-box {
   padding-left: 20%;
   padding-right: 20%;
 }
@@ -121,7 +121,7 @@ $background-table-color: var(--gray-bg-table-color);
   color: $green-color;
 }
 
-.hempcar-detail-text{
+.hempcar-detail-text {
   font-size: calc(16px + 0.3vw);
   font-style: normal;
   font-weight: 500;
@@ -146,11 +146,11 @@ $background-table-color: var(--gray-bg-table-color);
   opacity: 1;
 }
 
-.hempfiber{
+.hempfiber {
   margin-left: 10%;
 }
 
-.hempcar-head-text{
+.hempcar-head-text {
   color: $green-color;
   font-size: 2.25rem;
   font-style: normal;
@@ -158,24 +158,24 @@ $background-table-color: var(--gray-bg-table-color);
   line-height: normal;
 }
 
-.hempcar-photo{
+.hempcar-photo {
   width: 100%;
   border-radius: 20px;
 }
 
-.m-spec{
+.m-spec {
   margin-left: 10%;
   margin-right: 10%;
 }
 
-.Spec-main-text{
+.Spec-main-text {
   font-size: calc(1.5rem + 0.5vw);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-.Spec-detail-text{
+.Spec-detail-text {
   font-size: calc(16px + 0.42vw);
   font-style: normal;
   font-weight: 500;
@@ -183,12 +183,12 @@ $background-table-color: var(--gray-bg-table-color);
   margin-left: 5%;
 }
 
-.m-prop{
+.m-prop {
   margin-left: 5%;
   margin-right: 5%;
 }
 
-.Prop-main-text{
+.Prop-main-text {
   font-size: calc(1.5rem + 0.5vw);
   font-style: normal;
   font-weight: 700;
@@ -196,7 +196,7 @@ $background-table-color: var(--gray-bg-table-color);
   margin-left: 5%;
 }
 
-.Prop-detail-text{
+.Prop-detail-text {
   font-size: calc(16px + 0.42vw);
   font-style: normal;
   font-weight: 500;
@@ -204,7 +204,7 @@ $background-table-color: var(--gray-bg-table-color);
   margin-left: 5%;
 }
 
-.Prop-Method-detail-text-1{
+.Prop-Method-detail-text-1 {
   font-size: calc(16px + 0.42vw);
   font-style: normal;
   font-weight: 500;
@@ -212,15 +212,13 @@ $background-table-color: var(--gray-bg-table-color);
   margin-left: 10%;
 }
 
-.Prop-Method-detail-text-2{
+.Prop-Method-detail-text-2 {
   font-size: calc(16px + 0.42vw);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-left: 20%;
 }
-
-
 
 table {
   border-spacing: 0;
@@ -260,66 +258,66 @@ td {
   padding: 10px;
 }
 
-.bg-image-farm{
-  background-color: rgba(255,255,255,0.8);
+.bg-image-farm {
+  background-color: rgba(255, 255, 255, 0.8);
   background-size: cover;
-	background-position: center;
+  background-position: center;
   width: 100%;
 }
 
-.custom-width{
+.custom-width {
   width: 17.5%;
 }
 
-.custom-width-2{
+.custom-width-2 {
   width: 15%;
 }
 
-.m-solar-image{
+.m-solar-image {
   margin-bottom: 4%;
 }
 
-.solar-image-1{
+.solar-image-1 {
   width: 100%;
   padding-bottom: 5px;
   border-radius: 20px;
 }
 
-.solar-image-2{
+.solar-image-2 {
   width: 100%;
   padding-top: 5px;
   border-radius: 20px;
 }
 
-.solar-image-3{
+.solar-image-3 {
   width: 100%;
   border-radius: 20px;
 }
 
-.m-solar-main-text{
-  margin-left: 5%; 
+.m-solar-main-text {
+  margin-left: 5%;
   margin-right: 5%;
 }
 
-.p-table-solar{
+.p-table-solar {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
 }
 
-.graphene-photo{
+.graphene-photo {
   width: 100%;
 }
 
-.graphene-detail-text{
+.graphene-detail-text {
   font-size: calc(16px + 0.3vw);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-.graphene-text{
-  margin-top: auto; 
+.graphene-text {
+  margin-top: auto;
   margin-bottom: auto;
 }
 
@@ -330,98 +328,94 @@ td {
   border-radius: 20px;
 }
 
-.hempcar-video{
+.hempcar-video {
   border-radius: 20px;
 }
 
-.full-height{
-	height: 100vh;
+.fullheight-service {
+  height: 100dvh;
+  margin-top: 7rem;
+  padding-top: 3rem;
 }
 
-
-.full-height-2{
+.full-height-2 {
   height: 100vh;
 }
 
-.pt-13{
+.pt-13 {
   padding-top: 13rem;
 }
 
-.pt-8{
+.pt-8 {
   padding-top: 8rem;
 }
 
-
-.arrow{
-	width: 24px;
-	height: 24px;
-	transform: rotate(45deg);
-	border-left: none;
-	border-top: none;
-	border-right: 2px #000000 solid;
-	border-bottom: 2px #000000 solid;
+.arrow {
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #000000 solid;
+  border-bottom: 2px #000000 solid;
 }
 
 @media only screen and (max-width: 766px) {
-
-
-  .full-height-2{
+  .full-height-2 {
     height: 50vh;
   }
 
-  .hempcar-box{
+  .hempcar-box {
     padding-left: 0;
     padding-right: 0;
   }
 
-  .pt-13{
+  .pt-13 {
     padding-top: 18rem;
   }
-  
 
-  .head-text-2{
+  .head-text-2 {
     font-size: calc(1rem + 0.5vw);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 
-  ul{
+  ul {
     padding: 0;
   }
 
-  .Spec-detail-text{
+  .Spec-detail-text {
     font-size: calc(16px + 0.42vw);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
 
-  .graphene-photo{
-    width: 60%; 
+  .graphene-photo {
+    width: 60%;
   }
 
-  .custom-width{
-    width:50%;
+  .custom-width {
+    width: 50%;
   }
-  
-  .custom-width-2{
+
+  .custom-width-2 {
     width: 44%;
   }
 }
 
 @media only screen and (max-width: 970px) {
-  .bg-head{
+  .bg-head {
     width: 40%;
     border-radius: 10px;
   }
 
-  .custom-width{
-    width:50%;
+  .custom-width {
+    width: 50%;
   }
-  
-  .custom-width-2{
+
+  .custom-width-2 {
     width: 43%;
   }
 }
-
