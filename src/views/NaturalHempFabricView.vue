@@ -52,52 +52,12 @@ function scrollToSection(sectionId) {
     }
 }
 </script>
-<!-- <script>
-export default {
-    data() {
-        return {
-            current : null
-        };
-    },
-    mounted() {
-        window.addEventListener('wheel', this.handleScroll);
-    },
-    beforeUnmount() {
-        window.removeEventListener('wheel', this.handleScroll);
-    },
-    methods: {
-        handleScroll(event) {
-            const  s = this.$refs;
-
-            for (const  Name in  s) {
-                const   =  s[ Name];
-                const rect =  .getBoundingClientRect();
-                if (rect.top < window.innerHeight / 2) {
-                    this.current  =  Name;
-                }
-            }
-
-            if (event.deltaY > 0 && this.current ) {
-                const next  =  s[` ${parseInt(this.current .charAt(this.current .length - 1)) + 1}`];
-                if (next ) {
-                    next .scrollIntoView({ behavior: 'smooth' });
-                }
-            } else if (event.deltaY < 0 && this.current ) {
-                const previous  =  s[` ${parseInt(this.current .charAt(this.current .length - 1)) - 1}`];
-                if (previous ) {
-                    previous .scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        }
-    }
-}
-</script> -->
 <template>
-    <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 2rem; ">
-        <div class="container">
+    <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 7rem; ">
+        <div class="container pt-5">
             <div class="row">
-                <div class="box mt-5 col-2" style="margin-left: 0px;">
-                    <h4 class="text-center " style="color:white">{{ Data.Title }} </h4>
+                <div class="box d-flex align-items-center justify-content-center col-2">
+                    <h4 class="title-text-natural" style="color:white">{{ Data.Title }} </h4>
                 </div>
                 <div class="row pt-5">
                     <div class="col-md-1"></div>
@@ -110,17 +70,16 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="text-center ">
-                <span style="cursor: pointer;  " @click="scrollToSection('first')">↓ ↓ ↓</span>
-                <br><br><br>
+            <div class="d-flex align-items-center justify-content-center ">
+                <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
             </div>
         </div>
 
-    </div><br><br>
+    </div>
 
-    <div id="first">
-        <div class="container ps-5 full-height  ">
-            <div class="row">
+    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 20rem;">
+        <div class="container ps-5 full-height ">
+            <div class="row ">
                 <div class="col-md-6 d-flex align-items-center">
                     <div>
                         <h4 class="front-17px"><span class="greencolor">{{ Data.Natural }}</span> {{ Data.HempFabric }}</h4>
@@ -131,13 +90,13 @@ export default {
                 <div class="col-md-6">
                     <img :src="Solarpic" class="img-fluid" style="max-width: 100%; height: auto;">
                 </div>
-                <div class="text-center ">
-                    <span style="cursor: pointer;  " @click="scrollToSection('second')">↓ ↓ ↓</span>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('second')"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="second">
+    <div id="second" class="full-height-hempfabric-1 bg-color-hempfabric" style="padding-top: 15rem;">
         <div class="container ps-5  align-self-center full-height  ">
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center">
@@ -149,35 +108,32 @@ export default {
                 <div class="col-md-3">
                     <img :src="fabric" class="img-fluid" style="max-width: 100%; height: auto;">
                 </div>
-                <div class="text-center ">
-                    <span style="cursor: pointer;  " @click="scrollToSection('third')">↓ ↓ ↓</span>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('third')"></div>
                 </div>
             </div>
         </div>
-
     </div>
-    <div id="third">
-
-        <div class="container">
-            <h4 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric
-            }}</h4><br>
+    <div class=" bg-color-hempfabric" style="padding-top: 10rem;" id="third">
+        <div class="container mb-5" >
+            <h2 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric
+            }}</h2>
         </div>
         <div class="container d-flex align-items-center justify-content-center">
-            <div>
-                <div class="col-md-5 " data-aos="fade-up">
-                    <img :src="aktableone" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div><br>
-                <div class="col-md-5" data-aos="fade-up">
-                    <img :src="aktabletwo" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div><br>
-                <div class="col-md-5" data-aos="fade-up">
-                    <img :src="aktablethree" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div><br><br>
+            <div class="row">
+                <div class="pb-4 d-flex align-items-center justify-content-center " data-aos="fade-up">
+                    <img :src="aktableone" class="img-fluid" style="max-width: 70%; height: auto;">
+                </div>
+                <div class="pb-4 d-flex align-items-center justify-content-center" data-aos="fade-up">
+                    <img :src="aktabletwo" class="img-fluid" style="max-width: 70%; height: auto;">
+                </div>
+                <div class="pb-4 d-flex align-items-center justify-content-center" data-aos="fade-up">
+                    <img :src="aktablethree" class="img-fluid" style="max-width: 70%; height: auto;">
+                </div>
             </div>
-
         </div>
     </div>
 </template>
 <style lang="scss">
-@import '/src/assets/hempfabric.scss';
+@import '/src/assets/NaturalHempFabric.scss';
 </style>

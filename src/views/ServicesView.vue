@@ -62,8 +62,8 @@ function scrollToSection(sectionId) {
         <div class="bg-container fullheight-service">
             <div class="container-fluid mt-5 mb-5" data-aos="fade-up">
                 <div class="container">
-                    <div class="col-3 bg-head d-flex align-items-center justify-content-center">
-                        <p class="title-text service-text">{{ Data.MainTitle }}</p>
+                    <div class="col-2 bg-head d-flex align-items-center justify-content-center">
+                        <p class="title-text ">{{ Data.MainTitle }}</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 text-head-box">
