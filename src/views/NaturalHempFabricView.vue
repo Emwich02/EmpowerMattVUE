@@ -13,7 +13,7 @@ const languageStores = useLanguage()
 const isLang = computed(() => languageStores.activeLang)
 
 const Data = reactive({
-    Title: computed(() => isLang.value == 'THA' ? 'Products' : 'Products'),
+    Title: computed(() => isLang.value == 'THA' ? 'ผลิต' : 'Products'),
     Our: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'our'),
     Product: computed(() => isLang.value == 'THA' ? '1111' : 'Product'),
     Natural: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Natural"),
@@ -54,12 +54,12 @@ function scrollToSection(sectionId) {
 </script>
 <template>
     <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 7rem; ">
-        <div class="container pt-5">
-            <div class="row">
-                <div class="box d-flex align-items-center justify-content-center col-2">
+        <div class="container pt-5" data-aos="fade-up">
+            <div class="row pt-5">
+                <div class="box-naturalhemp d-flex align-items-center justify-content-center col-2">
                     <h4 class="title-text-natural" style="color:white">{{ Data.Title }} </h4>
                 </div>
-                <div class="row pt-5">
+                <div class="row pt-5" data-aos="fade-up">
                     <div class="col-md-1"></div>
                     <div class="col-md-11">
                         <h4 class="front-17px">{{ Data.Our }} <span class="greencolor">{{ Data.Product }}</span></h4>
@@ -70,15 +70,15 @@ function scrollToSection(sectionId) {
                     </div>
                 </div>
             </div>
-            <div class="d-flex align-items-center justify-content-center ">
+            <div class="d-flex align-items-center justify-content-center " data-aos="fade-up">
                 <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
             </div>
         </div>
 
     </div>
 
-    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 20rem;">
-        <div class="container ps-5 full-height ">
+    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 20rem;" >
+        <div class="container ps-5 full-height " data-aos="fade-up">
             <div class="row ">
                 <div class="col-md-6 d-flex align-items-center">
                     <div>
@@ -97,7 +97,7 @@ function scrollToSection(sectionId) {
         </div>
     </div>
     <div id="second" class="full-height-hempfabric-1 bg-color-hempfabric" style="padding-top: 15rem;">
-        <div class="container ps-5  align-self-center full-height  ">
+        <div class="container ps-5  align-self-center full-height  " data-aos="fade-up">
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center">
                     <div>
@@ -115,7 +115,7 @@ function scrollToSection(sectionId) {
         </div>
     </div>
     <div class=" bg-color-hempfabric" style="padding-top: 10rem;" id="third">
-        <div class="container mb-5" >
+        <div class="container mb-5" data-aos="fade-up">
             <h2 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric
             }}</h2>
         </div>

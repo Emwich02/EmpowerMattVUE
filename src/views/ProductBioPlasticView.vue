@@ -29,8 +29,8 @@ const Data = reactive({
     <div class="background-cream-bioplastic">
         <br><br><br><br>
 
-        <div class="container">
-            <div class="box-bioplastic mt-5 " style="margin-right: 70%;" data-aos="fade-up">
+        <div class="container pt-5">
+            <div class="box-bioplastic  d-flex align-items-center justify-content-center mt-5 col-2" data-aos="fade-up">
                 <h4 class="text-center-bioplastic " style="color:white">{{ Data.Products }} </h4>
             </div><br>
 
@@ -57,17 +57,17 @@ const Data = reactive({
 
             <div class="figure">
                 <div class="row">
-                    <div class="col" data-aos="fade-up">
+                    <div class="col-4" data-aos="fade-up">
                         <img :src="Straw" class="img-fluid" style="max-width: 80%; height: auto;">
-                        <p>{{ Data.straw }} </p>
+                        <h5 class="front-17px">{{ Data.straw }} </h5>
                     </div>
-                    <div class="col" data-aos="fade-up">
+                    <div class="col-4" data-aos="fade-up">
                         <span><img :src="FlockSpoon" class="img-fluid" style="max-width: 80%; height: auto;"></span>
-                        <p>{{ Data.cup }} </p>
+                        <h5 class="front-17px">{{ Data.cup }} </h5>
                     </div>
-                    <div class="col" data-aos="fade-up">
+                    <div class="col-4" data-aos="fade-up">
                         <img :src="coffeecup" class="img-fluid" style="max-width: 80%; height: auto;">
-                        <p>{{ Data.SpoonAndFork }} </p>
+                        <h5 class="front-17px">{{ Data.SpoonAndFork }} </h5>
                     </div>
                 </div>
             </div><br><br>
