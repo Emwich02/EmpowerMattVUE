@@ -30,8 +30,8 @@ const Data = reactive({
     Graphene: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Graphene"),
     Graphene_Detail_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : "We have done the research and development in “Graphene Composites”."),
     Graphene_Detail_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : "We are collaboration with Graphene Creation Co.,Ltd. to do some research"),
-    Graphene_Detail_3: computed(() => isLang.value == 'THA' ? 'ไอยู' : "projects to create some innovation products with based on graphene such as"),
-    Graphene_Detail_4: computed(() => isLang.value == 'THA' ? 'ไอยู' : "special functional textile."),
+    Graphene_Detail_3: computed(() => isLang.value == 'THA' ? 'ไอยู' : "projects to create some innovation products with based on graphene such as special functional textile."),
+    Graphene_Detail_4: computed(() => isLang.value == 'THA' ? 'ไอยู' : ""),
     Method_Detail_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Standard test method for tensile properties of polymer matrix composite materials."),
     Method_Detail_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : "Standard test method for flexural properties of unreinforced and reinforced plastics and electrical.")
 });
@@ -60,9 +60,9 @@ function scrollToSection(sectionId) {
 <template>
     <div>
         <div class="bg-container fullheight-service">
-            <div class="container-fluid mt-5 mb-5" data-aos="fade-up">
+            <div class="container-fluid mb-5" data-aos="fade-up">
                 <div class="container">
-                    <div class="col-2 bg-head d-flex align-items-center justify-content-center">
+                    <div class="col-3 bg-head d-flex align-items-center justify-content-center">
                         <p class="title-text ">{{ Data.MainTitle }}</p>
                     </div>
                     <div class="row">
@@ -95,7 +95,7 @@ function scrollToSection(sectionId) {
                 </div>
 
                 <div class="d-flex align-items-center justify-content-center ">
-                    <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
+                    <div class="arrow" style="cursor: pointer; " @click="scrollToSection('first')"></div>
                 </div>
             </div>
         </div>
@@ -293,21 +293,22 @@ function scrollToSection(sectionId) {
     <div class=" bg-container full-height " id="fourt">
         <div class="py-5 mb-5 ">
         </div>
-        <div class="container d-flex justify-content-center">
-            <div class="row ">
-                <div class="col-lg-4 " data-aos="fade-up">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 d-flex justify-content-center" data-aos="fade-up">
                     <img :src="graphene" alt="graphene" class="graphene-photo">
                 </div>
-                <div class="col-lg-8 graphene-text" data-aos="fade-up">
+                <div class="col-lg-8 pb-5 graphene-text" data-aos="fade-up">
                     <p class="head-text hemp-car-text">{{ Data.Graphene }}</p>
                     <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_1 }}</p>
                     <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_2 }}</p>
                     <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_3 }}</p>
-                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_4 }}</p>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<style lang="scss">// Import Main styles for this application
-@import '/src/assets/services.scss';</style>
+<style lang="scss">
+// Import Main styles for this application
+@import '/src/assets/services.scss';
+</style>
