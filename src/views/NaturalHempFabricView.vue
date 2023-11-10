@@ -3,9 +3,9 @@
 // import Graphene from '@/images/Graphene.png';
 import Solarpic from '@/images/Hempfabric/SolarSatellitePanels.png';
 import fabric from '@/images/Hempfabric/fabric.png';
-import aktableone from '@/images/Hempfabric/aktableone.png';
-import aktabletwo from '@/images/Hempfabric/aktabletwo.png';
-import aktablethree from '@/images/Hempfabric/aktablethree.png';
+// import aktableone from '@/images/Hempfabric/aktableone.png';
+// import aktabletwo from '@/images/Hempfabric/aktabletwo.png';
+// import aktablethree from '@/images/Hempfabric/aktablethree.png';
 import hempcar from '@/images/Hempfabric/hempcar.png';
 import { computed, reactive } from 'vue'
 import { useLanguage } from '/src/stores/useLanguage.js'
@@ -77,7 +77,7 @@ function scrollToSection(sectionId) {
 
     </div>
 
-    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 20rem;" >
+    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 20rem;">
         <div class="container ps-5 full-height " data-aos="fade-up">
             <div class="row ">
                 <div class="col-md-6 d-flex align-items-center">
@@ -119,18 +119,102 @@ function scrollToSection(sectionId) {
             <h2 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric
             }}</h2>
         </div>
-        <div class="container d-flex align-items-center justify-content-center">
-            <div class="row">
-                <div class="pb-4 d-flex align-items-center justify-content-center " data-aos="fade-up">
-                    <img :src="aktableone" class="img-fluid" style="max-width: 70%; height: auto;">
-                </div>
-                <div class="pb-4 d-flex align-items-center justify-content-center" data-aos="fade-up">
-                    <img :src="aktabletwo" class="img-fluid" style="max-width: 70%; height: auto;">
-                </div>
-                <div class="pb-4 d-flex align-items-center justify-content-center" data-aos="fade-up">
-                    <img :src="aktablethree" class="img-fluid" style="max-width: 70%; height: auto;">
-                </div>
-            </div>
+        <div class="table-responsive" data-aos="fade-up">
+            <table class="mb-5">
+                <tr>
+                    <th >Physical properties</th>
+                    <th>Testing results</th>
+                    <th>Standard method</th>
+                </tr>
+                <tr>
+                    <td>
+                        Fabric Weight <br>
+                        Weave Style<br>
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-6">
+                                Tensile Strength
+                            </div>
+                            <div class="col-lg-12 col-xl-6">Warp direction:</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-6">
+
+                            </div>
+                            <div class="col-lg-12 col-xl-6">Weft direction:</div>
+                        </div>
+
+                    </td>
+                    <td>
+                        170 ± 10 g/m2<br>
+                        Plain<br>
+                        ≥ 1317 N/25mm<br>
+                        ≥ 1317 N/25mm
+                    </td>
+                    <td>
+                        ASTM D3776<br><br>
+                        ASTM D5035<br>
+                        ASTM D5035
+                    </td>
+                </tr>
+
+            </table>
+            <table class="mb-5">
+                <tr>
+                    <th>Construction</th>
+                    <th>Testing results</th>
+                    <th>Standard method</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-6">
+                                Density
+                            </div>
+                            <div class="col-lg-12 col-xl-6">Warp count:</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-6">
+
+                            </div>
+                            <div class="col-lg-12 col-xl-6">Weft direction:</div>
+                        </div>
+                        Fabric Thickness <br>
+                    </td>
+                    <td>
+                        56 ± 0.5 pick/in<br>
+                        25 ± 0.5 pick/in<br>
+                        0.53 ± 0.05 mm<br>
+                    </td>
+                    <td>
+                        ASTM D3775<br>
+                        ASTM D3775<br>
+                        ASTM D1777
+                    </td>
+                </tr>
+
+            </table>
+            <table class="mb-5">
+                <tr>
+                    <th>Dimension</th>
+                    <th>Testing results</th>
+                    <th>Standard method</th>
+                </tr>
+                <tr>
+                    <td>
+                        Roll Width <br>
+                        Roll Length <br>
+
+                    </td>
+                    <td>
+                        1000 -0, +10 mm<br>
+                        200 m<br>
+                    </td>
+                    <td>
+                        ASTM D3774<br>
+                        ASTM D3773
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </template>

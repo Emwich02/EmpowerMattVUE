@@ -45,7 +45,7 @@ onMounted(() => {
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
             <div class="container d-flex justify-content-between">
                 <router-link to="/" class="navbar-brand">
-                    <img :src="logo" alt="" width="200" height="80">
+                    <img :src="logo" alt="" width="180" height="70">
                 </router-link>
                 <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -91,7 +91,7 @@ onMounted(() => {
                                 style="color: black;" id="button4" :class="{ active: $route.path === '/ContactUs' }">{{
                                     CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <div class="dropdown" id="dropdown2" style="margin-right: 0px; margin-left: 0px;">
                                 <router-link to="" data-value="ENG"
                                     class="nav-link dropdown-toggle nav-nav ps-3 pe-3 no-transition mb-0 mx-0 custom-link custom-dropdown">
@@ -103,7 +103,7 @@ onMounted(() => {
                                                 CONSTANT_WORD.Optionlang }}</router-link></li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
