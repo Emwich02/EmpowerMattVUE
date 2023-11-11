@@ -119,7 +119,7 @@ function scrollToSection(sectionId) {
             <h2 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric
             }}</h2>
         </div>
-        <div class="table-responsive" data-aos="fade-up">
+        <div class="table-responsive container" data-aos="fade-up">
             <table class="mb-5">
                 <tr>
                     <th >Physical properties</th>

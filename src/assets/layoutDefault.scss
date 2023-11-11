@@ -1,6 +1,6 @@
 :root {
     --green-primary-color: #538E6E;
-
+    --white-color: #FFFFFF;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -13,6 +13,7 @@
 
 .dropdown:hover .custom-link {
     border-radius: 20px 20px 0px 0px;
+    color: var(--white-color);
 }
 
 a .custom-link:hover {
@@ -45,3 +46,16 @@ a .custom-link:hover {
         text-align: center;
     }
 }
+.custom-fade {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.custom-fade.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
