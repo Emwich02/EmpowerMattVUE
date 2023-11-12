@@ -53,31 +53,35 @@ function scrollToSection(sectionId) {
 }
 </script>
 <template>
-    <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 7rem; ">
-        <div class="container pt-5" data-aos="fade-up">
-            <div class="row pt-5">
-                <div class="box-naturalhemp d-flex align-items-center justify-content-center col-2">
-                    <h4 class="title-text-natural" style="color:white">{{ Data.Title }} </h4>
-                </div>
-                <div class="row pt-5" data-aos="fade-up">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-11">
-                        <h4 class="front-17px">{{ Data.Our }} <span class="greencolor">{{ Data.Product }}</span></h4>
-                        <h2 class="front-20px"><span class="greencolor ">{{ Data.Natural }}</span> {{ Data.HempFabric }}
-                        </h2>
-                        <p class="front-13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
-                            Data.Descriptionmain }}</p>
+    <div>
+        <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 7rem; ">
+            <div class="container-fluid pt-5" data-aos="fade-up">
+                <div class="container pt-5">
+                    <div class="col-2 box-naturalhemp d-flex align-items-center justify-content-center">
+                        <h4 class="title-text-natural" style="color:white">{{ Data.Title }} </h4>
+                    </div>
+                    <div class="row pt-5">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-11">
+                            <h4 class="front-17px">{{ Data.Our }} <span class="greencolor">{{ Data.Product }}</span>
+                            </h4>
+                            <h2 class="front-20px"><span class="greencolor ">{{ Data.Natural }}</span> {{
+                                Data.HempFabric }}
+                            </h2>
+                            <p class="front-13px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                                Data.Descriptionmain }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-center " data-aos="fade-up">
-                <div class="arrow mt-5" style="cursor: pointer;" @click="scrollToSection('first')"></div>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <div class="arrow" style="cursor: pointer; " @click="scrollToSection('first')"></div>
+                </div>
             </div>
         </div>
-
     </div>
 
-    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 20rem;">
+    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 10rem;">
         <div class="container ps-5 full-height " data-aos="fade-up">
             <div class="row ">
                 <div class="col-md-6 d-flex align-items-center">
@@ -122,7 +126,7 @@ function scrollToSection(sectionId) {
         <div class="table-responsive container" data-aos="fade-up">
             <table class="mb-5">
                 <tr>
-                    <th >Physical properties</th>
+                    <th>Physical properties</th>
                     <th>Testing results</th>
                     <th>Standard method</th>
                 </tr>

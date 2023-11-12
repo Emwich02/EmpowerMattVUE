@@ -35,7 +35,6 @@ $background-table-color: #dde7da;
 
 .box-naturalhemp {
   background: $green-primary-color;
-  max-width: 100%;
   border-radius: 20px;
 }
 
@@ -144,5 +143,11 @@ td {
   }
   .front-13px {
     font-size: 13px;
+  }
+
+  .box-naturalhemp {
+    background: $green-primary-color;
+    width: 30%;
+    border-radius: 10px;
   }
 }

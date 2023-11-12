@@ -11,7 +11,7 @@ const languageStores = useLanguage()
 const isLang = computed(() => languageStores.activeLang)
 
 const Data = reactive({
-    Products: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'Products' ),
+    Products: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'Products'),
     Our: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'our '),
     product: computed(() => isLang.value == 'THA' ? '1111' : 'products'),
     HempBioPlastics: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Hemp-bioplastics '),
@@ -20,7 +20,7 @@ const Data = reactive({
     straw: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'straw'),
     cup: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'cup'),
     SpoonAndFork: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'spoon & fork'),
-   
+
 });
 
 </script>
@@ -30,9 +30,9 @@ const Data = reactive({
         <br><br><br><br>
 
         <div class="container pt-5">
-            <div class="box-bioplastic  d-flex align-items-center justify-content-center mt-5 col-2" data-aos="fade-up">
-                <h4 class="text-center-bioplastic " style="color:white">{{ Data.Products }} </h4>
-            </div><br>
+            <div class="col-2 box-naturalhemp d-flex align-items-center justify-content-center">
+                <h4 class="title-text-natural" style="color:white">{{ Data.Products }} </h4>
+            </div>
 
             <div class="text-center-bioplastic">
                 <h4 class="blackbold-text-bioplastic front-15px" data-aos="fade-up">{{ Data.Our }} <span
