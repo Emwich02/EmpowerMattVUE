@@ -142,7 +142,7 @@ onMounted(() => {
                 </div>
                 <div class="col-md-9 col-lg-11 col-xl-10 mx-auto mb-4">
                     <p>
-                        <img :src="address" class="img-fluid" style="max-width: 100%; height: 19px;">{{ CONSTANT_WORD.Address }}
+                        <img :src="address" class="img-fluid" style="max-width: 100%; height: 20px; padding-left: 3px;">{{ CONSTANT_WORD.Address }}
                     </p>
                 </div>
             </div>
