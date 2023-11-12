@@ -18,6 +18,7 @@ $background-table-color: var(--gray-bg-table-color);
 
 .bg-container {
   background-color: $background-color_1;
+  padding: 0;
 }
 
 .bg-head {
@@ -61,7 +62,7 @@ $background-table-color: var(--gray-bg-table-color);
 }
 
 .services-text {
-  font-size: 1.5rem;
+  font-size: calc(1rem + 0.5vw);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -334,8 +335,7 @@ td {
 
 .fullheight-service {
   height: 100dvh;
-  margin-top: 7rem;
-  padding-top: 3rem;
+  padding-top: 10rem;
 }
 
 .full-height-2 {
@@ -360,40 +360,121 @@ td {
   border-bottom: 2px #000000 solid;
 }
 
-@media only screen and (max-width: 766px) {
+// Media Query for Mobile Devices /
+@media (max-width: 480px) {
+  .bg-head {
+    width: 40%;
+    border-radius: 10px;
+  }
+
+  .title-text {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .head-text {
+    font-size: 18px;
+  }
+
+  .detail-text {
+    font-size: 14px;
+  }
+
+  .text-head-box {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .bg-image-research {
+    height: 30vh;
+  }
+
+  .bg-image-consult {
+    height: 30vh;
+  }
+
   .full-height-2 {
-    height: 50vh;
+    height: 60vh;
   }
 
   .hempcar-box {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  .pt-13 {
-    padding-top: 18rem;
+  .arrow {
+    margin-top: 0 !important;
   }
 
   .head-text-2 {
-    font-size: calc(1rem + 0.5vw);
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-size: 18px;
   }
 
-  ul {
-    padding: 0;
+  .Spec-main-text {
+    font-size: 20px;
   }
 
-  .Spec-detail-text {
-    font-size: calc(16px + 0.42vw);
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  .custom-width {
+    width: 50%;
+  }
+
+  .custom-width-2 {
+    width: 44%;
+  }
+
+  .Prop-main-text {
+    font-size: 18px;
   }
 
   .graphene-photo {
-    width: 60%;
+    width: 50%;
+  }
+}
+
+// / Media Query for low resolution  Tablets, Ipads /
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+// / Media Query for Tablets Ipads portrait mode /
+@media (min-width: 768px) and (max-width: 1020px) {
+  // body {
+  //     background-color: blue;
+  // }
+  .hempcar-box {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .full-height-2 {
+    height: 60vh;
+  }
+
+  .custom-width {
+    width: 50%;
+  }
+
+  .custom-width-2 {
+    width: 44%;
+  }
+
+  .graphene-photo {
+    width: 50%;
+  }
+}
+
+// / Media Query for Laptops and Desktops /
+@media (min-width: 1021px) and (max-width: 1280px) {
+  .hempcar-box {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .fullheight-service{
+    height: 60vh;
+  }
+
+  .full-height-2 {
+    height: 60vh;
   }
 
   .custom-width {
@@ -405,17 +486,6 @@ td {
   }
 }
 
-@media only screen and (max-width: 970px) {
-  .bg-head {
-    width: 40%;
-    border-radius: 10px;
-  }
-
-  .custom-width {
-    width: 50%;
-  }
-
-  .custom-width-2 {
-    width: 43%;
-  }
+// / Media Query for Large screens */
+@media (min-width: 1281px) {
 }
