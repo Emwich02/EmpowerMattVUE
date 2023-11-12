@@ -5,6 +5,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
 import { useLanguage } from '/src/stores/useLanguage.js'
 import logo from '@/images/logo.jpg';
+import address from '@/images/Address.png';
+import email from '@/images/Email.png';
+import tax from '@/images/Tax.png';
+import tell from '@/images/Tell.png';
 
 const languageStores = useLanguage()
 const isLang = computed(() => languageStores.activeLang)
@@ -20,9 +24,9 @@ const CONSTANT_WORD = reactive({
     Optionlang: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'THA'),
     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
     Tel: 'TEL : (+66)81-988-5787',
-    Email: 'E-MAIL : empowermatt2021@gmail.com',
+    Email: ' E-MAIL : empowermatt2021@gmail.com',
     Tax: 'TAX ID : 0135564006410',
-    Address: 'ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
+    Address: ' ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
 });
 
 
@@ -122,22 +126,23 @@ onMounted(() => {
                             {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
-                            <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
+                            <img :src="tell" class="img-fluid" style="max-width: 6%; height: auto;"> <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
                         </p>
+                        
                         <p>
-                            {{ CONSTANT_WORD.Email }}
+                            <img :src="email" class="img-fluid" style="max-width: 6%; height: auto;">{{ CONSTANT_WORD.Email }}
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-5 col-xl-4 mx-auto mb-4">
                         <br><br>
                         <p>
-                            {{ CONSTANT_WORD.Tax }}
+                            <img :src="tax" class="img-fluid" style="max-width: 6%; height: auto;"> {{ CONSTANT_WORD.Tax }}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-9 col-lg-11 col-xl-10 mx-auto mb-4">
                     <p>
-                        {{ CONSTANT_WORD.Address }}
+                        <img :src="address" class="img-fluid" style="max-width: 2%; height: auto;">{{ CONSTANT_WORD.Address }}
                     </p>
                 </div>
             </div>
