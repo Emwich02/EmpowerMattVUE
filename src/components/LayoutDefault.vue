@@ -126,23 +126,23 @@ onMounted(() => {
                             {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
-                            <img :src="tell" class="img-fluid" style="max-width: 6%; height: auto;"> <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
+                            <img :src="tell" class="img-fluid" style="max-width: 100%; height: 21px;"> <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
                         </p>
                         
                         <p>
-                            <img :src="email" class="img-fluid" style="max-width: 6%; height: auto;">{{ CONSTANT_WORD.Email }}
+                            <img :src="email" class="img-fluid" style="max-width: 100%; height: 16px;">{{ CONSTANT_WORD.Email }}
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-5 col-xl-4 mx-auto mb-4">
                         <br><br>
                         <p>
-                            <img :src="tax" class="img-fluid" style="max-width: 6%; height: auto;"> {{ CONSTANT_WORD.Tax }}
+                            <img :src="tax" class="img-fluid" style="max-width: 100%; height: 19px;"> {{ CONSTANT_WORD.Tax }}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-9 col-lg-11 col-xl-10 mx-auto mb-4">
                     <p>
-                        <img :src="address" class="img-fluid" style="max-width: 2%; height: auto;">{{ CONSTANT_WORD.Address }}
+                        <img :src="address" class="img-fluid" style="max-width: 100%; height: 19px;">{{ CONSTANT_WORD.Address }}
                     </p>
                 </div>
             </div>
