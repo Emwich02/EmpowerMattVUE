@@ -33,6 +33,10 @@ a .custom-link:hover {
     border-radius: 20px 20px 0px 0px;
 }
 
+.second {
+    display: none;
+  }
+
 @media (min-width: 991px) {
     .nav-item {
         width: 155px;
@@ -59,3 +63,12 @@ a .custom-link:hover {
     transform: translateY(0);
 }
 
+@media only screen and (max-width: 480px) {
+    .first {
+      display: none;
+    }
+  
+    .second {
+      display: block;
+    }
+  }
