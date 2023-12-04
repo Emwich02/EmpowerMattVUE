@@ -1,18 +1,19 @@
 <script setup>
 import { computed, reactive } from 'vue'
 import { useLanguage } from '/src/stores/useLanguage.js'
-import CEO_photo from '@/images/IU3.jpg'; // Replace with the correct path to your image
-import CTO_photo from '@/images/IU1.jpg';
+import BOD_photo from '@/images/sompoom.png';
+import CINO_photo from '@/images/jariyavadee.png';
 const languageStores = useLanguage()
 const isLang = computed(() => languageStores.activeLang)
 
 const Data = reactive({
     MainTitle_1: computed(() => isLang.value == 'THA' ? 'ทีม' : 'THE TEAM'),
     MainTitle_2: computed(() => isLang.value == 'THA' ? 'พบกับทีมของเรา' : 'MEET Our Team'),
-    Name_CEO: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'dlwlrma'),
-    Exp_CEO: computed(() => isLang.value == 'THA' ? 'วิทยาการคอมพิวเตอร์' : 'Experience in computer science'),
-    Name_CTO: computed(() => isLang.value == 'THA' ? 'อีจีอึน' : 'Ee Ji Eun'),
-    Exp_CTO: computed(() => isLang.value == 'THA' ? 'วิศวกรรมศาสตร์คอมพิวเตอร์' : 'Experience in computer engineering')
+    Name_BOD: computed(() => isLang.value == 'THA' ? 'สมภูมิ ศิริจันทรา' : 'Sompoom Sirichantra'),
+    Tel_BOD: computed(() => isLang.value == 'THA' ? '' : 'Tel : (+66)81 988 5787'),
+    Email: computed(() => isLang.value == 'THA' ? '' : 'E-mail : empowermatt2021@gmail.com'),
+    Name_CINO: computed(() => isLang.value == 'THA' ? 'ดร.จริยาวดี ศิริจันทรา' : 'Dr.Jariyavadee Sirichantra'),
+    Tel_CINO: computed(() => isLang.value == 'THA' ? 'วิศวกรรมศาสตร์คอมพิวเตอร์' : 'Tel : (+66)83 914 4748')
 });
 </script>
 <template>
@@ -27,12 +28,12 @@ const Data = reactive({
                 <div class="col-lg-6" style=" padding: 2%;">
                     <div class="row row-bg-color">
                         <div class="col-md-5" style="padding: 0%;">
-                            <img :src="CEO_photo" alt="person1" class="image-person">
+                            <img :src="BOD_photo" alt="person1" class="image-person">
                         </div>
                         <div class="col-md-7">
-                            <p class="name">{{ Data.Name_CEO }}</p>
-                            <p class="career-position">CEO</p>
-                            <p class="detail">{{ Data.Exp_CEO }}</p>
+                            <p class="name">{{ Data.Name_BOD }}</p>
+                            <p class="career-position">Board of Directors</p>
+                            <p class="detail">{{ Data.Tel_BOD }}</p>
                             <p></p>
                             <label class="contact">Contact</label>
                         </div>
@@ -41,12 +42,12 @@ const Data = reactive({
                 <div class="col-lg-6" style=" padding: 2%;">
                     <div class="row row-bg-color">
                         <div class="col-md-5" style="padding: 0%;">
-                            <img :src="CTO_photo" alt="person2" class="image-person">
+                            <img :src="CINO_photo" alt="person2" class="image-person">
                         </div>
                         <div class="col-md-7">
-                            <p class="name">{{ Data.Name_CTO }}</p>
-                            <p class="career-position">CTO</p>
-                            <p class="detail">{{ Data.Exp_CTO }}</p>
+                            <p class="name">{{ Data.Name_CINO }}</p>
+                            <p class="career-position">Chief Innovation Officer</p>
+                            <p class="detail">{{ Data.Tel_CINO }}</p>
                             <p class="contact">Contact</p>
                         </div>
                     </div>
