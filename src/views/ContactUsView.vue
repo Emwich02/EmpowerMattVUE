@@ -45,7 +45,7 @@ function scrollToSection(sectionId) {
                     </div>
                     <div class="col-lg-6" style="padding: 0%;">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15500.671625122215!2d100.52852859022104!3d13.768745988822806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29eb0f28f5e81%3A0xd4594d75ebaee10d!2z4Lit4LiZ4Li44Liq4Liy4Lin4Lij4Li14Lii4LmM4LiK4Lix4Lii4Liq4Lih4Lij4Lig4Li54Lih4Li0!5e0!3m2!1sth!2sth!4v1698504282345!5m2!1sth!2sth"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21305.262929627!2d100.62771899580984!3d13.949205537943062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7de40a612a1f%3A0xda635638e74574f5!2zMjYg4LiLLiDguIjguLLguKHguKMg4LiBIOC4iy4gMTcg4LiV4Liz4Lia4Lil4LiE4Li54LiE4LiVIOC4reC4s-C5gOC4oOC4reC4peC4s-C4peC4ueC4geC4geC4siDguJvguJfguLjguKHguJjguLLguJnguLUgMTIxMzA!5e0!3m2!1sth!2sth!4v1702410649085!5m2!1sth!2sth"
                             width="100%" height="100%" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

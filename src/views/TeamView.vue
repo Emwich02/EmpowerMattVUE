@@ -10,10 +10,10 @@ const Data = reactive({
     MainTitle_1: computed(() => isLang.value == 'THA' ? 'ทีม' : 'THE TEAM'),
     MainTitle_2: computed(() => isLang.value == 'THA' ? 'พบกับทีมของเรา' : 'MEET Our Team'),
     Name_BOD: computed(() => isLang.value == 'THA' ? 'สมภูมิ ศิริจันทรา' : 'Sompoom Sirichantra'),
-    Tel_BOD: computed(() => isLang.value == 'THA' ? '' : 'Tel : (+66)81 988 5787'),
-    Email: computed(() => isLang.value == 'THA' ? '' : 'E-mail : empowermatt2021@gmail.com'),
+    Tel_BOD: computed(() => isLang.value == 'THA' ? 'เบอร์โทร : (+66)81 988 5787' : 'Tel : (+66)81 988 5787'),
+    Email: computed(() => isLang.value == 'THA' ? '' : 'empowermatt2021@gmail.com'),
     Name_CINO: computed(() => isLang.value == 'THA' ? 'ดร.จริยาวดี ศิริจันทรา' : 'Dr.Jariyavadee Sirichantra'),
-    Tel_CINO: computed(() => isLang.value == 'THA' ? 'วิศวกรรมศาสตร์คอมพิวเตอร์' : 'Tel : (+66)83 914 4748')
+    Tel_CINO: computed(() => isLang.value == 'THA' ? 'เบอร์โทร : (+66)83 914 4748' : 'Tel : (+66)83 914 4748')
 });
 </script>
 <template>
@@ -34,8 +34,8 @@ const Data = reactive({
                             <p class="name">{{ Data.Name_BOD }}</p>
                             <p class="career-position">Board of Directors</p>
                             <p class="detail">{{ Data.Tel_BOD }}</p>
-                            <p></p>
-                            <label class="contact">Contact</label>
+                            <p class="detail-email">{{ Data.Email }}</p>
+                            <label class="contact">26/17 Moo 5 ,Khu khod, Lam luk ka District, Pathum Thani Province 12130 Thailand</label>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,8 @@ const Data = reactive({
                             <p class="name">{{ Data.Name_CINO }}</p>
                             <p class="career-position">Chief Innovation Officer</p>
                             <p class="detail">{{ Data.Tel_CINO }}</p>
-                            <p class="contact">Contact</p>
+                            <p class="detail-email">{{ Data.Email }}</p>
+                            <p class="contact">26/17 Moo 5 ,Khu khod, Lam luk ka District, Pathum Thani Province 12130 Thailand</p>
                         </div>
                     </div>
                 </div>
