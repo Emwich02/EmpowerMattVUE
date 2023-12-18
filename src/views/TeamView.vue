@@ -25,12 +25,12 @@ const Data = reactive({
                 <p class="margin-0 meet-text">{{ Data.MainTitle_2 }}</p>
             </div>
             <div class="row">
-                <div class="col-xl-6" style=" padding: 2%;">
+                <div class="col-lg-6 col-md-12" style=" padding: 2%;">
                     <div class="row row-bg-color">
                         <div class="col-md-5" style="padding: 0%;">
                             <img :src="BOD_photo" alt="person1" class="image-person">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7" style=" max-width: 100%;">
                             <p class="name">{{ Data.Name_BOD }}</p>
                             <p class="career-position">Board of Directors</p>
                             <p class="detail">{{ Data.Tel_BOD }}</p>
@@ -39,12 +39,12 @@ const Data = reactive({
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6" style=" padding: 2%;">
+                <div class="col-lg-6 col-md-12" style=" padding: 2%;">
                     <div class="row row-bg-color">
                         <div class="col-md-5" style="padding: 0%;">
                             <img :src="CINO_photo" alt="person2" class="image-person">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7" style=" max-width: 100%;">
                             <p class="name">{{ Data.Name_CINO }}</p>
                             <p class="career-position">Chief Innovation Officer</p>
                             <p class="detail">{{ Data.Tel_CINO }}</p>

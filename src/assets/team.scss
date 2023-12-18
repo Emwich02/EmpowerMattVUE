@@ -84,8 +84,22 @@ $background-color_3: var(--cream-bg-color);
 	}
 }
 
-@media only screen and (max-width: 1400px){
-	.col-xl-6{
-		width: 100%;
-	}
+@media screen and (max-width: 1400px) and (min-width: 990px) {
+    .name,
+    .career-position,
+    .detail,
+    .detail-email,
+    .contact {
+        font-size: 12px; /* Adjust the font size for this range */
+    }
+}
+
+@media only screen and (max-width: 330px) {
+	.name,
+    .career-position,
+    .detail,
+    .detail-email,
+    .contact {
+        font-size: 12px; /* Adjust the font size for this range */
+    }
 }
