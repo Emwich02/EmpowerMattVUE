@@ -109,7 +109,7 @@ function scrollToSection(sectionId) {
                 <div class="col-md-6" data-aos="fade-up">
                     <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">
                 </div>
-                <div class="col-md-5 d-flex align-items-center">
+                
                     <div><br>
                         <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"><span
                                 class="black-text">{{ Data.our }}</span> <span class="green-text">{{ Data.products }}</span>
@@ -124,7 +124,7 @@ function scrollToSection(sectionId) {
                             }}</router-link>
                         </p>
                     </div>
-                </div>
+                
         </div>
     </div>
 </div></template>
