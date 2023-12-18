@@ -43,6 +43,21 @@ onMounted(() => {
         once: true, // Whether to only trigger the animation once
     });
 })
+
+
+window.onclick = function(event){
+    if(!event.target.matches(".navbar-toggler btn-custom")){
+        var dd = document.getElementsByClassName("navbar-collapse collapse show");
+        for(var i = 0; i<dd.length;i++){
+            var x = dd[i];
+
+            if(x.classList.contains("show")){
+                x.classList.remove("show")
+            }
+        }
+    }
+}
+    
 </script>
 <template>
     <header>
