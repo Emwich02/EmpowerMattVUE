@@ -66,7 +66,7 @@ window.onclick = function(event){
                 <router-link to="/" class="navbar-brand">
                     <img :src="logo" alt="" width="180" height="70">
                 </router-link>
-                <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler btn-custom " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-key="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
