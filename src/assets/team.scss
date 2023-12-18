@@ -83,3 +83,9 @@ $background-color_3: var(--cream-bg-color);
 		margin-bottom: 10%;
 	}
 }
+
+@media only screen and (max-width: 1400px){
+	.col-xl-6{
+		width: 100%;
+	}
+}
