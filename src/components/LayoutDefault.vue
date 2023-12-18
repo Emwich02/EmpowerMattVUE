@@ -63,9 +63,10 @@ window.onclick = function(event){
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
             <div class="container d-flex justify-content-between">
-                <router-link to="/" class="navbar-brand">
-                    <img :src="logo" alt="" width="180" height="70">
+                <router-link to="/" class="navbar-brand ">
+                    <img class="logo-respon" :src="logo" alt="" width="180" height="70">
                 </router-link>
+           
                 <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-key="Toggle navigation">
@@ -134,7 +135,7 @@ window.onclick = function(event){
 
     <footer class="text-center text-lg-start bg-cream text-muted">
         <section class="pt-2 pb-2">
-            <div class="first">
+            <div class="first ">
                 <div class="container text-center text-md-start mt-5">
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-5 col-xl-4 mx-auto ">

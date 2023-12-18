@@ -39,18 +39,18 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
   <div class="picture-home" v-bind:style="{ backgroundImage: 'url(' + officepic3 + ')' }">
     <div class="container-fluid picture-home">
       <div class="text-center-home" data-aos="fade-up">
-        <h1 class="blackbold-text-welcome-home front-30px">{{ Data.MainTitle_1 }} <span class="greenbold-text-home">{{ Data.MainTitle_2 }}
+        <h1 class="blackbold-text-welcome-home front-30px front-25px-320">{{ Data.MainTitle_1 }} <span class="greenbold-text-home">{{ Data.MainTitle_2 }}
           </span></h1>
       </div> <br>
 
       <div class="box-home" data-aos="fade-up">
         <div class="text-center-home">
-        <h5 class="front-18px " style="color:white" data-aos="fade-up">{{ Data.PrimaryTitle }} </h5>
+        <h5 class="front-18px front-16px-320" style="color:white" data-aos="fade-up">{{ Data.PrimaryTitle }} </h5>
       </div>
       </div><br><br>
 
       <div class="container">
-        <p class="text-center-home front-13px " data-aos="fade-up">{{ Data.Description }}</p>
+        <p class="text-center-home front-13px front-9px-320" data-aos="fade-up">{{ Data.Description }}</p>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
 
   <div class="background-cream-home">
     <div class="text-center-home">
-      <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
+      <h5 class="blackbold-text-home front-18px front-14px-320" data-aos="fade-up"><br><br><br>
         {{ Data.HexagonalTopic_1 }}<span class="greenbold-text-home">{{ Data.HexagonalTopic_2 }} </span>
       </h5>
       <br><br></div>
@@ -72,7 +72,7 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
 
   <div class="background-green-home">
     <div class="text-center-home">
-      <h5 class="whitebold-text-home front-18px" data-aos="fade-up"><br><br><br>{{ Data.GrapheneTopic }}</h5>
+      <h5 class="whitebold-text-home front-18px front-14px-320" data-aos="fade-up"><br><br><br>{{ Data.GrapheneTopic }}</h5>
     </div> <br>
 
     <div class="container full-center-home ">
@@ -83,17 +83,17 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
 
     <div class="container-closer">
       <div class="text-center-home">
-        <p class="white-text-home front-13px" data-aos="fade-up"> {{ Data.GrapheneDetail }}</p>
+        <p class="white-text-home front-13px front-9px-320" data-aos="fade-up"> {{ Data.GrapheneDetail }}</p>
       </div>
     </div> <br><br><br><br>
   </div>
 
   <div v-bind:style="{ backgroundImage: 'url(' + Oak + ')' }">
     <div class="text-center-home">
-      <h5 class="blackbold-text-home front-18px"><br><br><br>{{ Data.IP_title }}</h5><br>
+      <h5 class="blackbold-text-home front-18px front-14px-320"><br><br><br>{{ Data.IP_title }}</h5><br>
     </div>
 
-    <div class="container-closer front-13px" data-aos="fade-up">
+    <div class="container-closer front-13px front-9px-320" data-aos="fade-up">
       <div class="grey-text">
         <p>{{ Data.IP_description }}</p>
       </div>
@@ -110,7 +110,7 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
   </div>
 
   <div class="text-center-home">
-    <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
+    <h5 class="blackbold-text-home front-18px front-14px-320" data-aos="fade-up"><br><br><br>
       {{ Data.PartnersTopic_1 }}
       <span class="greenbold-text-home ">{{ Data.PartnersTopic_2 }} </span>
     </h5>
