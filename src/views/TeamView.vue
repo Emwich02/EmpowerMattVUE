@@ -25,7 +25,7 @@ const Data = reactive({
                 <p class="margin-0 meet-text">{{ Data.MainTitle_2 }}</p>
             </div>
             <div class="row">
-                <div class="col-lg-6" style=" padding: 2%;">
+                <div class="col-xl-6" style=" padding: 2%;">
                     <div class="row row-bg-color">
                         <div class="col-md-5" style="padding: 0%;">
                             <img :src="BOD_photo" alt="person1" class="image-person">
@@ -39,7 +39,7 @@ const Data = reactive({
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" style=" padding: 2%;">
+                <div class="col-xl-6" style=" padding: 2%;">
                     <div class="row row-bg-color">
                         <div class="col-md-5" style="padding: 0%;">
                             <img :src="CINO_photo" alt="person2" class="image-person">

@@ -49,10 +49,10 @@ function scrollToSection(sectionId) {
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-color-productmain">
+    <div class="container-fluid bg-color-productmain ">
 
 
-        <div class="container full-height-starw-1 mt-product-main-13" id="first">
+        <div class="container full-height-starw-1 mt-product-main-13 d-flex flex-column align-items-center justify-content-center" id="first">
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-md-6" data-aos="fade-up">
                     <img :src="bioCompositePic" class="img-fluid" style="max-width: 100%; height: auto;">

@@ -116,6 +116,27 @@ $color_6: #1C1D23;
         margin-top: 30%;
     }
 }
+.background-green-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-full-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container-closer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* ปรับขนาดขอบบนของ .container-closer ตามต้องการ */
+}
 
 @media (max-width: 320px) {
     .front-16px-320 {

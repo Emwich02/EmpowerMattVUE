@@ -55,7 +55,7 @@ function scrollToSection(sectionId) {
 <template>
     <div>
         <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 7rem; ">
-            <div class="container-fluid pt-5" data-aos="fade-up">
+            <div class="d-flex flex-column align-items-center justify-content-center " data-aos="fade-up">
                 <div class="container pt-5">
                     <div class="col-2 box-naturalhemp d-flex align-items-center justify-content-center">
                         <h4 class="title-text-natural" style="color:white">{{ Data.Title }} </h4>
@@ -81,7 +81,7 @@ function scrollToSection(sectionId) {
         </div>
     </div>
 
-    <div class="bg-color-hempfabric full-height-hempfabric-1" id="first" style="padding-top: 10rem;">
+    <div class="bg-color-hempfabric full-height-hempfabric-1 d-flex flex-column align-items-center justify-content-center" id="first" style="padding-top: 10rem;">
         <div class="container ps-5 full-height " data-aos="fade-up">
             <div class="row ">
                 <div class="col-md-6 d-flex align-items-center">
@@ -100,7 +100,7 @@ function scrollToSection(sectionId) {
             </div>
         </div>
     </div>
-    <div id="second" class="full-height-hempfabric-1 bg-color-hempfabric" style="padding-top: 15rem;">
+    <div id="second" class="full-height-hempfabric-1 bg-color-hempfabric d-flex flex-column align-items-center justify-content-center" style="padding-top: 15rem;">
         <div class="container ps-5  align-self-center full-height  " data-aos="fade-up">
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center">
@@ -118,7 +118,7 @@ function scrollToSection(sectionId) {
             </div>
         </div>
     </div>
-    <div class=" bg-color-hempfabric" style="padding-top: 10rem;" id="third">
+    <div class=" bg-color-hempfabric full-height-hempfabric-1 d-flex flex-column align-items-center justify-content-center" style="padding-top: 10rem;" id="third">
         <div class="container mb-5" data-aos="fade-up">
             <h2 class="front-17px"><span class="greencolor ">{{ Data.Propertiesof }}</span> {{ Data.AKNaturalFabric
             }}</h2>

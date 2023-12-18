@@ -34,7 +34,7 @@ $background-table-color: var(--gray-bg-table-color);
   font-size: calc(16px + 0.5vw);
   margin: 1vw;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: normal;
   color: $white-color;
 }
@@ -431,8 +431,25 @@ td {
   }
 }
 
+@media (max-width: 767px) {
+  .bg-head{
+    width: 50%;
+  }
+  .title-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
 // / Media Query for low resolution  Tablets, Ipads /
 @media (min-width: 481px) and (max-width: 767px) {
+  .title-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .full-height-2 {
+    height: 50vh;
+  }
 }
 
 // / Media Query for Tablets Ipads portrait mode /
@@ -446,7 +463,7 @@ td {
   }
 
   .full-height-2 {
-    height: 60vh;
+    height: 65vh;
   }
 
   .custom-width {
@@ -470,11 +487,11 @@ td {
   }
 
   .fullheight-service{
-    height: 60vh;
+    height: 70vh;
   }
 
   .full-height-2 {
-    height: 60vh;
+    height: 74vh;
   }
 
   .custom-width {
