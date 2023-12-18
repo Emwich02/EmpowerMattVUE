@@ -431,6 +431,16 @@ td {
   }
 }
 
+@media (max-width: 767px) {
+  .bg-head{
+    width: 50%;
+  }
+  .title-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
 // / Media Query for low resolution  Tablets, Ipads /
 @media (min-width: 481px) and (max-width: 767px) {
   .title-text {
