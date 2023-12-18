@@ -169,9 +169,9 @@ window.onclick = function(event){
             </div>
 
             <div class="second">
-                <div class="container text-center text-md-start mt-5">
-                    <div class="row mt-3">
-                        <h6 class="text-uppercase fw-bold mb-4">
+                <div class="container text-center text-md-start mt-5 front-13px-480 front-9px-325">
+                    <div class="row mt-3 ">
+                        <h6 class="text-uppercase fw-bold mb-4 front-13px-480 front-9px-325">
                             {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
