@@ -56,19 +56,22 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
   </div>
 
 
-  <div class="background-cream-home">
+  <div class="background-cream-home d-flex flex-column align-items-center justify-content-center">
     <div class="text-center-home">
-      <h5 class="blackbold-text-home front-18px" data-aos="fade-up"><br><br><br>
-        {{ Data.HexagonalTopic_1 }}<span class="greenbold-text-home">{{ Data.HexagonalTopic_2 }} </span>
-      </h5>
-      <br><br></div>
-
-    <div class="container full-center-home">
-      <div class="col-md-5 d-flex align-items-center" data-aos="fade-up">
-        <img :src="Hexagonal" class="img-fluid" style="max-width: 100%; height: auto;">
-      </div><br><br><br>
+        <h5 class="blackbold-text-home front-18px" data-aos="fade-up">
+            <br><br><br>
+            {{ Data.HexagonalTopic_1 }}
+            <span class="greenbold-text-home">{{ Data.HexagonalTopic_2 }} </span>
+        </h5>
+        <br><br>
     </div>
-  </div>
+    <div class="container full-center-home">
+        <div class="col-md-5" data-aos="fade-up">
+            <img :src="Hexagonal" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+</div>
+
 
   <div class="background-green-home">
     <div class="text-center-home">
