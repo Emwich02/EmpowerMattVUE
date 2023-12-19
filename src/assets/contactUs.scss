@@ -52,6 +52,14 @@ $background-color_2: white;
 	background-color: $color_1;
 }
 
+.bg-image-contact {
+	background-color: rgba(255,255,255,0.6);
+	padding-top : 7rem ;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+
 .bg-image {
 	background-color: rgba(255,255,255,0.6);
 	padding-top : 7rem ;
@@ -105,4 +113,18 @@ $background-color_2: white;
 		border-radius: 0px 0px 20px 20px;
 		margin-bottom: 15%;
 	}
+}
+
+@media only screen and (max-width: 325px){
+	.bg-image-contact {
+		background-color: rgba(255,255,255,0.6);
+		padding-top : 0rem ;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+	}
+
+	// .bg-image{
+	// 	pa
+	// }
 }

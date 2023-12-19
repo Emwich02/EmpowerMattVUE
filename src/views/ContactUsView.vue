@@ -26,7 +26,7 @@ function scrollToSection(sectionId) {
 }
 </script>
 <template>
-    <div class="bg-image" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')' }">
+    <div class="bg-image-contact" v-bind:style="{ backgroundImage: 'url(' + Office_photo3 + ')' }">
         <div class="container-fluid bg-image padding-head">
             <div class="container">
                 <div class="center margin-head" data-aos="fade-up">
@@ -58,10 +58,10 @@ function scrollToSection(sectionId) {
     </div>
     <div class="container-fluid" id="first" data-aos="fade-up" >
         <div class="row">
-            <div class="col-8 m-0 p-0 ">
+            <div class="col-lg-8 m-0 p-0 ">
                 <img :src="Office_photo1" alt="Office_photo_1" class="image-office">
             </div>
-            <div class="col-4 m-0 p-0 ">
+            <div class="col-lg-4 m-0 p-0 ">
                 <img :src="Office_photo2" alt="Office_photo2" class="image-office">
                 <img :src="Office_photo3" alt="Office_photo3" class="image-office">
             </div>
