@@ -30,18 +30,18 @@ function scrollToSection(sectionId) {
         <div class="container-fluid bg-image padding-head">
             <div class="container">
                 <div class="center margin-head" data-aos="fade-up">
-                    <p class="m-0 Touch-text">{{ Data.MainTitle_1 }}</p>
+                    <p class="m-0 Touch-text front-25px-320-contact">{{ Data.MainTitle_1 }}</p>
                     <hr class="line-contact-head" size="5px" />
-                    <p class="contact-text">{{ Data.MainTitle_2 }}</p>
+                    <p class="contact-text front-25px-320-contact">{{ Data.MainTitle_2 }}</p>
                 </div>
                 <div class="row row-bg-color " data-aos="fade-up">
                     <div class="col-lg-6">
-                        <p class="contact-head">{{ Data.ContactTitle }}<span class="green-text">{{ Data.InfoTitle
+                        <p class="contact-head front-16px-320-contact">{{ Data.ContactTitle }}<span class="green-text">{{ Data.InfoTitle
                         }}</span> </p>
-                        <p class="contact-detial margin-text-detail">{{ Data.IP_1 }}</p>
-                        <p class="contact-detial margin-text-detail">{{ Data.IP_2 }}</p>
-                        <p class="contact-detial margin-space">{{ Data.IP_3 }}</p>
-                        <p class="contact-detial margin-text-bottom">{{ Data.IP_4 }}</p>
+                        <p class="contact-detial margin-text-detail front-9px-320-contact">{{ Data.IP_1 }}</p>
+                        <p class="contact-detial margin-text-detail front-9px-320-contact">{{ Data.IP_2 }}</p>
+                        <p class="contact-detial margin-space front-9px-320-contact">{{ Data.IP_3 }}</p>
+                        <p class="contact-detial margin-text-bottom front-9px-320-contact">{{ Data.IP_4 }}</p>
                     </div>
                     <div class="col-lg-6" style="padding: 0%;">
                         <iframe

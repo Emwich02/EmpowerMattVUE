@@ -128,3 +128,25 @@ $background-color_2: white;
 	// 	pa
 	// }
 }
+
+@media (max-width: 320px) {
+	.front-16px-320-contact {
+		font-size: 16px;
+	}
+  
+	.front-14px-320-contact {
+		font-size: 14px;
+	}
+  
+	.front-9px-320-contact {
+		font-size: 9px;
+	}
+  
+	.front-25px-320-contact {
+		font-size: 25px;
+	}
+  
+	.top-margin-320-contact {
+		margin-top: 70px;
+	}
+  }

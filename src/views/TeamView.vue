@@ -20,9 +20,9 @@ const Data = reactive({
     <div class="container-fluid bg-color" data-aos="fade-up">
         <div class="container">
             <div class="container center mb-5">
-                <p class="margin-0 team-text animation-begin">{{ Data.MainTitle_1 }}</p>
+                <p class="margin-0 team-text animation-begin front-25px-320-team">{{ Data.MainTitle_1 }}</p>
                 <hr class="line-team-head" size="5px" />
-                <p class="margin-0 meet-text">{{ Data.MainTitle_2 }}</p>
+                <p class="margin-0 meet-text front-25px-320-team">{{ Data.MainTitle_2 }}</p>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-12" style=" padding: 2%;">

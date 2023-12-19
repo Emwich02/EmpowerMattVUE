@@ -361,7 +361,7 @@ td {
 }
 
 // Media Query for Mobile Devices /
-@media (max-width: 480px) {
+@media  (min-width: 320px) and (max-width: 480px) {
   .bg-head {
     width: 40%;
     border-radius: 10px;

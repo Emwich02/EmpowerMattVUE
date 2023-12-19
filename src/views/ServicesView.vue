@@ -63,13 +63,13 @@ function scrollToSection(sectionId) {
             <div class="container-fluid mb-5" data-aos="fade-up">
                 <div class="container">
                     <div class="col-3 bg-head d-flex align-items-center justify-content-center">
-                        <p class="title-text ">{{ Data.MainTitle }}</p>
+                        <p class="title-text front-16px-320-service">{{ Data.MainTitle }}</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 text-head-box">
-                            <p class="head-text">{{ Data.MainDetail_1 }}</p>
-                            <p class="detail-text">{{ Data.MainDetail_2 }}</p>
-                            <p class="detail-text">{{ Data.MainDetail_3 }}</p>
+                            <p class="head-text front-14px-320-service">{{ Data.MainDetail_1 }}</p>
+                            <p class="detail-text front-9px-320-service">{{ Data.MainDetail_2 }}</p>
+                            <p class="detail-text front-9px-320-service">{{ Data.MainDetail_3 }}</p>
                         </div>
                         <div class="col-lg-6 row ">
                             <div class="col-1"></div>
@@ -77,7 +77,7 @@ function scrollToSection(sectionId) {
                                 v-bind:style="{ backgroundImage: 'url(' + hempcar_art + ')' }">
                                 <div
                                     class="container-fluid bg-image-research d-flex align-items-center justify-content-center m-0">
-                                    <p class="services-text">{{ Data.Research_1 }}<span class="hemp-car-text">{{
+                                    <p class="services-text front-14px-320-service">{{ Data.Research_1 }}<span class="hemp-car-text">{{
                                         Data.Hempcar
                                     }}</span>’</p>
                                 </div>
@@ -87,7 +87,7 @@ function scrollToSection(sectionId) {
                                 v-bind:style="{ backgroundImage: 'url(' + solar_1 + ')' }">
                                 <div
                                     class="container-fluid bg-image-consult d-flex align-items-center justify-content-center m-0">
-                                    <p class="services-text">{{ Data.Research_2 }}</p>
+                                    <p class="services-text front-14px-320-service">{{ Data.Research_2 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ function scrollToSection(sectionId) {
     <div class="container-fluid full-height-2 bg-container bg-cream-green-color " id="first">
         <div class="pt-8">
             <div class="d-flex align-items-center justify-content-center" data-aos="fade-up">
-                <p class="head-text-2">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
+                <p class="head-text-2 front-14px-320-service">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
                 }}</span>’</p>
             </div>
             <div class="hempcar-box d-flex align-items-center justify-content-center" data-aos="fade-up">
@@ -125,15 +125,15 @@ function scrollToSection(sectionId) {
                     <img :src="hempcar" alt="" class="hempcar-photo">
                 </div>
                 <div class="col-lg-5">
-                    <p class="hempcar-head-text">{{ Data.Hempcar }}</p>
-                    <p class="hempcar-detail-text">{{ Data.Research_Detail_1 }}</p>
+                    <p class="hempcar-head-text front-14px-320-service">{{ Data.Hempcar }}</p>
+                    <p class="hempcar-detail-text front-9px-320-service">{{ Data.Research_Detail_1 }}</p>
                 </div>
             </div>
             <div class="m-spec" data-aos="fade-up">
-                <p class="Spec-main-text">{{ Data.Spec_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
+                <p class="Spec-main-text front-14px-320-service">{{ Data.Spec_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
                 </p>
                 <ul>
-                    <li class="Spec-detail-text" v-for="(value, key) in listdata_1" :key="key">
+                    <li class="Spec-detail-text front-9px-320-service" v-for="(value, key) in listdata_1" :key="key">
                         {{ value }}
                     </li>
                 </ul>
@@ -145,16 +145,16 @@ function scrollToSection(sectionId) {
                 </div>
             </div>
             <div class="m-prop" data-aos="fade-up">
-                <p class="Prop-main-text">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
+                <p class="Prop-main-text front-14px-320-service">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
                 </p>
-                <p class="Prop-detail-text">{{ Data.Prop_Hempcar_Lab }}</p>
-                <p class="Prop-detail-text">{{ Data.Prop_Hempcar_Method }}</p>
-                <p class="Prop-Method-detail-text-1">1. ASTM D3039/D3039M-17 : </p>
-                <p class="Prop-Method-detail-text-2">{{ Data.Method_Detail_1 }}</p>
-                <p class="Prop-Method-detail-text-1">2. ASTM D790-17 : </p>
-                <p class="Prop-Method-detail-text-2">{{ Data.Method_Detail_2 }}</p>
+                <p class="Prop-detail-text front-9px-320-service">{{ Data.Prop_Hempcar_Lab }}</p>
+                <p class="Prop-detail-text front-9px-320-service">{{ Data.Prop_Hempcar_Method }}</p>
+                <p class="Prop-Method-detail-text-1 front-9px-320-service">1. ASTM D3039/D3039M-17 : </p>
+                <p class="Prop-Method-detail-text-2 front-9px-320-service">{{ Data.Method_Detail_1 }}</p>
+                <p class="Prop-Method-detail-text-1 front-9px-320-service">2. ASTM D790-17 : </p>
+                <p class="Prop-Method-detail-text-2 front-9px-320-service">{{ Data.Method_Detail_2 }}</p>
                 <div class="table-responsive" data-aos="fade-up">
-                    <table>
+                    <table class="front-9px-320-service">
                         <tr>
                             <th>Mechanical and physical properties</th>
                             <th>Testing results</th>
@@ -229,7 +229,7 @@ function scrollToSection(sectionId) {
     <div class="bg-image-farm" v-bind:style="{ backgroundImage: 'url(' + hemp_farm + ')' }" id="third">
         <div class="container-fluid bg-image-farm pt-8 pb-5">
             <div class="container d-flex justify-content-center pt-5" data-aos="fade-up">
-                <p class="head-text ">{{ Data.Research_Solar_Title }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
+                <p class="head-text front-14px-320-service">{{ Data.Research_Solar_Title }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
                 </p>
             </div>
             <div class="row d-flex justify-content-center m-solar-image" data-aos="fade-up">
@@ -243,11 +243,11 @@ function scrollToSection(sectionId) {
             </div>
             <div class="container" data-aos="fade-up">
                 <div class="m-solar-main-text">
-                    <p class="Prop-main-text">{{ Data.Prop_solar_1 }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
+                    <p class="Prop-main-text front-14px-320-service">{{ Data.Prop_solar_1 }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
                     </p>
                 </div>
                 <div class="p-table-solar table-responsive" data-aos="fade-up">
-                    <table>
+                    <table class="front-9px-320-service">
                         <tr>
                             <th>Mechanical and physical properties</th>
                             <th>Testing results</th>
@@ -299,10 +299,10 @@ function scrollToSection(sectionId) {
                     <img :src="graphene" alt="graphene" class="graphene-photo">
                 </div>
                 <div class="col-lg-8 pb-5 graphene-text" data-aos="fade-up">
-                    <p class="head-text hemp-car-text">{{ Data.Graphene }}</p>
-                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_1 }}</p>
-                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_2 }}</p>
-                    <p class="graphene-detail-text m-0">{{ Data.Graphene_Detail_3 }}</p>
+                    <p class="head-text hemp-car-text front-14px-320-service">{{ Data.Graphene }}</p>
+                    <p class="graphene-detail-text m-0 front-9px-320-service">{{ Data.Graphene_Detail_1 }}</p>
+                    <p class="graphene-detail-text m-0 front-9px-320-service">{{ Data.Graphene_Detail_2 }}</p>
+                    <p class="graphene-detail-text m-0 front-9px-320-service">{{ Data.Graphene_Detail_3 }}</p>
                 </div>
             </div>
         </div>
