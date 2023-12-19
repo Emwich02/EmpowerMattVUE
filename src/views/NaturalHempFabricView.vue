@@ -54,7 +54,7 @@ function scrollToSection(sectionId) {
 </script>
 <template>
     <div>
-        <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" style="margin-top: 7rem; ">
+        <div class="bgpic" v-bind:style="{ backgroundImage: 'url(' + hempcar + ')' }" >
             <div class="d-flex flex-column align-items-center justify-content-center " data-aos="fade-up">
                 <div class="container pt-5">
                     <div class="col-2 box-naturalhemp d-flex align-items-center justify-content-center">
