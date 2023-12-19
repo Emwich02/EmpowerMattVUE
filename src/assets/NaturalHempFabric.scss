@@ -151,3 +151,20 @@ td {
     border-radius: 10px;
   }
 }
+@media (max-width: 320px) {
+  .front-17px {
+    font-size: 16 px;
+  }
+  .front-20px {
+    font-size: 25px;
+  }
+  .front-15px {
+    font-size: 14px;
+  }
+  .front-13px {
+    font-size: 9px;
+  }
+  .table-responsive{
+    font-size: 9px;
+  }
+}
