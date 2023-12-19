@@ -82,7 +82,7 @@ function scrollToSection(sectionId) {
     </div>
 
     <div class="bg-color-hempfabric full-height-hempfabric-1 d-flex flex-column align-items-center justify-content-center" id="first" style="padding-top: 10rem;">
-        <div class="container ps-5 full-height " data-aos="fade-up">
+        <div class="container  full-height " data-aos="fade-up">
             <div class="row ">
                 <div class="col-md-6 d-flex align-items-center">
                     <div>
@@ -101,7 +101,7 @@ function scrollToSection(sectionId) {
         </div>
     </div>
     <div id="second" class="full-height-hempfabric-1 bg-color-hempfabric d-flex flex-column align-items-center justify-content-center" style="padding-top: 15rem;">
-        <div class="container ps-5  align-self-center full-height  " data-aos="fade-up">
+        <div class="container align-self-center full-height  " data-aos="fade-up">
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center">
                     <div>

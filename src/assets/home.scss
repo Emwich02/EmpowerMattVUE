@@ -50,7 +50,7 @@ $color_6: #1C1D23;
     font-weight: 1000;
 }
 
-.greeting-size{
+.greeting-size {
     font-size: 0.3em;
 }
 
@@ -65,7 +65,7 @@ $color_6: #1C1D23;
     text-shadow: 1px 2px 7px $color_6;
 }
 
-.grey-text{
+.grey-text {
     color: $color_4;
 }
 
@@ -108,14 +108,17 @@ $color_6: #1C1D23;
     .front-18px-480-home {
         font-size: 18px;
     }
-    .front-13px-480-home  {
+
+    .front-13px-480-home {
         font-size: 13px;
     }
-    .front-30px-480-home  {
-        font-size:30px;
+
+    .front-30px-480-home {
+        font-size: 30px;
         margin-top: 30%;
     }
 }
+
 .background-green-home {
     display: flex;
     flex-direction: column;
@@ -135,28 +138,29 @@ $color_6: #1C1D23;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* ปรับขนาดขอบบนของ .container-closer ตามต้องการ */
+    margin-top: 20px;
+    /* ปรับขนาดขอบบนของ .container-closer ตามต้องการ */
 }
 
 @media (max-width: 320px) {
     .front-16px-320-home {
         font-size: 16px;
     }
-    .front-14px-320-home  {
+
+    .front-14px-320-home {
         font-size: 14px;
     }
-    .front-9px-320-home  {
+
+    .front-9px-320-home {
         font-size: 9px;
     }
-    .front-25px-320-home  {
+
+    .front-25px-320-home {
         font-size: 25px;
         margin-top: 40%;
     }
+
     .top-margin-320-home {
         margin-top: 70px;
     }
-    
-    
 }
-
-
