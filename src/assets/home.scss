@@ -105,13 +105,13 @@ $color_6: #1C1D23;
 }
 
 @media (max-width: 480px) {
-    .front-18px {
+    .front-18px-480-home {
         font-size: 18px;
     }
-    .front-13px {
+    .front-13px-480-home  {
         font-size: 13px;
     }
-    .front-30px {
+    .front-30px-480-home  {
         font-size:30px;
         margin-top: 30%;
     }
@@ -136,6 +136,27 @@ $color_6: #1C1D23;
     flex-direction: column;
     align-items: center;
     margin-top: 20px; /* ปรับขนาดขอบบนของ .container-closer ตามต้องการ */
+}
+
+@media (max-width: 320px) {
+    .front-16px-320-home {
+        font-size: 16px;
+    }
+    .front-14px-320-home  {
+        font-size: 14px;
+    }
+    .front-9px-320-home  {
+        font-size: 9px;
+    }
+    .front-25px-320-home  {
+        font-size: 25px;
+        margin-top: 40%;
+    }
+    .top-margin-320-home {
+        margin-top: 70px;
+    }
+    
+    
 }
 
 

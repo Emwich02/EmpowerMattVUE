@@ -32,11 +32,12 @@ function scrollToSection(sectionId) {
         <div class="container-fluid picture-product-main">
             <div class="text-center">
                 <br><br><br><br><br><br>
-                <h1 class="blackbold-text front-30px " data-aos="fade-up">{{ Data.whatis }} <span class="greenbold-text">{{
-                    Data.hemp }}
+                <h1 class="blackbold-text front-30px-480-promain front-25px-320-promain" data-aos="fade-up">{{ Data.whatis
+                }} <span class="greenbold-text">{{
+    Data.hemp }}
                     </span></h1><br>
             </div>
-            <div class="container front-12px" data-aos="fade-up">
+            <div class="container front-12px-480-promain front-8px-320-promain" data-aos="fade-up">
                 <p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
                         Data.firstparagraph }}</p>
@@ -52,20 +53,24 @@ function scrollToSection(sectionId) {
     <div class="container-fluid bg-color-productmain ">
 
 
-        <div class="container full-height-starw-1 mt-product-main-13 d-flex flex-column align-items-center justify-content-center" id="first">
+        <div class="container full-height-starw-1 mt-product-main-13 d-flex flex-column align-items-center justify-content-center"
+            id="first">
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-md-6" data-aos="fade-up">
                     <img :src="bioCompositePic" class="img-fluid" style="max-width: 100%; height: auto;">
                 </div>
                 <div class="col-md-5 d-flex align-items-center">
                     <div><br>
-                        <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
-                                class="green-text">{{
+                        <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"><span
+                                class="black-text">{{ Data.our }}</span> <span class="green-text">{{
                                     Data.products }}</span>
                         </p>
-                        <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.compositeTitle }}</h5>
-                        <p class="front-12px" data-aos="fade-up"> {{ Data.compositeDetails }} </p>
-                        <p class="button-details front-12px" style="color:white" data-aos="fade-up">
+                        <h5 class="blackbold-text front-18px-480-promain front-13px-320-promain" data-aos="fade-up">{{
+                            Data.compositeTitle }}</h5>
+                        <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"> {{ Data.compositeDetails
+                        }} </p>
+                        <p class="button-details front-12px-480-promain front-8px-320-promain" style="color:white"
+                            data-aos="fade-up">
                             <router-link to="/Naturalhempfabric" class="dropdown-item product-1">
                                 {{ Data.moreDetails }} </router-link>
                         </p>
@@ -79,13 +84,16 @@ function scrollToSection(sectionId) {
             <div class="row justify-content-center">
                 <div class="col-md-5 d-flex align-items-center">
                     <div><br>
-                        <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
-                                class="green-text">{{
+                        <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"><span
+                                class="black-text">{{ Data.our }}</span> <span class="green-text">{{
                                     Data.products }}</span>
                         </p>
-                        <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
-                        <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
-                        <p class="button-details front-12px" style="color:white" data-aos="fade-up">
+                        <h5 class="blackbold-text front-18px-480-promain front-13px-320-promain" data-aos="fade-up">{{
+                            Data.plasticTitle }}</h5>
+                        <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"> {{ Data.plasticDetails
+                        }} </p>
+                        <p class="button-details front-12px-480-promain front-8px-320-promain" style="color:white"
+                            data-aos="fade-up">
                             <router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{
                                 Data.moreDetails }}</router-link>
                         </p>
@@ -97,29 +105,29 @@ function scrollToSection(sectionId) {
             </div>
         </div>
         <div class="container full-height-starw-2 bioplastic-down">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center top-margin-320-promain">
                 <div class="col-md-6" data-aos="fade-up">
                     <img :src="bioPlasticPic" class="img-fluid" style="max-width: 100%; height: auto;">
                 </div>
-                <div class="col-md-5 d-flex align-items-center">
+                
                     <div><br>
-                        <p class="front-12px" data-aos="fade-up"><span class="black-text">{{ Data.our }}</span> <span
-                                class="green-text">{{ Data.products }}</span>
+                        <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"><span
+                                class="black-text">{{ Data.our }}</span> <span class="green-text">{{ Data.products }}</span>
                         </p>
-                        <h5 class="blackbold-text front-18px" data-aos="fade-up">{{ Data.plasticTitle }}</h5>
-                        <p class="front-12px" data-aos="fade-up"> {{ Data.plasticDetails }} </p>
-                        <p class="button-details front-12px" style="color:white" data-aos="fade-up"> <router-link
-                                to="/ProductBioPlastic" class="dropdown-item product-2">{{ Data.moreDetails
-                                }}</router-link>
+                        <h5 class="blackbold-text front-18px-480-promain front-13px-320-promain" data-aos="fade-up">{{
+                            Data.plasticTitle }}</h5>
+                        <p class="front-12px-480-promain front-8px-320-promain" data-aos="fade-up"> {{ Data.plasticDetails
+                        }} </p>
+                        <p class="button-details front-12px-480-promain front-8px-320-promain" style="color:white"
+                            data-aos="fade-up">
+                            <router-link to="/ProductBioPlastic" class="dropdown-item product-2">{{ Data.moreDetails
+                            }}</router-link>
                         </p>
                     </div>
-                </div>
-            </div>
+                
         </div>
     </div>
-</template>
+</div></template>
 
-<style lang="scss">
-// Import Main styles for this application
-@import '/src/assets/productmain.scss';
-</style>
+<style lang="scss">// Import Main styles for this application
+@import '/src/assets/productmain.scss';</style>

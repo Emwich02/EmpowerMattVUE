@@ -106,20 +106,43 @@ $cream-primary-color: var(--cream-bg-color);
     display: block;
   }
 
-  .front-13px {
+  .front-13px-480-promain {
     font-size: 13px;
   }
 
-  .front-12px {
+  .front-12px-480-promain {
     font-size: 12px;
   }
 
-  .front-30px {
+  .front-30px-480-promain {
     font-size: 30px;
   }
 
-  .front-18px {
+  .front-18px-480-promain {
     font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+ 
+
+  .front-9px-320-promain {
+    font-size: 9px;
+  }
+
+  .front-8px-320-promain {
+    font-size: 8px;
+  }
+
+  .front-25px-320-promain {
+    font-size: 25px;
+  }
+
+  .front-13px-320-promain {
+    font-size: 13px;
+  }
+  .top-margin-320-promain{
+    margin-top: 80px;
   }
 }
 

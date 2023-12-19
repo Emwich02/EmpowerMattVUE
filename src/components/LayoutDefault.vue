@@ -63,10 +63,11 @@ window.onclick = function(event){
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
             <div class="container d-flex justify-content-between">
-                <router-link to="/" class="navbar-brand">
-                    <img :src="logo" alt="" width="180" height="70">
+                <router-link to="/" class="navbar-brand ">
+                    <img class="logo-respon" :src="logo" alt="" width="180" height="70">
                 </router-link>
-                <button class="navbar-toggler btn-custom " type="button" data-bs-toggle="collapse"
+           
+                <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-key="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -134,7 +135,7 @@ window.onclick = function(event){
 
     <footer class="text-center text-lg-start bg-cream text-muted">
         <section class="pt-2 pb-2">
-            <div class="first">
+            <div class="first ">
                 <div class="container text-center text-md-start mt-5">
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-5 col-xl-4 mx-auto ">
@@ -168,9 +169,9 @@ window.onclick = function(event){
             </div>
 
             <div class="second">
-                <div class="container text-center text-md-start mt-5">
-                    <div class="row mt-3">
-                        <h6 class="text-uppercase fw-bold mb-4">
+                <div class="container text-center text-md-start mt-5 front-13px-480 front-9px-325">
+                    <div class="row mt-3 ">
+                        <h6 class="text-uppercase fw-bold mb-4 front-13px-480 front-9px-325">
                             {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
