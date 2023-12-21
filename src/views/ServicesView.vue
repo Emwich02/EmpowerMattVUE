@@ -59,8 +59,11 @@ function scrollToSection(sectionId) {
 </script>
 <template>
     <div>
+        <div class="bg-container" style="height: 10rem;">
+
+        </div>
         <div class="bg-container fullheight-service">
-            <div class="container-fluid mb-5" data-aos="fade-up">
+            <div class="container-fluid" data-aos="fade-up">
                 <div class="container">
                     <div class="col-3 bg-head d-flex align-items-center justify-content-center">
                         <p class="title-text front-16px-320-service">{{ Data.MainTitle }}</p>
@@ -77,9 +80,10 @@ function scrollToSection(sectionId) {
                                 v-bind:style="{ backgroundImage: 'url(' + hempcar_art + ')' }">
                                 <div
                                     class="container-fluid bg-image-research d-flex align-items-center justify-content-center m-0">
-                                    <p class="services-text front-14px-320-service">{{ Data.Research_1 }}<span class="hemp-car-text">{{
-                                        Data.Hempcar
-                                    }}</span>’</p>
+                                    <p class="services-text front-14px-320-service">{{ Data.Research_1 }}<span
+                                            class="hemp-car-text">{{
+                                                Data.Hempcar
+                                            }}</span>’</p>
                                 </div>
 
                             </div>
@@ -94,7 +98,7 @@ function scrollToSection(sectionId) {
                     </div>
                 </div>
 
-                <div class="d-flex align-items-center justify-content-center ">
+                <div class="d-flex align-items-center justify-content-center pb-5">
                     <div class="arrow" style="cursor: pointer; " @click="scrollToSection('first')"></div>
                 </div>
             </div>
@@ -103,10 +107,11 @@ function scrollToSection(sectionId) {
     <div class="bg-container">
         <hr class="line-section-2 mt-10" size="5px" data-aos="fade-up">
     </div>
-    <div class="container-fluid full-height-2 bg-container bg-cream-green-color " id="first">
+    <div class="container-fluid bg-cream-green-color " id="first">
         <div class="pt-8">
             <div class="d-flex align-items-center justify-content-center" data-aos="fade-up">
-                <p class="head-text-2 front-14px-320-service">{{ Data.Research_1 }}<span class="hemp-car-text">{{ Data.Hempcar
+                <p class="head-text-2 front-14px-320-service">{{ Data.Research_1 }}<span class="hemp-car-text">{{
+                    Data.Hempcar
                 }}</span>’</p>
             </div>
             <div class="hempcar-box d-flex align-items-center justify-content-center" data-aos="fade-up">
@@ -130,7 +135,8 @@ function scrollToSection(sectionId) {
                 </div>
             </div>
             <div class="m-spec" data-aos="fade-up">
-                <p class="Spec-main-text front-14px-320-service">{{ Data.Spec_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
+                <p class="Spec-main-text front-14px-320-service">{{ Data.Spec_Hempcar }} ‘<span class="hemp-car-text">{{
+                    Data.Hempcar }}</span>’
                 </p>
                 <ul>
                     <li class="Spec-detail-text front-9px-320-service" v-for="(value, key) in listdata_1" :key="key">
@@ -145,7 +151,8 @@ function scrollToSection(sectionId) {
                 </div>
             </div>
             <div class="m-prop" data-aos="fade-up">
-                <p class="Prop-main-text front-14px-320-service">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">{{ Data.Hempcar }}</span>’
+                <p class="Prop-main-text front-14px-320-service">{{ Data.Prop_Hempcar }} ‘<span class="hemp-car-text">{{
+                    Data.Hempcar }}</span>’
                 </p>
                 <p class="Prop-detail-text front-9px-320-service">{{ Data.Prop_Hempcar_Lab }}</p>
                 <p class="Prop-detail-text front-9px-320-service">{{ Data.Prop_Hempcar_Method }}</p>
@@ -229,7 +236,8 @@ function scrollToSection(sectionId) {
     <div class="bg-image-farm" v-bind:style="{ backgroundImage: 'url(' + hemp_farm + ')' }" id="third">
         <div class="container-fluid bg-image-farm pt-8 pb-5">
             <div class="container d-flex justify-content-center pt-5" data-aos="fade-up">
-                <p class="head-text front-14px-320-service">{{ Data.Research_Solar_Title }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
+                <p class="head-text front-14px-320-service">{{ Data.Research_Solar_Title }} ‘<span class="hemp-car-text">{{
+                    Data.Solar }}</span>’
                 </p>
             </div>
             <div class="row d-flex justify-content-center m-solar-image" data-aos="fade-up">
@@ -243,7 +251,8 @@ function scrollToSection(sectionId) {
             </div>
             <div class="container" data-aos="fade-up">
                 <div class="m-solar-main-text">
-                    <p class="Prop-main-text front-14px-320-service">{{ Data.Prop_solar_1 }} ‘<span class="hemp-car-text">{{ Data.Solar }}</span>’
+                    <p class="Prop-main-text front-14px-320-service">{{ Data.Prop_solar_1 }} ‘<span class="hemp-car-text">{{
+                        Data.Solar }}</span>’
                     </p>
                 </div>
                 <div class="p-table-solar table-responsive" data-aos="fade-up">
@@ -308,7 +317,5 @@ function scrollToSection(sectionId) {
         </div>
     </div>
 </template>
-<style lang="scss">
-// Import Main styles for this application
-@import '/src/assets/services.scss';
-</style>
+<style lang="scss">// Import Main styles for this application
+@import '/src/assets/services.scss';</style>
