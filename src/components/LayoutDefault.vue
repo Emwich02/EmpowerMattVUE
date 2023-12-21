@@ -62,7 +62,7 @@ window.onclick = function(event){
 <template>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-cream p-2">
-            <div class="container d-flex justify-content-between">
+            <div class="container d-flex justify-content-between" style="padding: 0px">
                 <router-link to="/" class="navbar-brand ">
                     <img class="logo-respon" :src="logo" alt="" width="180" height="70">
                 </router-link>
@@ -105,7 +105,7 @@ window.onclick = function(event){
                                 }}</router-link>
                         </li>
                         <li class="nav-item flex-fill">
-                            <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3 no-transition"
+                            <router-link to="/ContactUs" class="nav-link nav-nav ps-3 pe-3   no-transition"
                                 style="color: black;" id="button4" :class="{ active: $route.path === '/ContactUs' }">{{
                                     CONSTANT_WORD.ContactUs }}</router-link>
                         </li>
