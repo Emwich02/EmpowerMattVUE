@@ -59,15 +59,15 @@ const Data = reactive({
                 <div class="row">
                     <div class="col-4" data-aos="fade-up">
                         <img :src="Straw" class="img-fluid" style="max-width: 80%; height: auto;">
-                        <h5 class="front-17px-768-bioplastic front-10px-320-bioplastic">{{ Data.straw }} </h5>
+                        <h5 class="front-17px-768-bioplastic front-12px-480-bioplastic front-10px-320-bioplastic">{{ Data.straw }} </h5>
                     </div>
                     <div class="col-4" data-aos="fade-up">
                         <span><img :src="FlockSpoon" class="img-fluid" style="max-width: 80%; height: auto;"></span>
-                        <h5 class="front-17px-768-bioplastic front-10px-320-bioplastic">{{ Data.cup }} </h5>
+                        <h5 class="front-17px-768-bioplastic front-12px-480-bioplastic front-10px-320-bioplastic">{{ Data.cup }} </h5>
                     </div>
                     <div class="col-4" data-aos="fade-up">
                         <img :src="coffeecup" class="img-fluid" style="max-width: 80%; height: auto;">
-                        <h5 class="front-17px-768-bioplastic front-10px-320-bioplastic">{{ Data.SpoonAndFork }} </h5>
+                        <h5 class="front-17px-768-bioplastic front-12px-480-bioplastic front-10px-320-bioplastic">{{ Data.SpoonAndFork }} </h5>
                     </div>
                 </div>
             </div><br><br>

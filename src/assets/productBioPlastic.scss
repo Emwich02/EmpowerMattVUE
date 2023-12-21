@@ -63,10 +63,12 @@ hr.style1 {
   .front-17px-768-bioplastic {
     font-size: 17px;
   }
+
   .front-15px-768-bioplastic {
     font-size: 15px;
   }
-  .front-13px-768-bioplastic  {
+
+  .front-13px-768-bioplastic {
     font-size: 13px;
   }
 
@@ -77,13 +79,23 @@ hr.style1 {
   }
 }
 
+@media (max-width: 480px) {
+  .front-12px-480-bioplastic {
+    font-size: 12px;
+  }
+
+
+}
+
 @media (max-width: 320px) {
   .front-12px-320-bioplastic {
     font-size: 12px;
   }
+
   .front-10px-320-bioplastic {
     font-size: 10px;
   }
+
   .front-8px-320-bioplastic {
     font-size: 8px;
   }
@@ -101,5 +113,3 @@ div.figure p {
   font-size: smaller;
   text-indent: 0;
 }
-
-
