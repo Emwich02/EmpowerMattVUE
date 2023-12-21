@@ -13,7 +13,7 @@ const Data = reactive({
     Tel_BOD: computed(() => isLang.value == 'THA' ? 'เบอร์โทร : (+66)81 988 5787' : 'Tel : (+66)81 988 5787'),
     Email: computed(() => isLang.value == 'THA' ? '' : 'empowermatt2021@gmail.com'),
     Name_CINO: computed(() => isLang.value == 'THA' ? 'ดร.จริยาวดี ศิริจันทรา' : 'Dr.Jariyavadee Sirichantra'),
-    Tel_CINO: computed(() => isLang.value == 'THA' ? 'เบอร์โทร : (+66)83 914 4748' : 'Tel : (+66)83 914 4748')
+    Tel_CINO: computed(() => isLang.value == 'THA' ? 'เบอร์โทร : (+66)84 914 4787' : 'Tel : (+66)84 914 4787')
 });
 </script>
 <template>
