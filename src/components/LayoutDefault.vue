@@ -23,7 +23,7 @@ const CONSTANT_WORD = reactive({
     Selectlang: computed(() => isLang.value == 'THA' ? 'ไทย' : 'ENG'),
     Optionlang: computed(() => isLang.value == 'THA' ? 'อังกฤษ' : 'THA'),
     Desctiption: 'IF YOU HAVE ANY QUESTIONS',
-    Tel: 'TEL : (+66)81-988-5787',
+    Tel: 'TEL : (+66)81-988-5787,(+66)84 914 4787',
     Email: ' E-MAIL : empowermatt2021@gmail.com',
     Tax: 'TAX ID : 0135564006410',
     Address: ' ADDRESS : EMPOWERMATT COMPANY LIMITED (HEAD OFFICE) 26/17 MOO 5 KHU KHOT SUBDISTRICT, LAM LUK KA DISTRICT, PATHUM THANI PROVINCE, 12130'
