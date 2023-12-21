@@ -35,7 +35,7 @@ const Data = reactive({
                             <p class="career-position">Board of Directors</p>
                             <p class="detail">{{ Data.Tel_BOD }}</p>
                             <p class="detail-email">{{ Data.Email }}</p>
-                            <label class="contact">26/17 Moo 5 ,Khu khod, Lam luk ka District, Pathum Thani Province 12130 Thailand</label>
+                            <label class="contact">Empowermatt Company Limited (Head Office) 26/17 Moo 5, Khu Khot Subdistrict, Lam Luk Ka District, Pathum Thani Province, 12130, Thailand.</label>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ const Data = reactive({
                             <p class="career-position">Chief Innovation Officer</p>
                             <p class="detail">{{ Data.Tel_CINO }}</p>
                             <p class="detail-email">{{ Data.Email }}</p>
-                            <p class="contact">26/17 Moo 5 ,Khu khod, Lam luk ka District, Pathum Thani Province 12130 Thailand</p>
+                            <p class="contact">Empowermatt Company Limited (Head Office) 26/17 Moo 5, Khu Khot Subdistrict, Lam Luk Ka District, Pathum Thani Province, 12130, Thailand.</p>
                         </div>
                     </div>
                 </div>
