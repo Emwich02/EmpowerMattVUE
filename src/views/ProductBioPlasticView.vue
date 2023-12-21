@@ -35,21 +35,21 @@ const Data = reactive({
             </div>
 
             <div class="text-center-bioplastic">
-                <h4 class="blackbold-text-bioplastic front-15px" data-aos="fade-up">{{ Data.Our }} <span
+                <h4 class="blackbold-text-bioplastic front-15px-768-bioplastic front-10px-320-bioplastic" data-aos="fade-up">{{ Data.Our }} <span
                         class="greenbold-text-bioplastic">{{
                             Data.product }} </span> </h4>
 
-                <h2 class="greenbold-text-bioplastic front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
+                <h2 class="greenbold-text-bioplastic front-17px-768-bioplastic front-12px-320-bioplastic" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
                         class="blackbold-text-bioplastic">{{
                             Data.CompoundMaterials }} </span> </h2>
                 <br>
-                <p class="front-13px" data-aos="fade-up">{{ Data.HempBioPlasticsDetails }}</p><br>
+                <p class="front-13px-768-bioplastic front-8px-320-bioplastic" data-aos="fade-up">{{ Data.HempBioPlasticsDetails }}</p><br>
                 <img :src="Bioplastic" class="img-fluid" style="max-width: 90%; height: auto;"
                     data-aos="fade-up"><br><br><br><br>
                 <img :src="downlight" class="img-fluid" style="max-width: 100%; height: auto;"
                     data-aos="fade-up"><br><br><br><br>
                 <hr class="style1" data-aos="fade-up"><br><br><br>
-                <h2 class="greenbold-text-bioplastic front-17px" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
+                <h2 class="greenbold-text-bioplastic front-17px-768-bioplastic front-12px-320-bioplastic" data-aos="fade-up"> {{ Data.HempBioPlastics }} <span
                         class="blackbold-text-bioplastic">{{ Data.product }}
                     </span> </h2>
                 <br>
@@ -59,15 +59,15 @@ const Data = reactive({
                 <div class="row">
                     <div class="col-4" data-aos="fade-up">
                         <img :src="Straw" class="img-fluid" style="max-width: 80%; height: auto;">
-                        <h5 class="front-17px">{{ Data.straw }} </h5>
+                        <h5 class="front-17px-768-bioplastic front-10px-320-bioplastic">{{ Data.straw }} </h5>
                     </div>
                     <div class="col-4" data-aos="fade-up">
                         <span><img :src="FlockSpoon" class="img-fluid" style="max-width: 80%; height: auto;"></span>
-                        <h5 class="front-17px">{{ Data.cup }} </h5>
+                        <h5 class="front-17px-768-bioplastic front-10px-320-bioplastic">{{ Data.cup }} </h5>
                     </div>
                     <div class="col-4" data-aos="fade-up">
                         <img :src="coffeecup" class="img-fluid" style="max-width: 80%; height: auto;">
-                        <h5 class="front-17px">{{ Data.SpoonAndFork }} </h5>
+                        <h5 class="front-17px-768-bioplastic front-10px-320-bioplastic">{{ Data.SpoonAndFork }} </h5>
                     </div>
                 </div>
             </div><br><br>
