@@ -14,7 +14,7 @@ const Data = reactive({
     Description: computed(() => isLang.value == 'THA' ? 'บริการของเรา' : `As a Platform Our approach to developing and creating empower material innovations steps up to Intellectual Properties(IP).We focus on doing the research and development in sustainable materials, which will be the eco-friendly products from hemp composite materials to drive the innovation in your lifestyle. We are also doing the development of graphene manufacturing processes for innovation products. We have some partners on unique opportunities to go throughout the same goal. 
 Thank you very much for your kindness. `),
 MainTitle_1: computed(() => isLang.value == 'THA' ? 'พบกับทีมของพวกเรา' : 'Welcome to '),
-MainTitle_2: computed(() => isLang.value == 'THA' ? '1111' : 'Empower'),
+MainTitle_2: computed(() => isLang.value == 'THA' ? '1111' : 'EmpowerMatt'),
 PrimaryTitle: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Empower Material Innovations'),
 HexagonalTopic_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Make the world to be '),
 HexagonalTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'sustainability'),
