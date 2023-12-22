@@ -45,19 +45,19 @@ onMounted(() => {
 })
 
 
-window.onclick = function(event){
-    if(!event.target.matches(".navbar-toggler btn-custom")){
+window.onclick = function (event) {
+    if (!event.target.matches(".navbar-toggler btn-custom")) {
         var dd = document.getElementsByClassName("navbar-collapse collapse show");
-        for(var i = 0; i<dd.length;i++){
+        for (var i = 0; i < dd.length; i++) {
             var x = dd[i];
 
-            if(x.classList.contains("show")){
+            if (x.classList.contains("show")) {
                 x.classList.remove("show")
             }
         }
     }
 }
-    
+
 </script>
 <template>
     <header>
@@ -66,7 +66,7 @@ window.onclick = function(event){
                 <router-link to="/" class="navbar-brand ">
                     <img class="logo-respon" :src="logo" alt="" width="180" height="70">
                 </router-link>
-           
+
                 <button class="navbar-toggler btn-custom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-key="Toggle navigation">
@@ -142,9 +142,9 @@ window.onclick = function(event){
                             <h6 class="text-uppercase fw-bold mb-4">
                                 {{ CONSTANT_WORD.Desctiption }}
                             </h6>
-                            <p>
-                                <img :src="tell" class="img-fluid" style="max-width: 100%; height: 21px;"> <i
-                                    class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
+                            <p class="tel">
+                                <img :src="tell" class="img-fluid" style="max-width: 100%; height: 18px;">
+                                <i class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
                             </p>
                             <p>
                                 <img :src="email" class="img-fluid" style="max-width: 100%; height: 16px;">{{
@@ -175,7 +175,7 @@ window.onclick = function(event){
                             {{ CONSTANT_WORD.Desctiption }}
                         </h6>
                         <p>
-                            <img :src="tell" class="img-fluid" style="max-width: 100%; height: 21px;"> <i
+                            <img :src="tell" class="img-fluid" style="max-width: 100%; height: 18px;"> <i
                                 class="bi bi-telephone-fill"></i> {{ CONSTANT_WORD.Tel }}
                         </p>
                         <p>
@@ -237,5 +237,6 @@ window.onclick = function(event){
         opacity: 1;
         transform: translateY(0);
     }
-}</style>
+}
+</style>
   
