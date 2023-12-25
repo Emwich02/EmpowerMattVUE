@@ -36,7 +36,8 @@ function scrollToSection(sectionId) {
                 </div>
                 <div class="row row-bg-color " data-aos="fade-up">
                     <div class="col-lg-6">
-                        <p class="contact-head front-16px-320-contact">{{ Data.ContactTitle }}<span class="green-text">{{ Data.InfoTitle
+                        <p class="contact-head front-16px-320-contact">{{ Data.ContactTitle }}<span class="green-text">{{
+                            Data.InfoTitle
                         }}</span> </p>
                         <p class="contact-detial margin-text-detail front-9px-320-contact">{{ Data.IP_1 }}</p>
                         <p class="contact-detial margin-text-detail front-9px-320-contact">{{ Data.IP_2 }}</p>
@@ -45,8 +46,8 @@ function scrollToSection(sectionId) {
                     </div>
                     <div class="col-lg-6" style="padding: 0%;">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21305.262929627!2d100.62771899580984!3d13.949205537943062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7de40a612a1f%3A0xda635638e74574f5!2zMjYg4LiLLiDguIjguLLguKHguKMg4LiBIOC4iy4gMTcg4LiV4Liz4Lia4Lil4LiE4Li54LiE4LiVIOC4reC4s-C5gOC4oOC4reC4peC4s-C4peC4ueC4geC4geC4siDguJvguJfguLjguKHguJjguLLguJnguLUgMTIxMzA!5e0!3m2!1sth!2sth!4v1702410649085!5m2!1sth!2sth"
-                            width="100%" height="100%" allowfullscreen="" loading="lazy"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1628.0208403251982!2d100.64207476250503!3d13.952178523097034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d7d0020e0b921%3A0xb703e0b841e658b4!2sEmpowermatt%20Company%20Limited%20(Head%20Office)!5e0!3m2!1sth!2sth!4v1703513994582!5m2!1sth!2sth"
+                            width="100%" height="100%"  allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -56,7 +57,7 @@ function scrollToSection(sectionId) {
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="first" data-aos="fade-up" >
+    <div class="container-fluid" id="first" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-8 m-0 p-0 ">
                 <img :src="Office_photo1" alt="Office_photo_1" class="image-office">
