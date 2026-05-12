@@ -26,9 +26,12 @@ IP_detail_1_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Publicat
 IP_detail_1_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Publication Date 04.03.2021'),
 IP_detail_1_3: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'International Application No. PCT/TH2019/000035'),
 IP_detail_1_4: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Title “BULLETPROOF PLATE”'),
-IP_detail_2_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'เลขที่คำขอ 2203000473'),
-IP_detail_2_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'ชื่อการประดิษฐ์อนุสิทธิบัตร “แผ่นเกราะกันกระสุน”'),
-IP_detail_3_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : `Bioplastic hemp straw with Petty Patent Pending No. 2103002144`),
+IP_detail_2_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'อนุสิทธิบัตรเลขที่ 25161'),
+IP_detail_2_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'ชื่อการประดิษฐ์ แผ่นเกราะกันกระสุน และกรรมวิธีการผลิต'),
+IP_detail_3_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : `คำขอรับสิทธิบัตร เลขที่ 2401003077`),
+IP_detail_3_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : `กระบวนการพัฒนาแผ่นเกราะกันกระสุนสมรรถนะสูงน้ำหนักเบา`),
+IP_detail_4_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : `คำขอรับสิทธิบัตร เลขที่ 2601000675`),
+IP_detail_4_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : `เฟอร์นิเจอร์กลุ่มไฟเบอร์กลาสเสริมแรงพอลิเมอร์ที่มีสารเคลือบจากกราฟีนที่มีฤทธิ์ป้องกันแบคทีเรีย`),
 PartnersTopic_1: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Our '),
 PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partners'),
 });
@@ -106,6 +109,9 @@ PartnersTopic_2: computed(() => isLang.value == 'THA' ? 'ไอยู' : 'Partne
         <li>{{ Data.IP_detail_2_1 }}</li>
         {{ Data.IP_detail_2_2 }}<br><br>
         <li>{{ Data.IP_detail_3_1 }}</li>
+        {{ Data.IP_detail_3_2 }}<br><br>
+        <li>{{ Data.IP_detail_4_1 }}</li>
+        {{ Data.IP_detail_4_2 }}<br><br>
       </ul>
     </div> <br><br><br>
   </div>
